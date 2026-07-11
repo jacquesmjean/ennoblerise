@@ -10,6 +10,7 @@
     "about": "À propos",
     "programs": "Nos programmes",
     "blog": "Réflexions",
+    "scholarship": "Bourse",
     "join": "Nous rejoindre",
     "donate": "Faire un don",
     "contact": "Contact"
@@ -93,6 +94,12 @@
     "body2": "Le parcours de la Dre Kas Henry — retracé dans son best-seller international Ennobled for Success: From Civil War to a US CFO — mène de l'adversité au leadership mondial, comme stratège financière, professeure et dirigeante d'entreprise. Les leçons les plus profondes ne sont pas venues des tableurs ni des conseils d'administration. Elles sont venues des personnes : des enseignants qui forment les jeunes esprits, des femmes qui portent leur famille dans l'épreuve, et des jeunes dont le potentiel n'attendait qu'une opportunité.",
     "mantra": "Bâtir pour durer et ennoblir pour réussir",
     "cta": "Lire son histoire"
+  },
+  "scholarshipCallout": {
+    "kicker": "La bourse Michael G. Henry Legacy Scholarship™",
+    "title": "Éduquer les esprits. Ennoblir les cœurs. Élever l'humanité.",
+    "body": "Un investissement dans de jeunes leaders qui maîtrisent leur art, protègent la dignité humaine et laissent chaque communauté meilleure qu'ils ne l'ont trouvée.",
+    "cta": "Découvrir la bourse"
   },
   "cta": {
     "kicker": "Votre engagement peut allumer la transformation",

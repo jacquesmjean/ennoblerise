@@ -10,6 +10,7 @@
     "about": "About Us",
     "programs": "Our Programs",
     "blog": "Insights",
+    "scholarship": "Scholarship",
     "join": "Join Us",
     "donate": "Donate",
     "contact": "Contact Us"
@@ -93,6 +94,12 @@
     "body2": "Dr. Kas Henry's journey — chronicled in her international bestselling book, Ennobled for Success: From Civil War to a US CFO — traces a path from adversity to global leadership as a financial strategist, professor, and corporate executive. The most profound lessons did not come from spreadsheets or board meetings. They came from people: teachers who shaped young minds, women who carried families through hardship, and youth whose potential waited only for opportunity.",
     "mantra": "Building to Last and Ennobling for Success",
     "cta": "Read her story"
+  },
+  "scholarshipCallout": {
+    "kicker": "The Michael G. Henry Legacy Scholarship™",
+    "title": "Educating minds. Ennobling hearts. Elevating humanity.",
+    "body": "An investment in young leaders who master their craft, protect human dignity, and leave every community better than they found it.",
+    "cta": "Explore the scholarship"
   },
   "cta": {
     "kicker": "Your involvement can ignite transformation",

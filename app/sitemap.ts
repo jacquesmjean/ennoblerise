@@ -5,7 +5,7 @@ import { locales } from '@/lib/i18n';
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://ennoblerise.org';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const pages = ['', '/about', '/programs', '/blog', '/donate', '/join', '/contact'];
+  const pages = ['', '/about', '/programs', '/scholarship', '/blog', '/donate', '/join', '/contact'];
   const posts = getAllPosts();
 
   const entries: MetadataRoute.Sitemap = [];

@@ -10,6 +10,7 @@
     "about": "Quiénes somos",
     "programs": "Nuestros programas",
     "blog": "Reflexiones",
+    "scholarship": "Beca",
     "join": "Únete",
     "donate": "Donar",
     "contact": "Contacto"
@@ -93,6 +94,12 @@
     "body2": "El camino de la Dra. Kas Henry — narrado en su bestseller internacional Ennobled for Success: From Civil War to a US CFO — va de la adversidad al liderazgo global como estratega financiera, profesora y ejecutiva corporativa. Las lecciones más profundas no vinieron de hojas de cálculo ni juntas directivas. Vinieron de las personas: maestros que forman mentes jóvenes, mujeres que sostienen familias en la adversidad y jóvenes cuyo potencial solo esperaba una oportunidad.",
     "mantra": "Construir para durar y ennoblecer para triunfar",
     "cta": "Lee su historia"
+  },
+  "scholarshipCallout": {
+    "kicker": "La beca Michael G. Henry Legacy Scholarship™",
+    "title": "Educar mentes. Ennoblecer corazones. Elevar la humanidad.",
+    "body": "Una inversión en jóvenes líderes que dominan su oficio, protegen la dignidad humana y dejan cada comunidad mejor de como la encontraron.",
+    "cta": "Conoce la beca"
   },
   "cta": {
     "kicker": "Tu participación puede encender la transformación",

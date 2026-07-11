@@ -267,6 +267,30 @@ export default async function HomePage({
         </div>
       </section>
 
+      {/* ——— SCHOLARSHIP CALLOUT ——— */}
+      <section className="bg-sand py-20 md:py-24">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <Reveal>
+            <div className="grid items-center gap-8 border border-gold/40 bg-white p-8 md:grid-cols-12 md:p-12">
+              <div className="md:col-span-8">
+                <p className="kicker text-gold">{dict.scholarshipCallout.kicker}</p>
+                <h2 className="mt-4 font-display text-2xl font-semibold leading-snug text-navy md:text-3xl">
+                  {dict.scholarshipCallout.title}
+                </h2>
+                <p className="mt-4 max-w-2xl font-body leading-relaxed text-ink/75">
+                  {dict.scholarshipCallout.body}
+                </p>
+              </div>
+              <div className="md:col-span-4 md:text-right">
+                <Link href={`/${locale}/scholarship`} className="btn-gold">
+                  {dict.scholarshipCallout.cta}
+                </Link>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* ——— CTA ——— */}
       <section className="relative overflow-hidden bg-navy py-24 text-ivory md:py-28">
         <Image

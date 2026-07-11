@@ -3,7 +3,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getAllPosts, getPost } from '@/lib/blog';
 import { getDict, type Locale } from '@/lib/i18n';
+import { themesData, currentThemeIndex } from '@/lib/themesData';
 import Reveal from '@/components/Reveal';
+
+export const revalidate = 86400; // refresh daily so the current monthly theme stays accurate
 
 export async function generateMetadata({
   params,
@@ -28,6 +31,8 @@ export default async function BlogPage({
   const locale = l as Locale;
   const dict = getDict(locale);
   const posts = getAllPosts();
+  const themes = themesData[locale] ?? themesData.en;
+  const nowIdx = currentThemeIndex(new Date());
   const [featured, ...rest] = posts;
   const featuredFull = featured ? getPost(featured.slug) : null;
 
@@ -99,6 +104,41 @@ export default async function BlogPage({
                   </h3>
                   <p className="mt-3 font-body text-[15px] leading-relaxed text-ink/70">{post.excerpt}</p>
                 </Link>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ——— MONTHLY THEMES ——— */}
+      <section className="horizon py-24 text-ivory md:py-28">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <Reveal className="max-w-2xl">
+            <p className="kicker text-gold-bright">{themes.kicker}</p>
+            <h2 className="mt-5 font-display text-3xl font-semibold md:text-4xl">{themes.title}</h2>
+            <p className="mt-5 font-body leading-relaxed text-ivory/80">{themes.intro}</p>
+          </Reveal>
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {themes.themes.map((t, i) => (
+              <Reveal key={t.month} delay={(i % 4) * 70}>
+                <div
+                  className={`h-full border p-5 transition-colors ${
+                    i === nowIdx
+                      ? 'border-gold-bright bg-gold-bright/10'
+                      : 'border-ivory/15 bg-white/5 hover:border-gold/50'
+                  }`}
+                >
+                  <div className="flex items-baseline justify-between">
+                    <p className="font-body text-[11px] uppercase tracking-wider2 text-ivory/55">{t.month}</p>
+                    {i === nowIdx && (
+                      <span className="bg-gold-bright px-2 py-0.5 font-body text-[10px] font-bold uppercase tracking-widest text-navy-deep">
+                        {themes.currentLabel}
+                      </span>
+                    )}
+                  </div>
+                  <h3 className="mt-2 font-display text-xl font-semibold text-gold-bright">{t.theme}</h3>
+                  <p className="mt-2 font-body text-[13px] leading-relaxed text-ivory/70">{t.note}</p>
+                </div>
               </Reveal>
             ))}
           </div>

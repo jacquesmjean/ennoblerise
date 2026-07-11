@@ -11,6 +11,7 @@ export default function Footer({ dict, locale }: { dict: Dict; locale: Locale })
   const explore = [
     { href: `/${locale}/about`, label: dict.nav.about },
     { href: `/${locale}/programs`, label: dict.nav.programs },
+    { href: `/${locale}/scholarship`, label: dict.nav.scholarship },
     { href: `/${locale}/blog`, label: dict.nav.blog },
   ];
   const engage = [

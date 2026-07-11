@@ -9,19 +9,27 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Official EnnobleRise palette — white base, deep compassion blue dark sections
         navy: {
-          DEFAULT: '#0A1828',
-          soft: '#12263B',
-          mist: '#1D3A57',
+          DEFAULT: '#1E3A8A', // Deep Compassion Blue — official primary
+          soft: '#2547A8',
+          deep: '#13255E',
+          mist: '#31519F',
         },
+        royal: '#1E3A8A',
+        charcoal: '#111827', // official neutral black
         gold: {
-          DEFAULT: '#C9A227',
-          bright: '#E9B949',
-          pale: '#F3E3B3',
+          DEFAULT: '#D9A514', // deepened sunrise gold for rules/borders on white
+          bright: '#FBBF24', // Sunrise Gold — official
+          pale: '#FDE9AE',
         },
-        ivory: '#FAF6EC',
-        sand: '#F1E8D6',
-        ink: '#1C2B3A',
+        coral: '#F88379', // Mindful Coral
+        teal: '#00A29E', // Resilient Teal
+        sky: '#38BDF8', // Hopeful Sky
+        leaf: '#0B6623', // Purpose-Driven Green
+        ivory: '#FFFFFF', // white base across the site
+        sand: '#F5F3F0', // Sandstone Beige — official neutral
+        ink: '#1F2937',
       },
       fontFamily: {
         display: ['var(--font-display)', 'Georgia', 'serif'],

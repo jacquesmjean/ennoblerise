@@ -29,6 +29,7 @@ export default function Header({ dict, locale }: { dict: Dict; locale: Locale })
     { href: `/${locale}/about`, label: dict.nav.about },
     { href: `/${locale}/programs`, label: dict.nav.programs },
     { href: `/${locale}/blog`, label: dict.nav.blog },
+    { href: `/${locale}/scholarship`, label: dict.nav.scholarship },
     { href: `/${locale}/join`, label: dict.nav.join },
     { href: `/${locale}/contact`, label: dict.nav.contact },
   ];

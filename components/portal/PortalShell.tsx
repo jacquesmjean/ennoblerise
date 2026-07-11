@@ -13,6 +13,7 @@ const nav = [
   { href: '/portal/applications', label: 'Applications', icon: '✍' },
   { href: '/portal/donations', label: 'Donations', icon: '♥' },
   { href: '/portal/grants', label: 'Grants', icon: '⛁' },
+  { href: '/portal/scholarships', label: 'Scholarships', icon: '🎓' },
   { href: '/portal/contracts', label: 'Contracts', icon: '§' },
   { href: '/portal/partners', label: 'Partners & Countries', icon: '⚑' },
   { href: '/portal/staff', label: 'Staff', icon: '⚭' },
@@ -96,7 +97,7 @@ export default function PortalShell({ children }: { children: React.ReactNode })
   }
 
   return (
-    <div className="flex min-h-screen bg-[#F4F1E8]">
+    <div className="flex min-h-screen bg-sand">
       <aside className="fixed inset-y-0 left-0 z-40 hidden w-60 flex-col bg-navy md:flex">
         <Link href="/portal" className="flex items-center gap-2.5 px-5 py-6">
           <Image src="/images/emblem.png" alt="" width={34} height={34} className="h-9 w-9 object-contain" />

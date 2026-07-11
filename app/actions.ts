@@ -57,6 +57,25 @@ export async function submitPledge(formData: FormData): Promise<ActionResult> {
   return { ok: !error, error: error?.message };
 }
 
+export async function submitScholarshipApplication(formData: FormData): Promise<ActionResult> {
+  const supabase = await createClient();
+  const { error } = await supabase.from('scholarship_applications').insert({
+    name: clean(formData.get('name'), 160),
+    email: clean(formData.get('email'), 200),
+    phone: clean(formData.get('phone'), 40),
+    country: clean(formData.get('country'), 90),
+    institution: clean(formData.get('institution'), 200),
+    program: clean(formData.get('program'), 200),
+    education_path: clean(formData.get('education_path'), 60),
+    career_vision: clean(formData.get('career_vision'), 4000),
+    service: clean(formData.get('service'), 4000),
+    essay: clean(formData.get('essay'), 12000),
+    financial_need: clean(formData.get('financial_need'), 4000),
+    locale: clean(formData.get('locale'), 5) || 'en',
+  });
+  return { ok: !error, error: error?.message };
+}
+
 export async function subscribeNewsletter(formData: FormData): Promise<ActionResult> {
   const supabase = await createClient();
   const email = clean(formData.get('email'), 200);
