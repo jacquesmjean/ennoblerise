@@ -1,0 +1,268 @@
+{
+  "meta": {
+    "siteName": "EnnobleRise Global Trust",
+    "tagline": "Dignité. Résilience. Changement mondial.",
+    "homeTitle": "EnnobleRise Global Trust | Ennoblir les jeunes, les éducateurs et les femmes",
+    "homeDescription": "EnnobleRise Global Trust est un catalyseur de transformation centrée sur l'humain — ennoblissant les jeunes pour diriger avec courage, outillant les éducateurs pour enseigner avec sens, et élevant les femmes comme architectes de communautés résilientes dans plus de 8 pays."
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "programs": "Nos programmes",
+    "blog": "Réflexions",
+    "join": "Nous rejoindre",
+    "donate": "Faire un don",
+    "contact": "Contact"
+  },
+  "hero": {
+    "kicker": "Un trust mondial pour la transformation centrée sur l'humain",
+    "titleA": "Chaque personne porte en elle",
+    "titleEm": "une valeur innée",
+    "titleB": "Notre travail est de l'éveiller.",
+    "lead": "Nous ennoblissons les jeunes pour qu'ils dirigent avec courage, outillons les éducateurs pour qu'ils enseignent avec sens, et élevons les femmes comme architectes de communautés résilientes — à travers cultures et continents.",
+    "ctaPrimary": "Rejoindre l'élan",
+    "ctaSecondary": "Découvrir nos programmes",
+    "scroll": "Élevez-vous avec nous"
+  },
+  "philosophy": {
+    "kicker": "Au-delà de l'autonomisation — l'ennoblissement",
+    "title": "L'autonomisation suppose que le pouvoir doit être donné. L'ennoblissement sait qu'il est déjà là.",
+    "body1": "Trop souvent, la société extrait la force naturelle, la créativité et la dignité des personnes — pour ne leur rendre que des fragments de ce pouvoir à travers des programmes et des opportunités. L'ennoblissement inverse ce cycle.",
+    "body2": "Le rôle de l'éducation, du mentorat et du leadership n'est pas de distribuer le pouvoir, mais de l'éveiller et de le libérer. Quand les personnes s'élèvent ancrées dans la bonté, la compassion, l'humilité, la grâce et l'impact porteur de sens, elles font plus que réussir. Elles élèvent des familles, renforcent des communautés et inspirent le progrès collectif.",
+    "quote": "Le but n'est pas simplement l'autonomisation. C'est de cultiver des leaders humains dont l'esprit éveillé transforme le monde.",
+    "quoteAttr": "Dre Kasthuri Henry, fondatrice et directrice exécutive"
+  },
+  "mission": {
+    "missionTitle": "Notre mission",
+    "missionBody": "Ennoblir les jeunes, les femmes et les éducateurs à travers le monde en nourrissant la résilience émotionnelle, l'indépendance financière et le leadership conscient. Par l'éducation, le mentorat et des initiatives durables, EnnobleRise Global Trust forme des leaders compatissants qui s'élèvent pour créer des communautés inclusives fondées sur la dignité, la paix et la prospérité collective.",
+    "visionTitle": "Notre vision",
+    "visionBody": "Un monde humain et conscient où des communautés résilientes cultivent des leaders guidés par le sens, champions de la bonté, de la justice sociale et de la protection de l'environnement — pour une paix durable et une prospérité partagée par tous."
+  },
+  "values": {
+    "kicker": "Ce qui nous guide",
+    "title": "Sept principes, une même vocation",
+    "items": [
+      { "name": "Leadership humain", "body": "Le leadership commence par l'humanité — honorer la dignité, la voix et le potentiel de chacun." },
+      { "name": "Croissance consciente", "body": "Conscience et intention dans tout ce que nous faisons, en honorant les racines culturelles en harmonie avec la nature." },
+      { "name": "Résilience et ennoblissement", "body": "Bâtir la force émotionnelle et financière pour surmonter l'adversité et créer un impact durable." },
+      { "name": "Innovation porteuse de sens", "body": "Des solutions créatives qui aident chacun à diriger avec intégrité, vision et prospérité durable." },
+      { "name": "Prospérité partagée", "body": "Un succès mesuré non par le gain individuel, mais par le bien-être collectif et la croissance inclusive." },
+      { "name": "Paix et justice", "body": "L'équité, l'harmonie et le respect de toute vie au cœur de chaque décision." },
+      { "name": "Intendance des personnes et de la planète", "body": "Prendre soin de l'humanité et de l'environnement comme une seule et même responsabilité." }
+    ]
+  },
+  "pillars": {
+    "kicker": "Nos trois piliers de programme",
+    "title": "Intentionnellement conçus pour un impact durable",
+    "youth": {
+      "name": "Jeunesse",
+      "program": "Ennoblissement des jeunes : les leaders conscients de demain",
+      "body": "Ennoblir la jeunesse est l'un des investissements les plus puissants qu'une société puisse faire pour son avenir. Par le mentorat, l'éducation et le développement du leadership ancrés dans la résilience émotionnelle, la conscience financière et la prise de décision réfléchie, nous préparons les jeunes à s'élever avec dignité, caractère et sens — pour que leurs communautés fleurissent pendant des générations.",
+      "cta": "Découvrir le pilier Jeunesse"
+    },
+    "educators": {
+      "name": "Éducateurs",
+      "program": "Leadership enseignant : cultiver des esprits humains et résilients",
+      "body": "Les éducateurs transmettent bien plus que des connaissances — ils façonnent le caractère, la confiance et les aspirations de toute une génération. Par la formation continue, le mentorat et la culture du leadership fondés sur l'intelligence émotionnelle et l'intendance éthique, les éducateurs deviennent des architectes du potentiel humain et des catalyseurs de transformation.",
+      "cta": "Découvrir le pilier Éducateurs"
+    },
+    "women": {
+      "name": "Femmes",
+      "program": "Résilience financière des femmes : libérer le pouvoir économique avec sens",
+      "body": "Les femmes sont les ancres des familles et des sociétés. Par le mentorat, l'éducation et le développement du leadership fondés sur la résilience émotionnelle, l'indépendance financière et la collaboration, nous ennoblissons les femmes pour qu'elles possèdent leur pouvoir et fassent entendre leur brillance — avec le courage d'être vues, entendues et valorisées. Quand elle s'élève, le monde s'élève avec elle.",
+      "cta": "Découvrir le pilier Femmes"
+    }
+  },
+  "impact": {
+    "kicker": "La force d'un élan collectif",
+    "title": "Ennoblir avec intention rend le monde plus heureux, plus uni et plus paisible.",
+    "line1": "Parce que les vies que nous touchons sont les nôtres.",
+    "line2": "Parce que la prospérité que nous cherchons nous cherchera toujours.",
+    "stats": [
+      { "value": "8+", "label": "Pays servis sur 5 continents" },
+      { "value": "18", "label": "Ambassadeurs de programme dans le monde" },
+      { "value": "3", "label": "Piliers de programme — jeunes, éducateurs, femmes" },
+      { "value": "150 K$", "label": "Objectif de financement des deux premières années" }
+    ]
+  },
+  "founder": {
+    "kicker": "De l'adversité à la vocation",
+    "title": "Rencontrez la Dre Kasthuri Henry",
+    "sub": "Fondatrice et directrice exécutive",
+    "body1": "Chaque mouvement commence par une histoire. Celle d'EnnobleRise Global Trust ne commence pas dans une salle de conseil, mais dans une enfance marquée par la guerre civile, la résilience et une foi inébranlable en la dignité de l'esprit humain.",
+    "body2": "Le parcours de la Dre Kas Henry — retracé dans son best-seller international Ennobled for Success: From Civil War to a US CFO — mène de l'adversité au leadership mondial, comme stratège financière, professeure et dirigeante d'entreprise. Les leçons les plus profondes ne sont pas venues des tableurs ni des conseils d'administration. Elles sont venues des personnes : des enseignants qui forment les jeunes esprits, des femmes qui portent leur famille dans l'épreuve, et des jeunes dont le potentiel n'attendait qu'une opportunité.",
+    "mantra": "Bâtir pour durer et ennoblir pour réussir",
+    "cta": "Lire son histoire"
+  },
+  "cta": {
+    "kicker": "Votre engagement peut allumer la transformation",
+    "title": "Mentor, éducateur, décideur ou philanthrope — élevez-vous avec nous.",
+    "donate": "Donner avec sens",
+    "join": "Devenir ambassadeur",
+    "partner": "Devenir partenaire"
+  },
+  "footer": {
+    "blurb": "Un catalyseur de transformation centrée sur l'humain — ennoblissant les jeunes, les éducateurs et les femmes pour s'élever ensemble vers une paix durable et une prospérité partagée.",
+    "explore": "Explorer",
+    "engage": "S'engager",
+    "contact": "Contact",
+    "newsletter": "Recevez nos lettres d'élévation",
+    "newsletterHint": "Des histoires de transformation, une fois par mois. Sans bruit.",
+    "emailPlaceholder": "Votre adresse e-mail",
+    "subscribe": "S'abonner",
+    "subscribed": "Bienvenue — vous avez rejoint l'élan.",
+    "rights": "Tous droits réservés.",
+    "volunteer": "Bénévolat",
+    "ambassador": "Ambassadeurs",
+    "partners": "Partenaires",
+    "grants": "Subventions et bailleurs"
+  },
+  "about": {
+    "title": "À propos",
+    "metaTitle": "À propos d'EnnobleRise Global Trust | Ennoblir plutôt qu'autonomiser",
+    "metaDescription": "L'histoire et la philosophie d'EnnobleRise Global Trust — fondé par la Dre Kasthuri Henry pour cultiver des leaders humains en ennoblissant jeunes, éducateurs et femmes.",
+    "storyKicker": "La naissance d'EnnobleRise Global Trust",
+    "storyTitle": "De l'adversité à la vocation",
+    "ambassadorsKicker": "Ceux qui montrent l'exemple",
+    "ambassadorsTitle": "Nos ambassadeurs",
+    "ambassadorsBody": "Le changement commence par ceux qui montrent l'exemple. Nos ambassadeurs — jeunes, éducateurs et femmes — incarnent l'esprit de s'élever avec intention en élevant les autres. Chacun apporte une voix unique, une expérience vécue et une perspective culturelle, modelant un leadership fondé sur la dignité, la compassion et le service. Par leurs histoires et leur mentorat, ils déclenchent une onde de transformation à travers les continents.",
+    "partnersTitle": "Nos partenaires",
+    "partnersBody": "Nous croyons au partenariat public-privé-communautaire. Institutions, entreprises et organisations communautaires rejoignent EnnobleRise pour bâtir des systèmes inclusifs fondés sur la paix, l'équité et la prospérité collective."
+  },
+  "programs": {
+    "metaTitle": "Nos programmes | Piliers Jeunesse, Éducateurs et Femmes — EnnobleRise",
+    "metaDescription": "Trois piliers intentionnellement conçus pour un impact durable : l'ennoblissement des jeunes, le leadership enseignant et la résilience financière des femmes.",
+    "title": "Nos programmes",
+    "lead": "Trois piliers. Un monde qui s'élève. Chaque programme éveille ce qui est déjà là — résilience émotionnelle, indépendance financière et leadership conscient.",
+    "howKicker": "Comment chaque pilier agit",
+    "youthDetail": ["Formation à l'intelligence émotionnelle : conscience de soi, empathie et courage de diriger.", "Programmes de leadership conscient qui ancrent l'ambition dans le caractère et le service.", "Compétences entrepreneuriales et financières qui transforment le potentiel en moyens de subsistance durables.", "Cercles de mentorat reliant les jeunes à des modèles et pairs du monde entier."],
+    "educatorsDetail": ["Outils d'enseignement conscient et d'apprentissage socio-émotionnel dans chaque classe.", "Développement du leadership qui honore les éducateurs comme bâtisseurs de nations.", "Réseaux de pairs qui rompent l'isolement et renouvellent la vocation.", "Reconnaissance et soutien qui amplifient leur capacité à former les leaders de demain."],
+    "womenDetail": ["Éducation financière pour une indépendance économique durable.", "Compétences professionnelles et entrepreneuriales avec de vrais débouchés.", "Réseaux collaboratifs de femmes qui élèvent en s'élevant.", "Formation au leadership fondée sur le courage et la compassion."],
+    "applyTitle": "Amenez un programme dans votre communauté",
+    "applyBody": "Nous intégrons de nouveaux pays, chapitres et institutions partenaires par un processus attentif, fondé d'abord sur la relation. Dites-nous où vous êtes et qui vous servez — notre équipe fera le chemin avec vous.",
+    "applyCta": "Commencer la conversation"
+  },
+  "blog": {
+    "metaTitle": "Réflexions | EnnobleRise Global Trust",
+    "metaDescription": "Essais sur le leadership humain, le capitalisme réinventé et la prospérité partagée, par la Dre Kasthuri Henry et la communauté EnnobleRise.",
+    "title": "Réflexions",
+    "lead": "Essais sur le leadership humain, le capitalisme réinventé et les disciplines de l'élévation collective.",
+    "readMore": "Lire l'essai",
+    "minRead": "min de lecture",
+    "backToBlog": "Toutes les réflexions",
+    "by": "Par"
+  },
+  "donate": {
+    "metaTitle": "Faire un don | Donner avec sens — EnnobleRise Global Trust",
+    "metaDescription": "Votre don ennoblit les jeunes, les éducateurs et les femmes dans plus de 8 pays. Donnez une fois ou chaque mois.",
+    "kicker": "Donner avec sens",
+    "title": "Votre générosité ne donne pas le pouvoir aux gens. Elle éveille le pouvoir déjà en eux.",
+    "lead": "Chaque don alimente le mentorat, l'éducation et le développement du leadership pour les jeunes, les éducateurs et les femmes dans plus de 8 pays sur 5 continents.",
+    "frequencyOnce": "Don unique",
+    "frequencyMonthly": "Don mensuel",
+    "amountLabel": "Choisissez votre don",
+    "customAmount": "Autre montant",
+    "designationLabel": "Orientez votre don",
+    "designations": [
+      { "id": "greatest", "label": "Là où le besoin est le plus grand" },
+      { "id": "youth", "label": "Ennoblissement des jeunes" },
+      { "id": "educators", "label": "Leadership enseignant" },
+      { "id": "women", "label": "Résilience financière des femmes" }
+    ],
+    "impactHints": {
+      "25": "Fournit un mois de matériel de mentorat à un jeune leader.",
+      "50": "Équipe un éducateur d'une trousse complète d'apprentissage socio-émotionnel.",
+      "100": "Finance la formation financière d'une femme entrepreneure.",
+      "250": "Parraine un cercle de leadership communautaire pendant un trimestre.",
+      "500": "Aide à lancer un nouveau chapitre dans un pays en intégration.",
+      "1000": "Ancre un programme national pour une saison — un don transformateur."
+    },
+    "nameLabel": "Nom complet",
+    "emailLabel": "Adresse e-mail",
+    "dedicationLabel": "Dédier ce don (facultatif)",
+    "dedicationPlaceholder": "En l'honneur de…",
+    "noteLabel": "Un mot pour notre équipe (facultatif)",
+    "continue": "Continuer vers le don",
+    "pledgeReceivedTitle": "Merci — votre promesse de don a été reçue.",
+    "pledgeReceivedBody": "Notre équipe vous contactera sous peu avec des options de paiement sécurisées. Votre intention seule renforce déjà cette œuvre.",
+    "trust": "EnnobleRise Global Trust est une organisation à but non lucratif. Les contributions sont gérées avec une intendance attentive à travers nos trois piliers.",
+    "monthlyBadge": "mensuel"
+  },
+  "join": {
+    "metaTitle": "Nous rejoindre | Bénévole, ambassadeur et partenaire — EnnobleRise",
+    "metaDescription": "Devenez bénévole, ambassadeur de programme ou partenaire institutionnel. Amenez les programmes EnnobleRise dans votre pays.",
+    "kicker": "Rejoindre l'élan",
+    "title": "La transformation est un acte collectif.",
+    "lead": "Les jeunes, les femmes et les enseignants sont les catalyseurs du changement — mais ils ne peuvent s'élever seuls. Il leur faut du mentorat, des ressources et un réseau mondial de soutien. Ce réseau, c'est vous.",
+    "roles": [
+      { "id": "volunteer", "name": "Bénévole", "body": "Offrez votre temps et votre talent — mentorat, traduction, organisation, enseignement." },
+      { "id": "ambassador", "name": "Ambassadeur", "body": "Représentez un pilier dans votre pays. Incarnez l'élan ; portez la flamme." },
+      { "id": "partner", "name": "Partenaire institutionnel", "body": "Écoles, entreprises et ONG qui bâtissent des programmes avec nous." },
+      { "id": "country", "name": "Chapitre national", "body": "Amenez EnnobleRise dans un nouveau pays — nous vous accompagnons avec soin." }
+    ],
+    "formTitle": "Dites-nous comment vous souhaitez vous élever",
+    "roleLabel": "Je souhaite rejoindre comme",
+    "countryLabel": "Pays",
+    "orgLabel": "Organisation (le cas échéant)",
+    "messageLabel": "Votre histoire et votre intention",
+    "messagePlaceholder": "Parlez-nous de vous, de votre communauté et de ce qui vous attire vers cette œuvre…",
+    "submit": "Envoyer ma candidature",
+    "receivedTitle": "Bienvenue — votre candidature est entre nos mains.",
+    "receivedBody": "Un membre de notre équipe vous répondra personnellement. Chaque élan commence par une conversation."
+  },
+  "contact": {
+    "metaTitle": "Contact | EnnobleRise Global Trust",
+    "metaDescription": "Contactez l'équipe d'EnnobleRise Global Trust — programmes, partenariats, médias et dons.",
+    "kicker": "Nous vous écoutons",
+    "title": "Chaque élan commence par une conversation.",
+    "nameLabel": "Nom complet",
+    "emailLabel": "Adresse e-mail",
+    "topicLabel": "Qu'est-ce qui vous amène ?",
+    "topics": [
+      { "id": "programs", "label": "Programmes et participation" },
+      { "id": "partnership", "label": "Partenariats et institutions" },
+      { "id": "giving", "label": "Dons et philanthropie" },
+      { "id": "media", "label": "Médias et conférences" },
+      { "id": "other", "label": "Autre chose" }
+    ],
+    "messageLabel": "Votre message",
+    "submit": "Envoyer le message",
+    "receivedTitle": "Merci. Votre message nous est parvenu.",
+    "receivedBody": "Nous répondons personnellement, généralement sous deux jours ouvrés.",
+    "reachTitle": "Nous joindre directement"
+  },
+  "concierge": {
+    "open": "Concierge",
+    "title": "Concierge EnnobleRise",
+    "sub": "À votre service — chaleureusement, dans votre langue.",
+    "greeting": "Bienvenue. Je suis le concierge d'EnnobleRise. Quel que soit le chemin qui vous a mené ici, vous êtes vu et valorisé. Comment puis-je vous servir aujourd'hui ?",
+    "options": [
+      { "id": "programs", "label": "Découvrir nos programmes" },
+      { "id": "donate", "label": "Donner avec sens" },
+      { "id": "join", "label": "Devenir bénévole ou ambassadeur" },
+      { "id": "partner", "label": "Devenir partenaire ou nous amener dans mon pays" },
+      { "id": "founder", "label": "Rencontrer notre fondatrice" },
+      { "id": "human", "label": "Parler à une personne" }
+    ],
+    "answers": {
+      "programs": "Nous agissons à travers trois piliers : l'ennoblissement des jeunes (les leaders conscients de demain), le leadership enseignant (cultiver des esprits humains et résilients) et la résilience financière des femmes (le pouvoir économique avec sens). Lequel souhaitez-vous explorer ?",
+      "donate": "Merci pour votre cœur généreux. Notre page de dons vous permet d'orienter votre don vers le pilier qui vous touche — ou là où le besoin est le plus grand. Puis-je vous y conduire ?",
+      "join": "Merveilleux. Nous accueillons bénévoles, mentors et ambassadeurs dans chaque pays que nous servons. Je peux vous mener à la candidature — trois minutes suffisent.",
+      "partner": "Nous intégrons les nouveaux pays et partenaires institutionnels par un processus attentif, fondé d'abord sur la relation. Parlez-nous de votre organisation, et notre équipe vous répondra personnellement.",
+      "founder": "La Dre Kasthuri Henry a fondé EnnobleRise après un parcours de la guerre civile jusqu'au poste de CFO aux États-Unis — retracé dans son best-seller Ennobled for Success. Sa conviction : le vrai leadership commence par l'ennoblissement de l'esprit humain.",
+      "human": "Bien sûr. Laissez votre nom, votre e-mail et un court message — un membre de notre équipe vous répondra personnellement, généralement sous deux jours ouvrés."
+    },
+    "goPrograms": "Voir nos programmes",
+    "goDonate": "Aller aux dons",
+    "goJoin": "Ouvrir la candidature",
+    "goAbout": "Lire son histoire",
+    "leaveMessage": "Laisser un message",
+    "back": "Revenir au début",
+    "namePlaceholder": "Votre nom",
+    "emailPlaceholder": "Votre e-mail",
+    "messagePlaceholder": "Votre message…",
+    "send": "Envoyer",
+    "sent": "Reçu avec gratitude. Nous vous répondrons bientôt.",
+    "anythingElse": "Puis-je vous aider avec autre chose ?"
+  }
+}

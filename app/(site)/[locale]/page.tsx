@@ -1,0 +1,302 @@
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
+import { getDict, type Locale } from '@/lib/i18n';
+import Reveal from '@/components/Reveal';
+import SunriseArc from '@/components/SunriseArc';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const dict = getDict(locale);
+  return {
+    title: { absolute: dict.meta.homeTitle },
+    description: dict.meta.homeDescription,
+    alternates: { canonical: `/${locale}` },
+  };
+}
+
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale: l } = await params;
+  const locale = l as Locale;
+  const dict = getDict(locale);
+
+  const pillars = [
+    { key: 'youth', data: dict.pillars.youth, img: '/images/pillar-youth.jpg', href: `/${locale}/programs#youth` },
+    { key: 'educators', data: dict.pillars.educators, img: '/images/pillar-educators.jpg', href: `/${locale}/programs#educators` },
+    { key: 'women', data: dict.pillars.women, img: '/images/pillar-women.jpg', href: `/${locale}/programs#women` },
+  ];
+
+  return (
+    <>
+      {/* ——— HERO ——— */}
+      <section className="horizon-strong relative flex min-h-[100svh] items-center overflow-hidden text-ivory">
+        <Image
+          src="/images/hero.jpg"
+          alt="A community standing together at sunrise, looking toward the light"
+          fill
+          priority
+          className="object-cover opacity-40"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-navy/30" />
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-24 pt-36 md:px-8">
+          <p className="kicker animate-rise text-gold-bright" style={{ animationDelay: '100ms' }}>
+            {dict.hero.kicker}
+          </p>
+          <h1
+            className="mt-6 max-w-4xl animate-rise font-display text-[13vw] font-medium leading-[1.04] sm:text-6xl md:text-7xl"
+            style={{ animationDelay: '250ms' }}
+          >
+            {dict.hero.titleA}{' '}
+            <em className="text-gold-bright">{dict.hero.titleEm}</em>.
+            <span className="mt-2 block">{dict.hero.titleB}</span>
+          </h1>
+          <p
+            className="mt-8 max-w-2xl animate-rise font-body text-lg leading-relaxed text-ivory/85"
+            style={{ animationDelay: '420ms' }}
+          >
+            {dict.hero.lead}
+          </p>
+          <div className="mt-10 flex flex-wrap gap-4 animate-rise" style={{ animationDelay: '560ms' }}>
+            <Link href={`/${locale}/join`} className="btn-gold">
+              {dict.hero.ctaPrimary}
+            </Link>
+            <Link href={`/${locale}/programs`} className="btn-ghost-light">
+              {dict.hero.ctaSecondary}
+            </Link>
+          </div>
+        </div>
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-shimmer">
+          <p className="kicker text-ivory/60">{dict.hero.scroll} ↓</p>
+        </div>
+      </section>
+
+      {/* ——— PHILOSOPHY ——— */}
+      <section className="grain bg-ivory py-24 md:py-32">
+        <div className="mx-auto grid max-w-7xl gap-14 px-5 md:grid-cols-12 md:px-8">
+          <Reveal className="md:col-span-5">
+            <p className="kicker text-gold">{dict.philosophy.kicker}</p>
+            <h2 className="mt-5 font-display text-3xl font-semibold leading-snug text-navy md:text-[2.6rem] md:leading-[1.2]">
+              {dict.philosophy.title}
+            </h2>
+            <SunriseArc className="mt-8 h-12 w-40" />
+          </Reveal>
+          <div className="md:col-span-6 md:col-start-7">
+            <Reveal delay={120}>
+              <p className="font-body text-lg leading-[1.85] text-ink/90">{dict.philosophy.body1}</p>
+            </Reveal>
+            <Reveal delay={220}>
+              <p className="mt-6 font-body text-lg leading-[1.85] text-ink/90">{dict.philosophy.body2}</p>
+            </Reveal>
+            <Reveal delay={320}>
+              <blockquote className="mt-10 border-l-2 border-gold pl-6">
+                <p className="font-display text-xl italic leading-relaxed text-navy md:text-2xl">
+                  “{dict.philosophy.quote}”
+                </p>
+                <cite className="mt-4 block font-body text-sm not-italic text-ink/60">
+                  — {dict.philosophy.quoteAttr}
+                </cite>
+              </blockquote>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ——— MISSION / VISION ——— */}
+      <section className="horizon py-24 text-ivory md:py-28">
+        <div className="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-2 md:px-8">
+          <Reveal>
+            <div className="border-t border-gold/50 pt-8">
+              <h2 className="font-display text-2xl font-semibold text-gold-bright">
+                {dict.mission.missionTitle}
+              </h2>
+              <p className="mt-5 font-body leading-[1.85] text-ivory/85">{dict.mission.missionBody}</p>
+            </div>
+          </Reveal>
+          <Reveal delay={150}>
+            <div className="border-t border-gold/50 pt-8">
+              <h2 className="font-display text-2xl font-semibold text-gold-bright">
+                {dict.mission.visionTitle}
+              </h2>
+              <p className="mt-5 font-body leading-[1.85] text-ivory/85">{dict.mission.visionBody}</p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ——— VALUES ——— */}
+      <section className="grain bg-sand py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <Reveal className="max-w-2xl">
+            <p className="kicker text-gold">{dict.values.kicker}</p>
+            <h2 className="mt-5 font-display text-3xl font-semibold text-navy md:text-[2.6rem]">
+              {dict.values.title}
+            </h2>
+          </Reveal>
+          <div className="mt-14 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+            {dict.values.items.map((v, i) => (
+              <Reveal key={v.name} delay={i * 80}>
+                <div className="group border-t border-navy/15 pt-6 transition-colors hover:border-gold">
+                  <span className="font-display text-sm text-gold">{String(i + 1).padStart(2, '0')}</span>
+                  <h3 className="mt-2 font-display text-xl font-semibold text-navy">{v.name}</h3>
+                  <p className="mt-3 font-body text-[15px] leading-relaxed text-ink/75">{v.body}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ——— PILLARS ——— */}
+      <section className="grain bg-ivory py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <Reveal className="max-w-3xl">
+            <p className="kicker text-gold">{dict.pillars.kicker}</p>
+            <h2 className="mt-5 font-display text-3xl font-semibold text-navy md:text-[2.6rem]">
+              {dict.pillars.title}
+            </h2>
+          </Reveal>
+          <div className="mt-16 space-y-20">
+            {pillars.map((p, i) => (
+              <Reveal key={p.key}>
+                <article
+                  className={`grid items-center gap-10 md:grid-cols-12 ${
+                    i % 2 === 1 ? '' : ''
+                  }`}
+                >
+                  <div className={`relative aspect-[4/3] overflow-hidden md:col-span-6 ${i % 2 === 1 ? 'md:order-2' : ''}`}>
+                    <Image
+                      src={p.img}
+                      alt={p.data.program}
+                      fill
+                      className="object-cover transition-transform duration-700 hover:scale-[1.03]"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                    <div className="absolute inset-0 ring-1 ring-inset ring-navy/10" />
+                  </div>
+                  <div className={`md:col-span-5 ${i % 2 === 1 ? 'md:order-1 md:col-start-1' : 'md:col-start-8'}`}>
+                    <span className="font-display text-6xl font-light text-gold/40">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <h3 className="mt-2 font-display text-2xl font-semibold text-navy md:text-3xl">
+                      {p.data.name}
+                    </h3>
+                    <p className="mt-1 font-body text-sm font-semibold uppercase tracking-widest text-gold">
+                      {p.data.program}
+                    </p>
+                    <p className="mt-5 font-body leading-[1.8] text-ink/85">{p.data.body}</p>
+                    <Link
+                      href={p.href}
+                      className="mt-6 inline-block border-b border-gold pb-0.5 font-body text-sm font-semibold text-navy transition-colors hover:text-gold"
+                    >
+                      {p.data.cta} →
+                    </Link>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ——— IMPACT ——— */}
+      <section className="horizon-strong py-24 text-ivory md:py-32">
+        <div className="mx-auto max-w-7xl px-5 text-center md:px-8">
+          <Reveal>
+            <p className="kicker text-gold-bright">{dict.impact.kicker}</p>
+            <h2 className="mx-auto mt-6 max-w-3xl font-display text-3xl font-semibold leading-snug md:text-4xl">
+              {dict.impact.title}
+            </h2>
+            <p className="mt-6 font-display text-lg italic text-ivory/75">{dict.impact.line1}</p>
+            <p className="font-display text-lg italic text-ivory/75">{dict.impact.line2}</p>
+          </Reveal>
+          <div className="mx-auto mt-16 grid max-w-4xl grid-cols-2 gap-10 md:grid-cols-4">
+            {dict.impact.stats.map((s, i) => (
+              <Reveal key={s.label} delay={i * 100}>
+                <div className="border-t border-gold/40 pt-6">
+                  <p className="font-display text-4xl font-semibold text-gold-bright md:text-5xl">{s.value}</p>
+                  <p className="mt-3 font-body text-xs leading-relaxed text-ivory/70">{s.label}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ——— FOUNDER ——— */}
+      <section className="grain bg-ivory py-24 md:py-32">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 md:grid-cols-12 md:px-8">
+          <Reveal className="relative md:col-span-6">
+            <div className="relative aspect-[16/10] overflow-hidden">
+              <Image
+                src="/images/founder-journey.jpg"
+                alt="A figure walking toward golden light over a mountain ridge at dawn"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+            <div className="absolute -bottom-5 -right-3 hidden bg-navy px-6 py-4 md:block">
+              <p className="font-display text-sm italic text-gold-bright">“{dict.founder.mantra}”</p>
+            </div>
+          </Reveal>
+          <div className="md:col-span-5 md:col-start-8">
+            <Reveal delay={120}>
+              <p className="kicker text-gold">{dict.founder.kicker}</p>
+              <h2 className="mt-4 font-display text-3xl font-semibold text-navy md:text-4xl">
+                {dict.founder.title}
+              </h2>
+              <p className="mt-1 font-body text-sm font-semibold uppercase tracking-widest text-gold">
+                {dict.founder.sub}
+              </p>
+              <p className="mt-6 font-body leading-[1.8] text-ink/85">{dict.founder.body1}</p>
+              <p className="mt-4 font-body leading-[1.8] text-ink/85">{dict.founder.body2}</p>
+              <Link href={`/${locale}/about`} className="btn-ghost-dark mt-8">
+                {dict.founder.cta}
+              </Link>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ——— CTA ——— */}
+      <section className="relative overflow-hidden bg-navy py-24 text-ivory md:py-28">
+        <Image
+          src="/images/unity.jpg"
+          alt=""
+          fill
+          className="object-cover opacity-25"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-navy/50" />
+        <div className="relative z-10 mx-auto max-w-7xl px-5 md:px-8">
+          <Reveal>
+            <p className="kicker text-gold-bright">{dict.cta.kicker}</p>
+            <h2 className="mt-6 max-w-3xl font-display text-3xl font-semibold leading-snug md:text-[2.75rem] md:leading-[1.2]">
+              {dict.cta.title}
+            </h2>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Link href={`/${locale}/donate`} className="btn-gold">
+                {dict.cta.donate}
+              </Link>
+              <Link href={`/${locale}/join`} className="btn-ghost-light">
+                {dict.cta.join}
+              </Link>
+              <Link href={`/${locale}/join`} className="btn-ghost-light">
+                {dict.cta.partner}
+              </Link>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+    </>
+  );
+}
