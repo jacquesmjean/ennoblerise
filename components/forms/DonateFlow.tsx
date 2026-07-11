@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useTransition } from 'react';
-import { submitPledge } from '@/app/actions';
+import { submitPledge } from '@/lib/submit';
 import type { Dict, Locale } from '@/lib/i18n';
 
 const AMOUNTS = [25, 50, 100, 250, 500, 1000];

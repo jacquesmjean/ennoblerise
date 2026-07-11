@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useTransition } from 'react';
-import { subscribeNewsletter } from '@/app/actions';
+import { subscribeNewsletter } from '@/lib/submit';
 import type { Dict, Locale } from '@/lib/i18n';
 
 export default function NewsletterForm({ dict, locale }: { dict: Dict; locale: Locale }) {

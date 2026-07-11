@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, useTransition } from 'react';
 import Link from 'next/link';
-import { submitConciergeMessage } from '@/app/actions';
+import { submitConciergeMessage } from '@/lib/submit';
 import type { Dict, Locale } from '@/lib/i18n';
 
 type Turn = { from: 'concierge' | 'visitor'; text: string };

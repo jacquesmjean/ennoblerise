@@ -91,6 +91,14 @@ export default function PortalShell({ children }: { children: React.ReactNode })
           <p className="mt-5 font-body text-[11px] leading-relaxed text-ivory/45">
             Staff access only. Accounts are provisioned by your administrator.
           </p>
+          <a
+            href="https://techfides.com"
+            target="_blank"
+            rel="noopener"
+            className="mt-4 block text-center font-body text-[11px] text-ivory/40 hover:text-ivory/70 transition-colors"
+          >
+            Powered by <span className="font-semibold text-[#0EA5E9]">TechFides</span>
+          </a>
         </form>
       </div>
     );

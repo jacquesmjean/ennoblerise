@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useTransition } from 'react';
-import { submitScholarshipApplication } from '@/app/actions';
+import { submitScholarshipApplication } from '@/lib/submit';
 import type { Locale } from '@/lib/i18n';
 import type { ScholarshipContent } from '@/lib/scholarshipData';
 

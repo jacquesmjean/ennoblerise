@@ -96,6 +96,17 @@ export default function Footer({ dict, locale }: { dict: Dict; locale: Locale })
           <p className="font-body text-xs text-ivory/45">
             © {year} EnnobleRise Global Trust™ — {dict.footer.rights}
           </p>
+          <a
+            href="https://techfides.com"
+            target="_blank"
+            rel="noopener"
+            className="group font-body text-[11px] tracking-wide text-ivory/40 transition-colors hover:text-ivory/70"
+          >
+            Powered by{' '}
+            <span className="font-semibold text-[#0EA5E9] transition-all group-hover:drop-shadow-[0_0_8px_rgba(14,165,233,0.6)]">
+              TechFides
+            </span>
+          </a>
         </div>
       </div>
     </footer>

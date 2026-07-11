@@ -1,6 +1,8 @@
-'use server';
+'use client';
 
-import { createClient } from '@/lib/supabase/server';
+// Client-side form submissions — write directly to Supabase under RLS
+// (anon role may INSERT only; nothing is readable without staff auth).
+import { createClient } from '@/lib/supabase/client';
 
 type ActionResult = { ok: boolean; error?: string };
 
@@ -9,7 +11,7 @@ function clean(value: FormDataEntryValue | null, max = 2000): string {
 }
 
 export async function submitInquiry(formData: FormData): Promise<ActionResult> {
-  const supabase = await createClient();
+  const supabase = createClient();
   const { error } = await supabase.from('inquiries').insert({
     name: clean(formData.get('name'), 160),
     email: clean(formData.get('email'), 200),
@@ -22,10 +24,9 @@ export async function submitInquiry(formData: FormData): Promise<ActionResult> {
 }
 
 export async function submitJoinApplication(formData: FormData): Promise<ActionResult> {
-  const supabase = await createClient();
-  const role = clean(formData.get('role'), 40) || 'volunteer';
+  const supabase = createClient();
   const { error } = await supabase.from('applications').insert({
-    role,
+    role: clean(formData.get('role'), 40) || 'volunteer',
     name: clean(formData.get('name'), 160),
     email: clean(formData.get('email'), 200),
     country: clean(formData.get('country'), 90),
@@ -37,7 +38,7 @@ export async function submitJoinApplication(formData: FormData): Promise<ActionR
 }
 
 export async function submitPledge(formData: FormData): Promise<ActionResult> {
-  const supabase = await createClient();
+  const supabase = createClient();
   const amount = Number(clean(formData.get('amount'), 12));
   if (!Number.isFinite(amount) || amount <= 0 || amount > 1000000) {
     return { ok: false, error: 'Invalid amount' };
@@ -57,8 +58,33 @@ export async function submitPledge(formData: FormData): Promise<ActionResult> {
   return { ok: !error, error: error?.message };
 }
 
+export async function subscribeNewsletter(formData: FormData): Promise<ActionResult> {
+  const supabase = createClient();
+  const email = clean(formData.get('email'), 200);
+  if (!email.includes('@')) return { ok: false, error: 'Invalid email' };
+  const { error } = await supabase.from('subscribers').insert({
+    email,
+    locale: clean(formData.get('locale'), 5) || 'en',
+  });
+  if (error && error.code === '23505') return { ok: true };
+  return { ok: !error, error: error?.message };
+}
+
+export async function submitConciergeMessage(formData: FormData): Promise<ActionResult> {
+  const supabase = createClient();
+  const { error } = await supabase.from('inquiries').insert({
+    name: clean(formData.get('name'), 160),
+    email: clean(formData.get('email'), 200),
+    topic: clean(formData.get('topic'), 60) || 'concierge',
+    message: clean(formData.get('message')),
+    locale: clean(formData.get('locale'), 5) || 'en',
+    source: 'concierge',
+  });
+  return { ok: !error, error: error?.message };
+}
+
 export async function submitScholarshipApplication(formData: FormData): Promise<ActionResult> {
-  const supabase = await createClient();
+  const supabase = createClient();
   const { error } = await supabase.from('scholarship_applications').insert({
     name: clean(formData.get('name'), 160),
     email: clean(formData.get('email'), 200),
@@ -72,32 +98,6 @@ export async function submitScholarshipApplication(formData: FormData): Promise<
     essay: clean(formData.get('essay'), 12000),
     financial_need: clean(formData.get('financial_need'), 4000),
     locale: clean(formData.get('locale'), 5) || 'en',
-  });
-  return { ok: !error, error: error?.message };
-}
-
-export async function subscribeNewsletter(formData: FormData): Promise<ActionResult> {
-  const supabase = await createClient();
-  const email = clean(formData.get('email'), 200);
-  if (!email.includes('@')) return { ok: false, error: 'Invalid email' };
-  const { error } = await supabase.from('subscribers').insert({
-    email,
-    locale: clean(formData.get('locale'), 5) || 'en',
-  });
-  // Unique-violation means already subscribed — treat as success.
-  if (error && error.code === '23505') return { ok: true };
-  return { ok: !error, error: error?.message };
-}
-
-export async function submitConciergeMessage(formData: FormData): Promise<ActionResult> {
-  const supabase = await createClient();
-  const { error } = await supabase.from('inquiries').insert({
-    name: clean(formData.get('name'), 160),
-    email: clean(formData.get('email'), 200),
-    topic: clean(formData.get('topic'), 60) || 'concierge',
-    message: clean(formData.get('message')),
-    locale: clean(formData.get('locale'), 5) || 'en',
-    source: 'concierge',
   });
   return { ok: !error, error: error?.message };
 }

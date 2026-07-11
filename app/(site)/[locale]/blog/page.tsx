@@ -6,7 +6,6 @@ import { getDict, type Locale } from '@/lib/i18n';
 import { themesData, currentThemeIndex } from '@/lib/themesData';
 import Reveal from '@/components/Reveal';
 
-export const revalidate = 86400; // refresh daily so the current monthly theme stays accurate
 
 export async function generateMetadata({
   params,

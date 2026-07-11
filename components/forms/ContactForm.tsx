@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useTransition } from 'react';
-import { submitInquiry } from '@/app/actions';
+import { submitInquiry } from '@/lib/submit';
 import type { Dict, Locale } from '@/lib/i18n';
 
 export default function ContactForm({ dict, locale }: { dict: Dict; locale: Locale }) {
