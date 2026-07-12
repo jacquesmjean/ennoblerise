@@ -43,13 +43,34 @@
     "kicker": "Ce qui nous guide",
     "title": "Sept principes, une même vocation",
     "items": [
-      { "name": "Leadership humain", "body": "Le leadership commence par l'humanité — honorer la dignité, la voix et le potentiel de chacun." },
-      { "name": "Croissance consciente", "body": "Conscience et intention dans tout ce que nous faisons, en honorant les racines culturelles en harmonie avec la nature." },
-      { "name": "Résilience et ennoblissement", "body": "Bâtir la force émotionnelle et financière pour surmonter l'adversité et créer un impact durable." },
-      { "name": "Innovation porteuse de sens", "body": "Des solutions créatives qui aident chacun à diriger avec intégrité, vision et prospérité durable." },
-      { "name": "Prospérité partagée", "body": "Un succès mesuré non par le gain individuel, mais par le bien-être collectif et la croissance inclusive." },
-      { "name": "Paix et justice", "body": "L'équité, l'harmonie et le respect de toute vie au cœur de chaque décision." },
-      { "name": "Intendance des personnes et de la planète", "body": "Prendre soin de l'humanité et de l'environnement comme une seule et même responsabilité." }
+      {
+        "name": "Leadership humain",
+        "body": "Le leadership commence par l'humanité — honorer la dignité, la voix et le potentiel de chacun."
+      },
+      {
+        "name": "Croissance consciente",
+        "body": "Conscience et intention dans tout ce que nous faisons, en honorant les racines culturelles en harmonie avec la nature."
+      },
+      {
+        "name": "Résilience et ennoblissement",
+        "body": "Bâtir la force émotionnelle et financière pour surmonter l'adversité et créer un impact durable."
+      },
+      {
+        "name": "Innovation porteuse de sens",
+        "body": "Des solutions créatives qui aident chacun à diriger avec intégrité, vision et prospérité durable."
+      },
+      {
+        "name": "Prospérité partagée",
+        "body": "Un succès mesuré non par le gain individuel, mais par le bien-être collectif et la croissance inclusive."
+      },
+      {
+        "name": "Paix et justice",
+        "body": "L'équité, l'harmonie et le respect de toute vie au cœur de chaque décision."
+      },
+      {
+        "name": "Intendance des personnes et de la planète",
+        "body": "Prendre soin de l'humanité et de l'environnement comme une seule et même responsabilité."
+      }
     ]
   },
   "pillars": {
@@ -80,10 +101,22 @@
     "line1": "Parce que les vies que nous touchons sont les nôtres.",
     "line2": "Parce que la prospérité que nous cherchons nous cherchera toujours.",
     "stats": [
-      { "value": "8+", "label": "Pays servis sur 5 continents" },
-      { "value": "18", "label": "Ambassadeurs de programme dans le monde" },
-      { "value": "3", "label": "Piliers de programme — jeunes, éducateurs, femmes" },
-      { "value": "150 K$", "label": "Objectif de financement des deux premières années" }
+      {
+        "value": "8+",
+        "label": "Pays servis sur 5 continents"
+      },
+      {
+        "value": "18",
+        "label": "Ambassadeurs de programme dans le monde"
+      },
+      {
+        "value": "3",
+        "label": "Piliers de programme — jeunes, éducateurs, femmes"
+      },
+      {
+        "value": "150 K$",
+        "label": "Objectif de financement des deux premières années"
+      }
     ]
   },
   "founder": {
@@ -122,7 +155,9 @@
     "volunteer": "Bénévolat",
     "ambassador": "Ambassadeurs",
     "partners": "Partenaires",
-    "grants": "Subventions et bailleurs"
+    "grants": "Subventions et bailleurs",
+    "terms": "Conditions d'utilisation",
+    "privacy": "Politique de confidentialité"
   },
   "about": {
     "title": "À propos",
@@ -142,9 +177,24 @@
     "title": "Nos programmes",
     "lead": "Trois piliers. Un monde qui s'élève. Chaque programme éveille ce qui est déjà là — résilience émotionnelle, indépendance financière et leadership conscient.",
     "howKicker": "Comment chaque pilier agit",
-    "youthDetail": ["Formation à l'intelligence émotionnelle : conscience de soi, empathie et courage de diriger.", "Programmes de leadership conscient qui ancrent l'ambition dans le caractère et le service.", "Compétences entrepreneuriales et financières qui transforment le potentiel en moyens de subsistance durables.", "Cercles de mentorat reliant les jeunes à des modèles et pairs du monde entier."],
-    "educatorsDetail": ["Outils d'enseignement conscient et d'apprentissage socio-émotionnel dans chaque classe.", "Développement du leadership qui honore les éducateurs comme bâtisseurs de nations.", "Réseaux de pairs qui rompent l'isolement et renouvellent la vocation.", "Reconnaissance et soutien qui amplifient leur capacité à former les leaders de demain."],
-    "womenDetail": ["Éducation financière pour une indépendance économique durable.", "Compétences professionnelles et entrepreneuriales avec de vrais débouchés.", "Réseaux collaboratifs de femmes qui élèvent en s'élevant.", "Formation au leadership fondée sur le courage et la compassion."],
+    "youthDetail": [
+      "Formation à l'intelligence émotionnelle : conscience de soi, empathie et courage de diriger.",
+      "Programmes de leadership conscient qui ancrent l'ambition dans le caractère et le service.",
+      "Compétences entrepreneuriales et financières qui transforment le potentiel en moyens de subsistance durables.",
+      "Cercles de mentorat reliant les jeunes à des modèles et pairs du monde entier."
+    ],
+    "educatorsDetail": [
+      "Outils d'enseignement conscient et d'apprentissage socio-émotionnel dans chaque classe.",
+      "Développement du leadership qui honore les éducateurs comme bâtisseurs de nations.",
+      "Réseaux de pairs qui rompent l'isolement et renouvellent la vocation.",
+      "Reconnaissance et soutien qui amplifient leur capacité à former les leaders de demain."
+    ],
+    "womenDetail": [
+      "Éducation financière pour une indépendance économique durable.",
+      "Compétences professionnelles et entrepreneuriales avec de vrais débouchés.",
+      "Réseaux collaboratifs de femmes qui élèvent en s'élevant.",
+      "Formation au leadership fondée sur le courage et la compassion."
+    ],
     "applyTitle": "Amenez un programme dans votre communauté",
     "applyBody": "Nous intégrons de nouveaux pays, chapitres et institutions partenaires par un processus attentif, fondé d'abord sur la relation. Dites-nous où vous êtes et qui vous servez — notre équipe fera le chemin avec vous.",
     "applyCta": "Commencer la conversation"
@@ -171,10 +221,22 @@
     "customAmount": "Autre montant",
     "designationLabel": "Orientez votre don",
     "designations": [
-      { "id": "greatest", "label": "Là où le besoin est le plus grand" },
-      { "id": "youth", "label": "Ennoblissement des jeunes" },
-      { "id": "educators", "label": "Leadership enseignant" },
-      { "id": "women", "label": "Résilience financière des femmes" }
+      {
+        "id": "greatest",
+        "label": "Là où le besoin est le plus grand"
+      },
+      {
+        "id": "youth",
+        "label": "Ennoblissement des jeunes"
+      },
+      {
+        "id": "educators",
+        "label": "Leadership enseignant"
+      },
+      {
+        "id": "women",
+        "label": "Résilience financière des femmes"
+      }
     ],
     "impactHints": {
       "25": "Fournit un mois de matériel de mentorat à un jeune leader.",
@@ -202,10 +264,26 @@
     "title": "La transformation est un acte collectif.",
     "lead": "Les jeunes, les femmes et les enseignants sont les catalyseurs du changement — mais ils ne peuvent s'élever seuls. Il leur faut du mentorat, des ressources et un réseau mondial de soutien. Ce réseau, c'est vous.",
     "roles": [
-      { "id": "volunteer", "name": "Bénévole", "body": "Offrez votre temps et votre talent — mentorat, traduction, organisation, enseignement." },
-      { "id": "ambassador", "name": "Ambassadeur", "body": "Représentez un pilier dans votre pays. Incarnez l'élan ; portez la flamme." },
-      { "id": "partner", "name": "Partenaire institutionnel", "body": "Écoles, entreprises et ONG qui bâtissent des programmes avec nous." },
-      { "id": "country", "name": "Chapitre national", "body": "Amenez EnnobleRise dans un nouveau pays — nous vous accompagnons avec soin." }
+      {
+        "id": "volunteer",
+        "name": "Bénévole",
+        "body": "Offrez votre temps et votre talent — mentorat, traduction, organisation, enseignement."
+      },
+      {
+        "id": "ambassador",
+        "name": "Ambassadeur",
+        "body": "Représentez un pilier dans votre pays. Incarnez l'élan ; portez la flamme."
+      },
+      {
+        "id": "partner",
+        "name": "Partenaire institutionnel",
+        "body": "Écoles, entreprises et ONG qui bâtissent des programmes avec nous."
+      },
+      {
+        "id": "country",
+        "name": "Chapitre national",
+        "body": "Amenez EnnobleRise dans un nouveau pays — nous vous accompagnons avec soin."
+      }
     ],
     "formTitle": "Dites-nous comment vous souhaitez vous élever",
     "roleLabel": "Je souhaite rejoindre comme",
@@ -226,11 +304,26 @@
     "emailLabel": "Adresse e-mail",
     "topicLabel": "Qu'est-ce qui vous amène ?",
     "topics": [
-      { "id": "programs", "label": "Programmes et participation" },
-      { "id": "partnership", "label": "Partenariats et institutions" },
-      { "id": "giving", "label": "Dons et philanthropie" },
-      { "id": "media", "label": "Médias et conférences" },
-      { "id": "other", "label": "Autre chose" }
+      {
+        "id": "programs",
+        "label": "Programmes et participation"
+      },
+      {
+        "id": "partnership",
+        "label": "Partenariats et institutions"
+      },
+      {
+        "id": "giving",
+        "label": "Dons et philanthropie"
+      },
+      {
+        "id": "media",
+        "label": "Médias et conférences"
+      },
+      {
+        "id": "other",
+        "label": "Autre chose"
+      }
     ],
     "messageLabel": "Votre message",
     "submit": "Envoyer le message",
@@ -244,12 +337,30 @@
     "sub": "À votre service — chaleureusement, dans votre langue.",
     "greeting": "Bienvenue. Je suis le concierge d'EnnobleRise. Quel que soit le chemin qui vous a mené ici, vous êtes vu et valorisé. Comment puis-je vous servir aujourd'hui ?",
     "options": [
-      { "id": "programs", "label": "Découvrir nos programmes" },
-      { "id": "donate", "label": "Donner avec sens" },
-      { "id": "join", "label": "Devenir bénévole ou ambassadeur" },
-      { "id": "partner", "label": "Devenir partenaire ou nous amener dans mon pays" },
-      { "id": "founder", "label": "Rencontrer notre fondatrice" },
-      { "id": "human", "label": "Parler à une personne" }
+      {
+        "id": "programs",
+        "label": "Découvrir nos programmes"
+      },
+      {
+        "id": "donate",
+        "label": "Donner avec sens"
+      },
+      {
+        "id": "join",
+        "label": "Devenir bénévole ou ambassadeur"
+      },
+      {
+        "id": "partner",
+        "label": "Devenir partenaire ou nous amener dans mon pays"
+      },
+      {
+        "id": "founder",
+        "label": "Rencontrer notre fondatrice"
+      },
+      {
+        "id": "human",
+        "label": "Parler à une personne"
+      }
     ],
     "answers": {
       "programs": "Nous agissons à travers trois piliers : l'ennoblissement des jeunes (les leaders conscients de demain), le leadership enseignant (cultiver des esprits humains et résilients) et la résilience financière des femmes (le pouvoir économique avec sens). Lequel souhaitez-vous explorer ?",

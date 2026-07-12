@@ -43,13 +43,34 @@
     "kicker": "Lo que nos guía",
     "title": "Siete principios, un mismo propósito",
     "items": [
-      { "name": "Liderazgo humano", "body": "El liderazgo comienza con la humanidad: honrar la dignidad, la voz y el potencial de cada persona." },
-      { "name": "Crecimiento consciente", "body": "Conciencia e intención en todo lo que hacemos, honrando las raíces culturales en armonía con la naturaleza." },
-      { "name": "Resiliencia y ennoblecimiento", "body": "Construir la fortaleza emocional y financiera para superar la adversidad y crear un impacto duradero." },
-      { "name": "Innovación con propósito", "body": "Soluciones creativas que ayudan a liderar con integridad, visión y prosperidad de largo plazo." },
-      { "name": "Prosperidad compartida", "body": "Un éxito que no se mide por la ganancia individual, sino por el bienestar colectivo y el crecimiento inclusivo." },
-      { "name": "Paz y justicia", "body": "La equidad, la armonía y el respeto por toda forma de vida en el corazón de cada decisión." },
-      { "name": "Cuidado de las personas y del planeta", "body": "Cuidar de la humanidad y del medio ambiente como una sola responsabilidad inseparable." }
+      {
+        "name": "Liderazgo humano",
+        "body": "El liderazgo comienza con la humanidad: honrar la dignidad, la voz y el potencial de cada persona."
+      },
+      {
+        "name": "Crecimiento consciente",
+        "body": "Conciencia e intención en todo lo que hacemos, honrando las raíces culturales en armonía con la naturaleza."
+      },
+      {
+        "name": "Resiliencia y ennoblecimiento",
+        "body": "Construir la fortaleza emocional y financiera para superar la adversidad y crear un impacto duradero."
+      },
+      {
+        "name": "Innovación con propósito",
+        "body": "Soluciones creativas que ayudan a liderar con integridad, visión y prosperidad de largo plazo."
+      },
+      {
+        "name": "Prosperidad compartida",
+        "body": "Un éxito que no se mide por la ganancia individual, sino por el bienestar colectivo y el crecimiento inclusivo."
+      },
+      {
+        "name": "Paz y justicia",
+        "body": "La equidad, la armonía y el respeto por toda forma de vida en el corazón de cada decisión."
+      },
+      {
+        "name": "Cuidado de las personas y del planeta",
+        "body": "Cuidar de la humanidad y del medio ambiente como una sola responsabilidad inseparable."
+      }
     ]
   },
   "pillars": {
@@ -80,10 +101,22 @@
     "line1": "Porque las vidas que impactamos son las nuestras.",
     "line2": "Porque la prosperidad que buscamos siempre nos buscará.",
     "stats": [
-      { "value": "8+", "label": "Países servidos en 5 continentes" },
-      { "value": "18", "label": "Embajadores de programa en el mundo" },
-      { "value": "3", "label": "Pilares de programa: jóvenes, educadores, mujeres" },
-      { "value": "$150K", "label": "Meta de financiamiento en los primeros dos años" }
+      {
+        "value": "8+",
+        "label": "Países servidos en 5 continentes"
+      },
+      {
+        "value": "18",
+        "label": "Embajadores de programa en el mundo"
+      },
+      {
+        "value": "3",
+        "label": "Pilares de programa: jóvenes, educadores, mujeres"
+      },
+      {
+        "value": "$150K",
+        "label": "Meta de financiamiento en los primeros dos años"
+      }
     ]
   },
   "founder": {
@@ -122,7 +155,9 @@
     "volunteer": "Voluntariado",
     "ambassador": "Embajadores",
     "partners": "Aliados",
-    "grants": "Subvenciones y financiadores"
+    "grants": "Subvenciones y financiadores",
+    "terms": "Términos de uso",
+    "privacy": "Política de privacidad"
   },
   "about": {
     "title": "Quiénes somos",
@@ -142,9 +177,24 @@
     "title": "Nuestros programas",
     "lead": "Tres pilares. Un mundo que asciende. Cada programa despierta lo que ya está dentro: resiliencia emocional, independencia financiera y liderazgo consciente.",
     "howKicker": "Cómo actúa cada pilar",
-    "youthDetail": ["Formación en inteligencia emocional: autoconciencia, empatía y valentía para liderar.", "Programas de liderazgo consciente que arraigan la ambición en el carácter y el servicio.", "Habilidades emprendedoras y financieras que convierten el potencial en medios de vida sostenibles.", "Círculos de mentoría que conectan a los jóvenes con referentes y pares de todo el mundo."],
-    "educatorsDetail": ["Herramientas de enseñanza consciente y aprendizaje socioemocional en cada aula.", "Desarrollo de liderazgo que honra a los educadores como constructores de naciones.", "Redes de pares que rompen el aislamiento y renuevan el propósito.", "Reconocimiento y apoyo que amplifican su capacidad de formar a los líderes del futuro."],
-    "womenDetail": ["Educación financiera para una independencia económica duradera.", "Habilidades vocacionales y emprendedoras con caminos reales al mercado.", "Redes colaborativas de mujeres que elevan mientras se elevan.", "Formación de liderazgo arraigada en la valentía y la compasión."],
+    "youthDetail": [
+      "Formación en inteligencia emocional: autoconciencia, empatía y valentía para liderar.",
+      "Programas de liderazgo consciente que arraigan la ambición en el carácter y el servicio.",
+      "Habilidades emprendedoras y financieras que convierten el potencial en medios de vida sostenibles.",
+      "Círculos de mentoría que conectan a los jóvenes con referentes y pares de todo el mundo."
+    ],
+    "educatorsDetail": [
+      "Herramientas de enseñanza consciente y aprendizaje socioemocional en cada aula.",
+      "Desarrollo de liderazgo que honra a los educadores como constructores de naciones.",
+      "Redes de pares que rompen el aislamiento y renuevan el propósito.",
+      "Reconocimiento y apoyo que amplifican su capacidad de formar a los líderes del futuro."
+    ],
+    "womenDetail": [
+      "Educación financiera para una independencia económica duradera.",
+      "Habilidades vocacionales y emprendedoras con caminos reales al mercado.",
+      "Redes colaborativas de mujeres que elevan mientras se elevan.",
+      "Formación de liderazgo arraigada en la valentía y la compasión."
+    ],
     "applyTitle": "Lleva un programa a tu comunidad",
     "applyBody": "Incorporamos nuevos países, capítulos e instituciones aliadas mediante un proceso cuidadoso, centrado primero en la relación. Cuéntanos dónde estás y a quién sirves — nuestro equipo caminará contigo.",
     "applyCta": "Iniciar la conversación"
@@ -171,10 +221,22 @@
     "customAmount": "Otro monto",
     "designationLabel": "Dirige tu donativo",
     "designations": [
-      { "id": "greatest", "label": "Donde la necesidad sea mayor" },
-      { "id": "youth", "label": "Ennoblecimiento juvenil" },
-      { "id": "educators", "label": "Liderazgo docente" },
-      { "id": "women", "label": "Resiliencia financiera de las mujeres" }
+      {
+        "id": "greatest",
+        "label": "Donde la necesidad sea mayor"
+      },
+      {
+        "id": "youth",
+        "label": "Ennoblecimiento juvenil"
+      },
+      {
+        "id": "educators",
+        "label": "Liderazgo docente"
+      },
+      {
+        "id": "women",
+        "label": "Resiliencia financiera de las mujeres"
+      }
     ],
     "impactHints": {
       "25": "Provee un mes de materiales de mentoría para un joven líder.",
@@ -202,10 +264,26 @@
     "title": "La transformación es un acto colectivo.",
     "lead": "Los jóvenes, las mujeres y los maestros son los catalizadores del cambio — pero no pueden elevarse solos. Necesitan mentoría, recursos y una red global de apoyo. Esa red eres tú.",
     "roles": [
-      { "id": "volunteer", "name": "Voluntario", "body": "Ofrece tu tiempo y talento: mentoría, traducción, organización, enseñanza." },
-      { "id": "ambassador", "name": "Embajador", "body": "Representa un pilar en tu país. Encarna el ascenso; lleva la llama." },
-      { "id": "partner", "name": "Aliado institucional", "body": "Escuelas, empresas y ONG que construyen programas con nosotros." },
-      { "id": "country", "name": "Capítulo nacional", "body": "Lleva EnnobleRise a un nuevo país — te acompañamos con cuidado." }
+      {
+        "id": "volunteer",
+        "name": "Voluntario",
+        "body": "Ofrece tu tiempo y talento: mentoría, traducción, organización, enseñanza."
+      },
+      {
+        "id": "ambassador",
+        "name": "Embajador",
+        "body": "Representa un pilar en tu país. Encarna el ascenso; lleva la llama."
+      },
+      {
+        "id": "partner",
+        "name": "Aliado institucional",
+        "body": "Escuelas, empresas y ONG que construyen programas con nosotros."
+      },
+      {
+        "id": "country",
+        "name": "Capítulo nacional",
+        "body": "Lleva EnnobleRise a un nuevo país — te acompañamos con cuidado."
+      }
     ],
     "formTitle": "Cuéntanos cómo deseas elevarte",
     "roleLabel": "Quiero unirme como",
@@ -226,11 +304,26 @@
     "emailLabel": "Correo electrónico",
     "topicLabel": "¿Qué te trae a nosotros?",
     "topics": [
-      { "id": "programs", "label": "Programas y participación" },
-      { "id": "partnership", "label": "Alianzas e instituciones" },
-      { "id": "giving", "label": "Donativos y filantropía" },
-      { "id": "media", "label": "Medios y conferencias" },
-      { "id": "other", "label": "Otro asunto" }
+      {
+        "id": "programs",
+        "label": "Programas y participación"
+      },
+      {
+        "id": "partnership",
+        "label": "Alianzas e instituciones"
+      },
+      {
+        "id": "giving",
+        "label": "Donativos y filantropía"
+      },
+      {
+        "id": "media",
+        "label": "Medios y conferencias"
+      },
+      {
+        "id": "other",
+        "label": "Otro asunto"
+      }
     ],
     "messageLabel": "Tu mensaje",
     "submit": "Enviar mensaje",
@@ -244,12 +337,30 @@
     "sub": "A tu servicio — con calidez, en tu idioma.",
     "greeting": "Bienvenido. Soy la conserjería de EnnobleRise. Sea cual sea el camino que te trajo aquí, eres visto y valorado. ¿Cómo puedo servirte hoy?",
     "options": [
-      { "id": "programs", "label": "Conocer nuestros programas" },
-      { "id": "donate", "label": "Dar con propósito" },
-      { "id": "join", "label": "Ser voluntario o embajador" },
-      { "id": "partner", "label": "Ser aliado o llevarnos a mi país" },
-      { "id": "founder", "label": "Conocer a nuestra fundadora" },
-      { "id": "human", "label": "Hablar con una persona" }
+      {
+        "id": "programs",
+        "label": "Conocer nuestros programas"
+      },
+      {
+        "id": "donate",
+        "label": "Dar con propósito"
+      },
+      {
+        "id": "join",
+        "label": "Ser voluntario o embajador"
+      },
+      {
+        "id": "partner",
+        "label": "Ser aliado o llevarnos a mi país"
+      },
+      {
+        "id": "founder",
+        "label": "Conocer a nuestra fundadora"
+      },
+      {
+        "id": "human",
+        "label": "Hablar con una persona"
+      }
     ],
     "answers": {
       "programs": "Trabajamos a través de tres pilares: ennoblecimiento juvenil (líderes conscientes del mañana), liderazgo docente (mentes humanas y resilientes) y resiliencia financiera de las mujeres (poder económico con propósito). ¿Cuál te gustaría explorar?",

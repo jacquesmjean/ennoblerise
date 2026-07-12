@@ -96,6 +96,15 @@ export default function Footer({ dict, locale }: { dict: Dict; locale: Locale })
           <p className="font-body text-xs text-ivory/45">
             © {year} EnnobleRise Global Trust™ — {dict.footer.rights}
           </p>
+          <div className="flex items-center gap-5 font-body text-[11px]">
+            <Link href={`/${locale}/terms`} className="text-ivory/50 underline-offset-4 hover:text-gold-bright hover:underline transition-colors">
+              {dict.footer.terms}
+            </Link>
+            <span className="text-ivory/25">·</span>
+            <Link href={`/${locale}/privacy`} className="text-ivory/50 underline-offset-4 hover:text-gold-bright hover:underline transition-colors">
+              {dict.footer.privacy}
+            </Link>
+          </div>
           <a
             href="https://techfides.com"
             target="_blank"

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getDict, type Locale } from '@/lib/i18n';
 import JoinForm from '@/components/forms/JoinForm';
 import Reveal from '@/components/Reveal';
+import ArcDivider from '@/components/ArcDivider';
 
 export async function generateMetadata({
   params,
@@ -29,7 +30,7 @@ export default async function JoinPage({
 
   return (
     <>
-      <section className="horizon relative pt-40 pb-20 text-ivory md:pb-24">
+      <section className="horizon relative pt-40 pb-32 text-ivory md:pb-40">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <p className="kicker animate-rise text-gold-bright">{j.kicker}</p>
           <h1 className="mt-5 animate-rise font-display text-4xl font-medium md:text-6xl" style={{ animationDelay: '150ms' }}>
@@ -38,6 +39,9 @@ export default async function JoinPage({
           <p className="mt-6 max-w-2xl animate-rise font-body text-lg leading-relaxed text-ivory/85" style={{ animationDelay: '300ms' }}>
             {j.lead}
           </p>
+        </div>
+        <div className="absolute inset-x-0 bottom-0">
+          <ArcDivider fill="#ffffff" />
         </div>
       </section>
 

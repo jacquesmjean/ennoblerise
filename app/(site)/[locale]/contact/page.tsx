@@ -3,6 +3,7 @@ import { getDict, type Locale } from '@/lib/i18n';
 import ContactForm from '@/components/forms/ContactForm';
 import SocialIcons from '@/components/SocialIcons';
 import Reveal from '@/components/Reveal';
+import ArcDivider from '@/components/ArcDivider';
 
 export async function generateMetadata({
   params,
@@ -30,12 +31,15 @@ export default async function ContactPage({
 
   return (
     <>
-      <section className="horizon relative pt-40 pb-20 text-ivory md:pb-24">
+      <section className="horizon relative pt-40 pb-32 text-ivory md:pb-40">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <p className="kicker animate-rise text-gold-bright">{c.kicker}</p>
           <h1 className="mt-5 max-w-3xl animate-rise font-display text-4xl font-medium md:text-5xl" style={{ animationDelay: '150ms' }}>
             {c.title}
           </h1>
+        </div>
+        <div className="absolute inset-x-0 bottom-0">
+          <ArcDivider fill="#ffffff" />
         </div>
       </section>
 

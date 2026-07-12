@@ -4,6 +4,7 @@ import { getDict, type Locale } from '@/lib/i18n';
 import { scholarshipData } from '@/lib/scholarshipData';
 import ScholarshipForm from '@/components/forms/ScholarshipForm';
 import Reveal from '@/components/Reveal';
+import ArcDivider from '@/components/ArcDivider';
 import SunriseArc from '@/components/SunriseArc';
 
 export async function generateMetadata({
@@ -43,7 +44,7 @@ export default async function ScholarshipPage({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       {/* Hero */}
-      <section className="horizon-strong relative pt-40 pb-24 text-ivory">
+      <section className="horizon-strong aurora relative overflow-hidden pt-40 pb-36 text-ivory md:pb-48">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <p className="kicker animate-rise text-gold-bright">{c.kicker}</p>
           <h1
@@ -58,6 +59,9 @@ export default async function ScholarshipPage({
           <p className="mt-8 animate-rise font-display text-lg italic text-gold-bright" style={{ animationDelay: '420ms' }}>
             “{c.motto}”
           </p>
+        </div>
+        <div className="absolute inset-x-0 bottom-0">
+          <ArcDivider fill="#ffffff" />
         </div>
       </section>
 

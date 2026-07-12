@@ -5,6 +5,7 @@ import { getAllPosts, getPost } from '@/lib/blog';
 import { getDict, type Locale } from '@/lib/i18n';
 import { themesData, currentThemeIndex } from '@/lib/themesData';
 import Reveal from '@/components/Reveal';
+import ArcDivider from '@/components/ArcDivider';
 
 
 export async function generateMetadata({
@@ -44,7 +45,7 @@ export default async function BlogPage({
 
   return (
     <>
-      <section className="horizon relative pt-40 pb-20 text-ivory md:pb-24">
+      <section className="horizon relative pt-40 pb-32 text-ivory md:pb-40">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <p className="kicker animate-rise text-gold-bright">{featured?.category}</p>
           <h1 className="mt-5 animate-rise font-display text-5xl font-medium md:text-6xl" style={{ animationDelay: '150ms' }}>
@@ -53,6 +54,9 @@ export default async function BlogPage({
           <p className="mt-6 max-w-2xl animate-rise font-body text-lg text-ivory/85" style={{ animationDelay: '300ms' }}>
             {dict.blog.lead}
           </p>
+        </div>
+        <div className="absolute inset-x-0 bottom-0">
+          <ArcDivider fill="#ffffff" />
         </div>
       </section>
 

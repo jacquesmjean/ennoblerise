@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { getDict, type Locale } from '@/lib/i18n';
 import { aboutStory } from '@/lib/aboutStory';
 import Reveal from '@/components/Reveal';
+import ArcDivider from '@/components/ArcDivider';
 import SunriseArc from '@/components/SunriseArc';
 
 export async function generateMetadata({
@@ -55,12 +56,15 @@ export default async function AboutPage({
       />
 
       {/* Page hero */}
-      <section className="horizon relative pt-40 pb-20 text-ivory md:pb-28">
+      <section className="horizon relative pt-40 pb-32 text-ivory md:pb-44">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <p className="kicker animate-rise text-gold-bright">{dict.meta.tagline}</p>
           <h1 className="mt-5 animate-rise font-display text-5xl font-medium md:text-6xl" style={{ animationDelay: '150ms' }}>
             {dict.about.title}
           </h1>
+        </div>
+        <div className="absolute inset-x-0 bottom-0">
+          <ArcDivider fill="#ffffff" />
         </div>
       </section>
 

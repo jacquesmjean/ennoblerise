@@ -43,13 +43,34 @@
     "kicker": "What guides us",
     "title": "Seven principles, one purpose",
     "items": [
-      { "name": "Humane Leadership", "body": "Leadership begins with humanity — valuing every individual's dignity, voice, and potential." },
-      { "name": "Mindful Growth", "body": "Awareness and intention in all we do, honoring cultural roots in harmony with nature." },
-      { "name": "Resilience & Ennoblement", "body": "Building the emotional and financial strength to rise above adversity and create lasting impact." },
-      { "name": "Purpose-Driven Innovation", "body": "Creative solutions that help people lead with integrity, vision, and long-term prosperity." },
-      { "name": "Shared Prosperity", "body": "Success measured not by individual gain, but by collective well-being and inclusive growth." },
-      { "name": "Peace & Justice", "body": "Fairness, harmony, and respect for all life at the heart of every decision." },
-      { "name": "Stewardship of People & Planet", "body": "Caring for humanity and the environment as one inseparable responsibility." }
+      {
+        "name": "Humane Leadership",
+        "body": "Leadership begins with humanity — valuing every individual's dignity, voice, and potential."
+      },
+      {
+        "name": "Mindful Growth",
+        "body": "Awareness and intention in all we do, honoring cultural roots in harmony with nature."
+      },
+      {
+        "name": "Resilience & Ennoblement",
+        "body": "Building the emotional and financial strength to rise above adversity and create lasting impact."
+      },
+      {
+        "name": "Purpose-Driven Innovation",
+        "body": "Creative solutions that help people lead with integrity, vision, and long-term prosperity."
+      },
+      {
+        "name": "Shared Prosperity",
+        "body": "Success measured not by individual gain, but by collective well-being and inclusive growth."
+      },
+      {
+        "name": "Peace & Justice",
+        "body": "Fairness, harmony, and respect for all life at the heart of every decision."
+      },
+      {
+        "name": "Stewardship of People & Planet",
+        "body": "Caring for humanity and the environment as one inseparable responsibility."
+      }
     ]
   },
   "pillars": {
@@ -80,10 +101,22 @@
     "line1": "Because the lives we impact are our own.",
     "line2": "Because the prosperity we seek will always seek us.",
     "stats": [
-      { "value": "8+", "label": "Countries served across 5 continents" },
-      { "value": "18", "label": "Program ambassadors worldwide" },
-      { "value": "3", "label": "Program pillars — youth, educators, women" },
-      { "value": "$150K", "label": "Targeted funding in the first two years" }
+      {
+        "value": "8+",
+        "label": "Countries served across 5 continents"
+      },
+      {
+        "value": "18",
+        "label": "Program ambassadors worldwide"
+      },
+      {
+        "value": "3",
+        "label": "Program pillars — youth, educators, women"
+      },
+      {
+        "value": "$150K",
+        "label": "Targeted funding in the first two years"
+      }
     ]
   },
   "founder": {
@@ -122,7 +155,9 @@
     "volunteer": "Volunteer",
     "ambassador": "Ambassadors",
     "partners": "Partners",
-    "grants": "Grants & Funders"
+    "grants": "Grants & Funders",
+    "terms": "Terms of Use",
+    "privacy": "Privacy Policy"
   },
   "about": {
     "title": "About Us",
@@ -142,9 +177,24 @@
     "title": "Our Programs",
     "lead": "Three pillars. One rising world. Each program awakens what is already within — emotional resilience, financial independence, and mindful leadership.",
     "howKicker": "How each pillar works",
-    "youthDetail": ["Emotional intelligence training that builds self-awareness, empathy, and the courage to lead.", "Mindful leadership programs that ground ambition in character and service.", "Entrepreneurial and financial skills that turn potential into sustainable livelihoods.", "Mentorship circles connecting youth with global role models and peers."],
-    "educatorsDetail": ["Tools for mindful teaching and socio-emotional learning in every classroom.", "Leadership development that honors educators as nation-builders.", "Peer networks that fight isolation and renew purpose.", "Recognition and support that amplify their capacity to shape future leaders."],
-    "womenDetail": ["Financial literacy that builds lasting economic independence.", "Vocational and entrepreneurial skills with real market pathways.", "Collaborative networks of women who lift as they rise.", "Leadership formation grounded in courage and compassion."],
+    "youthDetail": [
+      "Emotional intelligence training that builds self-awareness, empathy, and the courage to lead.",
+      "Mindful leadership programs that ground ambition in character and service.",
+      "Entrepreneurial and financial skills that turn potential into sustainable livelihoods.",
+      "Mentorship circles connecting youth with global role models and peers."
+    ],
+    "educatorsDetail": [
+      "Tools for mindful teaching and socio-emotional learning in every classroom.",
+      "Leadership development that honors educators as nation-builders.",
+      "Peer networks that fight isolation and renew purpose.",
+      "Recognition and support that amplify their capacity to shape future leaders."
+    ],
+    "womenDetail": [
+      "Financial literacy that builds lasting economic independence.",
+      "Vocational and entrepreneurial skills with real market pathways.",
+      "Collaborative networks of women who lift as they rise.",
+      "Leadership formation grounded in courage and compassion."
+    ],
     "applyTitle": "Bring a program to your community",
     "applyBody": "We onboard new countries, chapters, and partner institutions through a careful, relationship-first process. Tell us where you are and who you serve — our team will walk the path with you.",
     "applyCta": "Start the conversation"
@@ -171,10 +221,22 @@
     "customAmount": "Other amount",
     "designationLabel": "Direct your gift",
     "designations": [
-      { "id": "greatest", "label": "Where the need is greatest" },
-      { "id": "youth", "label": "Youth Ennoblement" },
-      { "id": "educators", "label": "Teacher Leadership" },
-      { "id": "women", "label": "Women's Financial Resilience" }
+      {
+        "id": "greatest",
+        "label": "Where the need is greatest"
+      },
+      {
+        "id": "youth",
+        "label": "Youth Ennoblement"
+      },
+      {
+        "id": "educators",
+        "label": "Teacher Leadership"
+      },
+      {
+        "id": "women",
+        "label": "Women's Financial Resilience"
+      }
     ],
     "impactHints": {
       "25": "Provides a month of mentorship materials for one young leader.",
@@ -202,10 +264,26 @@
     "title": "Transformation is a collaborative act.",
     "lead": "Youth, women, and teachers are the catalysts of change — but they cannot rise alone. They need mentorship, resources, and a supportive global network. That network is you.",
     "roles": [
-      { "id": "volunteer", "name": "Volunteer", "body": "Give your time and skill — mentoring, translating, organizing, teaching." },
-      { "id": "ambassador", "name": "Ambassador", "body": "Represent a pillar in your country. Model the rise; carry the flame." },
-      { "id": "partner", "name": "Institutional Partner", "body": "Schools, businesses, and NGOs building programs with us." },
-      { "id": "country", "name": "Country Chapter", "body": "Bring EnnobleRise to a new nation — we onboard with care." }
+      {
+        "id": "volunteer",
+        "name": "Volunteer",
+        "body": "Give your time and skill — mentoring, translating, organizing, teaching."
+      },
+      {
+        "id": "ambassador",
+        "name": "Ambassador",
+        "body": "Represent a pillar in your country. Model the rise; carry the flame."
+      },
+      {
+        "id": "partner",
+        "name": "Institutional Partner",
+        "body": "Schools, businesses, and NGOs building programs with us."
+      },
+      {
+        "id": "country",
+        "name": "Country Chapter",
+        "body": "Bring EnnobleRise to a new nation — we onboard with care."
+      }
     ],
     "formTitle": "Tell us how you wish to rise",
     "roleLabel": "I want to join as",
@@ -226,11 +304,26 @@
     "emailLabel": "Email address",
     "topicLabel": "What brings you to us?",
     "topics": [
-      { "id": "programs", "label": "Programs & participation" },
-      { "id": "partnership", "label": "Partnership & institutions" },
-      { "id": "giving", "label": "Giving & philanthropy" },
-      { "id": "media", "label": "Media & speaking" },
-      { "id": "other", "label": "Something else" }
+      {
+        "id": "programs",
+        "label": "Programs & participation"
+      },
+      {
+        "id": "partnership",
+        "label": "Partnership & institutions"
+      },
+      {
+        "id": "giving",
+        "label": "Giving & philanthropy"
+      },
+      {
+        "id": "media",
+        "label": "Media & speaking"
+      },
+      {
+        "id": "other",
+        "label": "Something else"
+      }
     ],
     "messageLabel": "Your message",
     "submit": "Send message",
@@ -244,12 +337,30 @@
     "sub": "At your service — warmly, in your language.",
     "greeting": "Welcome. I am the EnnobleRise concierge. However you arrived here, you are seen and valued. How may I serve you today?",
     "options": [
-      { "id": "programs", "label": "Learn about our programs" },
-      { "id": "donate", "label": "Give with purpose" },
-      { "id": "join", "label": "Volunteer or become an ambassador" },
-      { "id": "partner", "label": "Partner or bring us to my country" },
-      { "id": "founder", "label": "Meet our founder" },
-      { "id": "human", "label": "Speak with a person" }
+      {
+        "id": "programs",
+        "label": "Learn about our programs"
+      },
+      {
+        "id": "donate",
+        "label": "Give with purpose"
+      },
+      {
+        "id": "join",
+        "label": "Volunteer or become an ambassador"
+      },
+      {
+        "id": "partner",
+        "label": "Partner or bring us to my country"
+      },
+      {
+        "id": "founder",
+        "label": "Meet our founder"
+      },
+      {
+        "id": "human",
+        "label": "Speak with a person"
+      }
     ],
     "answers": {
       "programs": "We work through three pillars: Youth Ennoblement (mindful leaders of tomorrow), Teacher Leadership (nurturing humane and resilient minds), and Women's Financial Resilience (economic power with purpose). Which would you like to explore?",
