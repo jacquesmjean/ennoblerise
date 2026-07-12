@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import type { Dict, Locale } from '@/lib/i18n';
 import { locales, localeNames } from '@/lib/i18n';
+import ScrollProgress from './ScrollProgress';
 
 export default function Header({ dict, locale }: { dict: Dict; locale: Locale }) {
   const [scrolled, setScrolled] = useState(false);
@@ -48,6 +49,10 @@ export default function Header({ dict, locale }: { dict: Dict; locale: Locale })
           : 'bg-transparent'
       }`}
     >
+      <ScrollProgress />
+      <a href="#main" className="skip-link font-body">
+        Skip to content
+      </a>
       <div className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-5 md:px-8">
         <Link href={`/${locale}`} className="flex items-center gap-3" aria-label={dict.meta.siteName}>
           <Image
@@ -74,7 +79,8 @@ export default function Header({ dict, locale }: { dict: Dict; locale: Locale })
             <Link
               key={item.href}
               href={item.href}
-              className={`font-body text-[13px] font-semibold uppercase tracking-[0.12em] transition-colors ${
+              data-active={pathname.startsWith(item.href)}
+              className={`nav-link font-body text-[13px] font-semibold uppercase tracking-[0.12em] transition-colors ${
                 pathname.startsWith(item.href)
                   ? 'text-gold-bright'
                   : 'text-ivory/80 hover:text-gold-bright'

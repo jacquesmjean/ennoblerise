@@ -4,6 +4,22 @@ import Link from 'next/link';
 import { getDict, type Locale } from '@/lib/i18n';
 import Reveal from '@/components/Reveal';
 import SunriseArc from '@/components/SunriseArc';
+import ArcDivider from '@/components/ArcDivider';
+import CountUp from '@/components/CountUp';
+
+/** Server-rendered word-by-word rise animation. */
+function Words({ text, from = 0, step = 90 }: { text: string; from?: number; step?: number }) {
+  return (
+    <>
+      {text.split(' ').map((w, i) => (
+        <span key={i} className="word-rise" style={{ animationDelay: `${from + i * step}ms` }}>
+          {w}
+          {' '}
+        </span>
+      ))}
+    </>
+  );
+}
 
 export async function generateMetadata({
   params,
@@ -37,7 +53,7 @@ export default async function HomePage({
   return (
     <>
       {/* ——— HERO ——— */}
-      <section className="horizon-strong relative flex min-h-[100svh] items-center overflow-hidden text-ivory">
+      <section className="horizon-strong aurora relative flex min-h-[100svh] items-center overflow-hidden text-ivory">
         <Image
           src="/images/hero.jpg"
           alt="A joyful, diverse global community standing together in bright daylight"
@@ -53,13 +69,15 @@ export default async function HomePage({
           <p className="kicker animate-rise text-gold-bright" style={{ animationDelay: '100ms' }}>
             {dict.hero.kicker}
           </p>
-          <h1
-            className="mt-6 max-w-4xl animate-rise font-display text-[13vw] font-medium leading-[1.04] sm:text-6xl md:text-7xl"
-            style={{ animationDelay: '250ms' }}
-          >
-            {dict.hero.titleA}{' '}
-            <em className="text-gold-bright">{dict.hero.titleEm}</em>.
-            <span className="mt-2 block">{dict.hero.titleB}</span>
+          <h1 className="mt-6 max-w-4xl font-display text-[13vw] font-medium leading-[1.04] sm:text-6xl md:text-7xl">
+            <Words text={dict.hero.titleA} from={250} />
+            <em className="word-rise text-shimmer" style={{ animationDelay: `${250 + dict.hero.titleA.split(' ').length * 90}ms` }}>
+              {dict.hero.titleEm}
+            </em>
+            <span className="word-rise" style={{ animationDelay: `${340 + dict.hero.titleA.split(' ').length * 90}ms` }}>.</span>
+            <span className="mt-2 block">
+              <Words text={dict.hero.titleB} from={500 + dict.hero.titleA.split(' ').length * 90} step={70} />
+            </span>
           </h1>
           <p
             className="mt-8 max-w-2xl animate-rise font-body text-lg leading-relaxed text-ivory/85"
@@ -76,8 +94,12 @@ export default async function HomePage({
             </Link>
           </div>
         </div>
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-shimmer">
-          <p className="kicker text-ivory/60">{dict.hero.scroll} ↓</p>
+        <div className="absolute bottom-[88px] left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 md:bottom-[128px]">
+          <p className="kicker text-ivory/70">{dict.hero.scroll}</p>
+          <div className="scroll-hint" />
+        </div>
+        <div className="absolute inset-x-0 bottom-0 z-[5]">
+          <ArcDivider fill="#ffffff" />
         </div>
       </section>
 
@@ -113,7 +135,7 @@ export default async function HomePage({
       </section>
 
       {/* ——— MISSION / VISION ——— */}
-      <section className="horizon py-24 text-ivory md:py-28">
+      <section className="horizon relative py-24 pb-36 text-ivory md:py-28 md:pb-48">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-2 md:px-8">
           <Reveal>
             <div className="border-t border-gold/50 pt-8">
@@ -132,6 +154,9 @@ export default async function HomePage({
             </div>
           </Reveal>
         </div>
+        <div className="absolute inset-x-0 bottom-0">
+          <ArcDivider fill="#F5F3F0" />
+        </div>
       </section>
 
       {/* ——— VALUES ——— */}
@@ -146,7 +171,7 @@ export default async function HomePage({
           <div className="mt-14 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
             {dict.values.items.map((v, i) => (
               <Reveal key={v.name} delay={i * 80}>
-                <div className="group border-t border-navy/15 pt-6 transition-colors hover:border-gold">
+                <div className="value-card group border-t border-navy/15 p-4 pt-6 transition-colors hover:border-gold">
                   <span className="font-display text-sm text-gold">{String(i + 1).padStart(2, '0')}</span>
                   <h3 className="mt-2 font-display text-xl font-semibold text-navy">{v.name}</h3>
                   <p className="mt-3 font-body text-[15px] leading-relaxed text-ink/75">{v.body}</p>
@@ -210,7 +235,7 @@ export default async function HomePage({
       </section>
 
       {/* ——— IMPACT ——— */}
-      <section className="horizon-strong py-24 text-ivory md:py-32">
+      <section className="horizon-strong aurora relative overflow-hidden py-24 pb-40 text-ivory md:py-32 md:pb-52">
         <div className="mx-auto max-w-7xl px-5 text-center md:px-8">
           <Reveal>
             <p className="kicker text-gold-bright">{dict.impact.kicker}</p>
@@ -224,12 +249,17 @@ export default async function HomePage({
             {dict.impact.stats.map((s, i) => (
               <Reveal key={s.label} delay={i * 100}>
                 <div className="border-t border-gold/40 pt-6">
-                  <p className="font-display text-4xl font-semibold text-gold-bright md:text-5xl">{s.value}</p>
+                  <p className="font-display text-4xl font-semibold text-gold-bright md:text-5xl">
+                    <CountUp value={s.value} />
+                  </p>
                   <p className="mt-3 font-body text-xs leading-relaxed text-ivory/70">{s.label}</p>
                 </div>
               </Reveal>
             ))}
           </div>
+        </div>
+        <div className="absolute inset-x-0 bottom-0">
+          <ArcDivider fill="#ffffff" />
         </div>
       </section>
 

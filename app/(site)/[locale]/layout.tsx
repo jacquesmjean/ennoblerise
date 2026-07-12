@@ -97,7 +97,7 @@ export default async function LocaleLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
         />
         <Header dict={dict} locale={locale as Locale} />
-        <main>{children}</main>
+        <main id="main">{children}</main>
         <Footer dict={dict} locale={locale as Locale} />
         <Concierge dict={dict} locale={locale as Locale} />
       </body>
