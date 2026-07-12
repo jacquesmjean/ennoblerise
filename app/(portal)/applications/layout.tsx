@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import { display, body } from '@/lib/fonts';
-import PortalShell from '@/components/portal/PortalShell';
+import PortalShell from '@/components/applications/PortalShell';
 import '@/app/globals.css';
 
 export const metadata: Metadata = {
-  title: 'Operations Portal | EnnobleRise Global Trust',
+  title: 'Applications | EnnobleRise Global Trust',
   robots: { index: false, follow: false },
 };
 

@@ -8,15 +8,18 @@ import type { Session } from '@supabase/supabase-js';
 import { createClient } from '@/lib/supabase/client';
 
 const nav = [
-  { href: '/portal', label: 'Dashboard', icon: '◆' },
-  { href: '/portal/inquiries', label: 'Front Desk', icon: '☎' },
-  { href: '/portal/applications', label: 'Applications', icon: '✍' },
-  { href: '/portal/donations', label: 'Donations', icon: '♥' },
-  { href: '/portal/grants', label: 'Grants', icon: '⛁' },
-  { href: '/portal/scholarships', label: 'Scholarships', icon: '🎓' },
-  { href: '/portal/contracts', label: 'Contracts', icon: '§' },
-  { href: '/portal/partners', label: 'Partners & Countries', icon: '⚑' },
-  { href: '/portal/staff', label: 'Staff', icon: '⚭' },
+  { href: '/applications', label: 'All apps', icon: '▦' },
+  { href: '/applications/finance', label: 'Financial Dashboard', icon: '📊' },
+  { href: '/applications/grants', label: 'Grant Writing', icon: '✦' },
+  { href: '/applications/contracts', label: 'Contracts', icon: '§' },
+  { href: '/applications/donations', label: 'Donations', icon: '♥' },
+  { href: '/applications/scholarships', label: 'Scholarships', icon: '🎓' },
+  { href: '/applications/partners', label: 'Partners & Countries', icon: '⚑' },
+  { href: '/applications/onboarding', label: 'Employee Onboarding', icon: '⚭' },
+  { href: '/applications/inquiries', label: 'Front Desk', icon: '☎' },
+  { href: '/applications/applications', label: 'Join Applications', icon: '✍' },
+  { href: '/applications/ledger', label: 'Ledger', icon: '⛁' },
+  { href: '/applications/staff', label: 'Staff', icon: '◇' },
 ];
 
 export default function PortalShell({ children }: { children: React.ReactNode }) {
@@ -63,7 +66,7 @@ export default function PortalShell({ children }: { children: React.ReactNode })
               <p className="font-display text-lg font-semibold text-ivory">
                 Ennoble<span className="text-gold-bright">Rise</span>™
               </p>
-              <p className="font-body text-[10px] uppercase tracking-wider2 text-gold-bright">Operations Portal</p>
+              <p className="font-body text-[10px] uppercase tracking-wider2 text-gold-bright">Applications</p>
             </div>
           </div>
           <div className="mt-8 space-y-4">
@@ -107,19 +110,19 @@ export default function PortalShell({ children }: { children: React.ReactNode })
   return (
     <div className="flex min-h-screen bg-sand">
       <aside className="fixed inset-y-0 left-0 z-40 hidden w-60 flex-col bg-navy md:flex">
-        <Link href="/portal" className="flex items-center gap-2.5 px-5 py-6">
+        <Link href="/applications" className="flex items-center gap-2.5 px-5 py-6">
           <Image src="/images/emblem.png" alt="" width={34} height={34} className="h-9 w-9 object-contain" />
           <div>
             <p className="font-display text-sm font-semibold text-ivory">
               Ennoble<span className="text-gold-bright">Rise</span>™
             </p>
-            <p className="font-body text-[9px] uppercase tracking-wider2 text-gold-bright">Operations</p>
+            <p className="font-body text-[9px] uppercase tracking-wider2 text-gold-bright">Applications</p>
           </div>
         </Link>
         <nav className="flex-1 space-y-0.5 px-3">
           {nav.map((item) => {
             const active =
-              item.href === '/portal' ? pathname === '/portal' : pathname.startsWith(item.href);
+              item.href === '/applications' ? pathname === '/applications' : pathname.startsWith(item.href);
             return (
               <Link
                 key={item.href}

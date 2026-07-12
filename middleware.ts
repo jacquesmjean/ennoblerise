@@ -40,7 +40,7 @@ export function middleware(request: NextRequest) {
   if (
     pathname.startsWith('/_next') ||
     pathname.startsWith('/api') ||
-    pathname.startsWith('/portal') ||
+    pathname.startsWith('/applications') ||
     pathname.includes('.')
   ) {
     return NextResponse.next();
@@ -66,5 +66,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!_next|api|portal|.*\\..*).*)'],
+  matcher: ['/((?!_next|api|applications|.*\\..*).*)'],
 };

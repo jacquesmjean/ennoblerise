@@ -57,13 +57,13 @@ export default function Dashboard() {
 
   const cards = counts
     ? [
-        card('Front desk — new', counts.newInquiries, '/portal/inquiries', `${counts.inquiries} total inquiries`),
-        card('New applications', counts.applications, '/portal/applications', 'volunteers · ambassadors · partners'),
-        card('Giving to date', `$${counts.donationsTotal.toLocaleString()}`, '/portal/donations', `${counts.donationsCount} gifts & pledges`),
-        card('Grants in pipeline', counts.grants, '/portal/grants', 'research → reporting'),
-        card('Contracts', counts.contracts, '/portal/contracts', 'NDA · partner · scholarship'),
-        card('Partners', counts.partners, '/portal/partners', `${counts.chapters} country chapters`),
-        card('Newsletter subscribers', counts.subscribers, '/portal/inquiries', 'letters of rise'),
+        card('Front desk — new', counts.newInquiries, '/applications/inquiries', `${counts.inquiries} total inquiries`),
+        card('New applications', counts.applications, '/applications/applications', 'volunteers · ambassadors · partners'),
+        card('Giving to date', `$${counts.donationsTotal.toLocaleString()}`, '/applications/donations', `${counts.donationsCount} gifts & pledges`),
+        card('Grants in pipeline', counts.grants, '/applications/grants', 'research → reporting'),
+        card('Contracts', counts.contracts, '/applications/contracts', 'NDA · partner · scholarship'),
+        card('Partners', counts.partners, '/applications/partners', `${counts.chapters} country chapters`),
+        card('Newsletter subscribers', counts.subscribers, '/applications/inquiries', 'letters of rise'),
       ]
     : [];
 
@@ -93,10 +93,10 @@ export default function Dashboard() {
       <div className="portal-card mt-8">
         <h2 className="font-display text-lg font-semibold text-navy">Quick actions</h2>
         <div className="mt-4 flex flex-wrap gap-3">
-          <Link href="/portal/grants" className="btn-gold !px-5 !py-2.5 text-xs">✦ Write a grant</Link>
-          <Link href="/portal/contracts" className="btn-ghost-dark !px-5 !py-2.5 text-xs">§ Generate a contract</Link>
-          <Link href="/portal/partners" className="btn-ghost-dark !px-5 !py-2.5 text-xs">⚑ Onboard a country</Link>
-          <Link href="/portal/staff" className="btn-ghost-dark !px-5 !py-2.5 text-xs">⚭ Manage staff</Link>
+          <Link href="/applications/grants" className="btn-gold !px-5 !py-2.5 text-xs">✦ Write a grant</Link>
+          <Link href="/applications/contracts" className="btn-ghost-dark !px-5 !py-2.5 text-xs">§ Generate a contract</Link>
+          <Link href="/applications/partners" className="btn-ghost-dark !px-5 !py-2.5 text-xs">⚑ Onboard a country</Link>
+          <Link href="/applications/staff" className="btn-ghost-dark !px-5 !py-2.5 text-xs">⚭ Manage staff</Link>
         </div>
       </div>
     </div>

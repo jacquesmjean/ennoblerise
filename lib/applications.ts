@@ -20,6 +20,54 @@ export type Collection = {
 };
 
 export const collections: Record<string, Collection> = {
+  onboarding: {
+    table: 'employee_onboarding',
+    title: 'Employee Onboarding',
+    singular: 'team member',
+    description: 'Onboard employees, contractors, ambassadors, and volunteers — from offer to active.',
+    statusKey: 'stage',
+    statuses: ['offer', 'paperwork', 'provisioning', 'orientation', 'active', 'offboarded'],
+    listColumns: [
+      { key: 'full_name', label: 'Name' },
+      { key: 'role', label: 'Role' },
+      { key: 'worker_type', label: 'Type' },
+      { key: 'country', label: 'Country' },
+      { key: 'start_date', label: 'Start' },
+    ],
+    fields: [
+      { key: 'full_name', label: 'Full name', type: 'text', required: true },
+      { key: 'email', label: 'Email', type: 'email' },
+      { key: 'role', label: 'Role / title', type: 'text' },
+      { key: 'worker_type', label: 'Type', type: 'select', options: ['employee', 'contractor', 'volunteer', 'ambassador'] },
+      { key: 'start_date', label: 'Start date', type: 'date' },
+      { key: 'country', label: 'Country', type: 'text' },
+      { key: 'notes', label: 'Notes', type: 'textarea' },
+    ],
+  },
+  ledger: {
+    table: 'ledger',
+    title: 'Ledger',
+    singular: 'entry',
+    description: 'Income and expense entries that feed the Financial Dashboard.',
+    statusKey: 'type',
+    statuses: ['income', 'expense'],
+    listColumns: [
+      { key: 'entry_date', label: 'Date' },
+      { key: 'category', label: 'Category' },
+      { key: 'description', label: 'Description' },
+      { key: 'program', label: 'Program' },
+      { key: 'amount', label: 'Amount' },
+    ],
+    fields: [
+      { key: 'entry_date', label: 'Date', type: 'date', required: true },
+      { key: 'type', label: 'Type', type: 'select', options: ['income', 'expense'] },
+      { key: 'category', label: 'Category', type: 'text' },
+      { key: 'description', label: 'Description', type: 'text' },
+      { key: 'amount', label: 'Amount (USD)', type: 'number', required: true },
+      { key: 'program', label: 'Program', type: 'select', options: ['general', 'youth', 'educators', 'women', 'scholarship'] },
+      { key: 'method', label: 'Method', type: 'text' },
+    ],
+  },
   inquiries: {
     table: 'inquiries',
     title: 'Inquiries',

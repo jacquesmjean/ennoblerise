@@ -40,13 +40,15 @@ export default async function HomePage({
       <section className="horizon-strong relative flex min-h-[100svh] items-center overflow-hidden text-ivory">
         <Image
           src="/images/hero.jpg"
-          alt="A community standing together at sunrise, looking toward the light"
+          alt="A joyful, diverse global community standing together in bright daylight"
           fill
           priority
-          className="object-cover opacity-40"
+          className="object-cover opacity-90"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-navy/30" />
+        {/* Left scrim for text legibility — keeps the right side bright and vibrant */}
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/70 to-navy/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent" />
         <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-24 pt-36 md:px-8">
           <p className="kicker animate-rise text-gold-bright" style={{ animationDelay: '100ms' }}>
             {dict.hero.kicker}
@@ -297,10 +299,10 @@ export default async function HomePage({
           src="/images/unity.jpg"
           alt=""
           fill
-          className="object-cover opacity-25"
+          className="object-cover opacity-50"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/80 to-navy/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/85 to-navy/40" />
         <div className="relative z-10 mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <p className="kicker text-gold-bright">{dict.cta.kicker}</p>

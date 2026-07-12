@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import { createClient } from '@/lib/supabase/client';
-import type { Collection } from '@/lib/portal';
+import type { Collection } from '@/lib/applications';
 
 type Row = Record<string, unknown> & { id: string; created_at?: string };
 
@@ -13,6 +13,13 @@ const stageColors: Record<string, string> = {
   interest: 'bg-blue-100 text-blue-900',
   research: 'bg-blue-100 text-blue-900',
   invited: 'bg-blue-100 text-blue-900',
+  offer: 'bg-blue-100 text-blue-900',
+  income: 'bg-emerald-100 text-emerald-900',
+  expense: 'bg-orange-100 text-orange-900',
+  paperwork: 'bg-amber-100 text-amber-900',
+  provisioning: 'bg-purple-100 text-purple-900',
+  orientation: 'bg-purple-100 text-purple-900',
+  offboarded: 'bg-stone-200 text-stone-700',
   in_progress: 'bg-amber-100 text-amber-900',
   reviewing: 'bg-amber-100 text-amber-900',
   conversation: 'bg-amber-100 text-amber-900',
