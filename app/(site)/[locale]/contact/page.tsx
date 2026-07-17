@@ -48,17 +48,23 @@ export default async function ContactPage({
           <div className="md:col-span-4">
             <Reveal>
               <p className="kicker text-gold">{c.reachTitle}</p>
-              <div className="mt-6 space-y-4 font-body text-ink/85">
+              <div className="mt-6 space-y-3 font-body text-ink/85">
                 <p>
                   <a href="mailto:Engage@EnnobleRise.Org" className="border-b border-gold/60 pb-0.5 hover:text-gold transition-colors">
                     Engage@EnnobleRise.Org
                   </a>
                 </p>
                 <p>
-                  <a href="tel:+12245361603" className="hover:text-gold transition-colors">
-                    +1 (224) 536-1603
+                  <a href="mailto:Scholarship@EnnobleRise.Org" className="border-b border-gold/60 pb-0.5 hover:text-gold transition-colors">
+                    Scholarship@EnnobleRise.Org
                   </a>
                 </p>
+                <p>
+                  <a href="mailto:Donate@EnnobleRise.Org" className="border-b border-gold/60 pb-0.5 hover:text-gold transition-colors">
+                    Donate@EnnobleRise.Org
+                  </a>
+                </p>
+                <p className="font-body text-sm text-ink/55">Toll-free line coming soon.</p>
               </div>
               <div className="mt-8 rounded-none bg-navy p-5">
                 <SocialIcons />

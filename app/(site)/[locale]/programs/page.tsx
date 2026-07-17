@@ -59,6 +59,25 @@ export default async function ProgramsPage({
         </div>
       </section>
 
+      {/* Certification / Legacy Partnership */}
+      <section className="bg-ivory pt-16 md:pt-20">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <Reveal>
+            <div className="border border-gold/30 bg-sand/60 p-7 md:p-9">
+              <h2 className="font-display text-xl font-semibold text-navy md:text-2xl">{pd.certTitle}</h2>
+              <p className="mt-3 max-w-4xl font-body leading-relaxed text-ink/80">{pd.certBody}</p>
+              <div className="mt-5 flex flex-wrap gap-2.5">
+                {pd.certBadges.map((b) => (
+                  <span key={b} className="border border-navy/15 bg-white px-3 py-1.5 font-body text-[12.5px] font-semibold text-navy">
+                    {b}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {pillars.map((p, i) => (
         <section
           key={p.id}

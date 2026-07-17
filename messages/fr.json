@@ -93,7 +93,8 @@
       "program": "Résilience financière des femmes : libérer le pouvoir économique avec sens",
       "body": "Les femmes sont les ancres des familles et des sociétés. Par le mentorat, l'éducation et le développement du leadership fondés sur la résilience émotionnelle, l'indépendance financière et la collaboration, nous ennoblissons les femmes pour qu'elles possèdent leur pouvoir et fassent entendre leur brillance — avec le courage d'être vues, entendues et valorisées. Quand elle s'élève, le monde s'élève avec elle.",
       "cta": "Découvrir le pilier Femmes"
-    }
+    },
+    "orbitHint": "Parcourez chaque cercle pour rencontrer celles et ceux au cœur de notre mission."
   },
   "impact": {
     "kicker": "La force d'un élan collectif",
@@ -126,7 +127,9 @@
     "body1": "Chaque mouvement commence par une histoire. Celle d'EnnobleRise Global Trust ne commence pas dans une salle de conseil, mais dans une enfance marquée par la guerre civile, la résilience et une foi inébranlable en la dignité de l'esprit humain.",
     "body2": "Le parcours de la Dre Kas Henry — retracé dans son best-seller international Ennobled for Success: From Civil War to a US CFO — mène de l'adversité au leadership mondial, comme stratège financière, professeure et dirigeante d'entreprise. Les leçons les plus profondes ne sont pas venues des tableurs ni des conseils d'administration. Elles sont venues des personnes : des enseignants qui forment les jeunes esprits, des femmes qui portent leur famille dans l'épreuve, et des jeunes dont le potentiel n'attendait qu'une opportunité.",
     "mantra": "Bâtir pour durer et ennoblir pour réussir",
-    "cta": "Lire son histoire"
+    "cta": "Lire son histoire",
+    "bookLink": "Ennobled for Success — le livre sur Amazon",
+    "marquisLink": "Marquis Who's Who distingue la Dre Kasthuri Henry"
   },
   "scholarshipCallout": {
     "kicker": "La bourse Michael G. Henry Legacy Scholarship™",
@@ -169,7 +172,80 @@
     "ambassadorsTitle": "Nos ambassadeurs",
     "ambassadorsBody": "Le changement commence par ceux qui montrent l'exemple. Nos ambassadeurs — jeunes, éducateurs et femmes — incarnent l'esprit de s'élever avec intention en élevant les autres. Chacun apporte une voix unique, une expérience vécue et une perspective culturelle, modelant un leadership fondé sur la dignité, la compassion et le service. Par leurs histoires et leur mentorat, ils déclenchent une onde de transformation à travers les continents.",
     "partnersTitle": "Nos partenaires",
-    "partnersBody": "Nous croyons au partenariat public-privé-communautaire. Institutions, entreprises et organisations communautaires rejoignent EnnobleRise pour bâtir des systèmes inclusifs fondés sur la paix, l'équité et la prospérité collective."
+    "partnersBody": "Nous croyons au partenariat public-privé-communautaire. Voici les partenaires envisagés au lancement ; logos et liens seront ajoutés à mesure que chaque partenariat se formalise.",
+    "advisoryKicker": "Une guidance venue du monde entier",
+    "advisoryTitle": "Notre conseil consultatif",
+    "advisoryBody": "Un conseil mondial de leaders de la finance, de l'éducation et de l'impact social qui accompagnent la mission. Les membres sont en cours de confirmation — profils, photos et pays apparaîtront bientôt ici.",
+    "advisorySoon": "À venir",
+    "advisoryCountry": "Nom · Pays",
+    "partnersNote": "Les accords de partenariat sont gérés via notre plateforme d'opérations, puis reflétés ici avec la marque et le site de chaque partenaire.",
+    "partnerGroups": [
+      {
+        "label": "Partenaire technologique",
+        "items": [
+          {
+            "name": "TechFides",
+            "url": "https://techfides.com"
+          }
+        ]
+      },
+      {
+        "label": "Partenaire de programme",
+        "items": [
+          {
+            "name": "Ville de Burbank, Illinois",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "label": "Partenaires Legacy",
+        "items": [
+          {
+            "name": "Ennobled for Success Institute",
+            "url": ""
+          },
+          {
+            "name": "Ennobled for Success Publishing",
+            "url": ""
+          },
+          {
+            "name": "Divisions de KasHenry LLC",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "label": "Partenaire de service",
+        "items": [
+          {
+            "name": "Destiny Connect Foundation",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "label": "Partenaires éducatifs",
+        "items": [
+          {
+            "name": "ASBM University, Bhubaneswar, Inde",
+            "url": ""
+          },
+          {
+            "name": "ICBM School of Business, Hyderabad, Inde",
+            "url": ""
+          },
+          {
+            "name": "École partenaire, Belize",
+            "url": ""
+          },
+          {
+            "name": "Bibliothèque communautaire, Haïti",
+            "url": ""
+          }
+        ]
+      }
+    ]
   },
   "programs": {
     "metaTitle": "Nos programmes | Piliers Jeunesse, Éducateurs et Femmes — EnnobleRise",

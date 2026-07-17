@@ -6,6 +6,7 @@ import Reveal from '@/components/Reveal';
 import SunriseArc from '@/components/SunriseArc';
 import ArcDivider from '@/components/ArcDivider';
 import CountUp from '@/components/CountUp';
+import CircularPillars from '@/components/CircularPillars';
 
 /** Server-rendered word-by-word rise animation. */
 function Words({ text, from = 0, step = 90 }: { text: string; from?: number; step?: number }) {
@@ -43,12 +44,6 @@ export default async function HomePage({
   const { locale: l } = await params;
   const locale = l as Locale;
   const dict = getDict(locale);
-
-  const pillars = [
-    { key: 'youth', data: dict.pillars.youth, img: '/images/pillar-youth.jpg', href: `/${locale}/programs#youth` },
-    { key: 'educators', data: dict.pillars.educators, img: '/images/pillar-educators.jpg', href: `/${locale}/programs#educators` },
-    { key: 'women', data: dict.pillars.women, img: '/images/pillar-women.jpg', href: `/${locale}/programs#women` },
-  ];
 
   return (
     <>
@@ -182,55 +177,19 @@ export default async function HomePage({
         </div>
       </section>
 
-      {/* ——— PILLARS ——— */}
+      {/* ——— PILLARS (circular navigator) ——— */}
       <section className="grain bg-ivory py-24 md:py-32">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
-          <Reveal className="max-w-3xl">
+          <Reveal className="mx-auto max-w-3xl text-center">
             <p className="kicker text-gold">{dict.pillars.kicker}</p>
             <h2 className="mt-5 font-display text-3xl font-semibold text-navy md:text-[2.6rem]">
               {dict.pillars.title}
             </h2>
+            <p className="mt-5 font-body text-ink/70">{dict.pillars.orbitHint}</p>
           </Reveal>
-          <div className="mt-16 space-y-20">
-            {pillars.map((p, i) => (
-              <Reveal key={p.key}>
-                <article
-                  className={`grid items-center gap-10 md:grid-cols-12 ${
-                    i % 2 === 1 ? '' : ''
-                  }`}
-                >
-                  <div className={`relative aspect-[4/3] overflow-hidden md:col-span-6 ${i % 2 === 1 ? 'md:order-2' : ''}`}>
-                    <Image
-                      src={p.img}
-                      alt={p.data.program}
-                      fill
-                      className="object-cover transition-transform duration-700 hover:scale-[1.03]"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                    />
-                    <div className="absolute inset-0 ring-1 ring-inset ring-navy/10" />
-                  </div>
-                  <div className={`md:col-span-5 ${i % 2 === 1 ? 'md:order-1 md:col-start-1' : 'md:col-start-8'}`}>
-                    <span className="font-display text-6xl font-light text-gold/40">
-                      {String(i + 1).padStart(2, '0')}
-                    </span>
-                    <h3 className="mt-2 font-display text-2xl font-semibold text-navy md:text-3xl">
-                      {p.data.name}
-                    </h3>
-                    <p className="mt-1 font-body text-sm font-semibold uppercase tracking-widest text-gold">
-                      {p.data.program}
-                    </p>
-                    <p className="mt-5 font-body leading-[1.8] text-ink/85">{p.data.body}</p>
-                    <Link
-                      href={p.href}
-                      className="mt-6 inline-block border-b border-gold pb-0.5 font-body text-sm font-semibold text-navy transition-colors hover:text-gold"
-                    >
-                      {p.data.cta} →
-                    </Link>
-                  </div>
-                </article>
-              </Reveal>
-            ))}
-          </div>
+          <Reveal delay={120} className="mt-14 md:mt-20">
+            <CircularPillars dict={dict} locale={locale} />
+          </Reveal>
         </div>
       </section>
 
@@ -294,6 +253,16 @@ export default async function HomePage({
               <Link href={`/${locale}/about`} className="btn-ghost-dark mt-8">
                 {dict.founder.cta}
               </Link>
+              <div className="mt-6 flex flex-col gap-2">
+                <a href="https://www.amazon.com/Ennobled-Success-Civil-War-CFO-ebook/dp/B0DNP1S7GJ" target="_blank" rel="noopener" className="group inline-flex items-center gap-2 font-body text-sm text-navy transition-colors hover:text-gold">
+                  <span className="text-gold">↗</span>
+                  <span className="border-b border-gold/50 pb-0.5 group-hover:border-gold">{dict.founder.bookLink}</span>
+                </a>
+                <a href="https://blog.marquiswhoswho.com/kasthuri-henry-phd-ctp" target="_blank" rel="noopener" className="group inline-flex items-center gap-2 font-body text-sm text-navy transition-colors hover:text-gold">
+                  <span className="text-gold">↗</span>
+                  <span className="border-b border-gold/50 pb-0.5 group-hover:border-gold">{dict.founder.marquisLink}</span>
+                </a>
+              </div>
             </Reveal>
           </div>
         </div>

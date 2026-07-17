@@ -48,14 +48,22 @@ export default async function JoinPage({
       <section className="grain bg-ivory py-20 md:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-12 md:px-8">
           <div className="space-y-6 md:col-span-5">
-            {j.roles.map((r, i) => (
-              <Reveal key={r.id} delay={i * 80}>
-                <div className="border-t border-navy/15 pt-5">
-                  <h3 className="font-display text-xl font-semibold text-navy">{r.name}</h3>
-                  <p className="mt-2 font-body text-[15px] leading-relaxed text-ink/75">{r.body}</p>
-                </div>
-              </Reveal>
-            ))}
+            {j.roles.map((r, i) => {
+              const icon: Record<string, string> = { volunteer: '🤝', ambassador: '🌟', partner: '🏛', country: '🌍' };
+              return (
+                <Reveal key={r.id} delay={i * 80}>
+                  <div className="flex gap-4 border-t border-navy/15 pt-5">
+                    <span className="mt-0.5 flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-sand text-xl" aria-hidden="true">
+                      {icon[r.id] ?? '✦'}
+                    </span>
+                    <div>
+                      <h3 className="font-display text-xl font-semibold text-navy">{r.name}</h3>
+                      <p className="mt-2 font-body text-[15px] leading-relaxed text-ink/75">{r.body}</p>
+                    </div>
+                  </div>
+                </Reveal>
+              );
+            })}
           </div>
           <div className="md:col-span-6 md:col-start-7">
             <Reveal delay={150}>

@@ -93,7 +93,8 @@
       "program": "Resiliencia financiera de las mujeres: liberando el poder económico con propósito",
       "body": "Las mujeres son las anclas de las familias y las sociedades. A través de la mentoría, la educación y el desarrollo de liderazgo fundados en la resiliencia emocional, la independencia financiera y la colaboración, ennoblecemos a las mujeres para que sean dueñas de su poder y expresen su brillantez — con la valentía de ser vistas, escuchadas y valoradas. Cuando ella se eleva, el mundo se eleva con ella.",
       "cta": "Explorar el pilar de Mujeres"
-    }
+    },
+    "orbitHint": "Recorre cada círculo para conocer a las personas en el corazón de nuestra labor."
   },
   "impact": {
     "kicker": "El poder de un ascenso colectivo",
@@ -126,7 +127,9 @@
     "body1": "Todo movimiento comienza con una historia. La de EnnobleRise Global Trust no comienza en una sala de juntas, sino en una infancia marcada por la guerra civil, la resiliencia y una fe inquebrantable en la dignidad del espíritu humano.",
     "body2": "El camino de la Dra. Kas Henry — narrado en su bestseller internacional Ennobled for Success: From Civil War to a US CFO — va de la adversidad al liderazgo global como estratega financiera, profesora y ejecutiva corporativa. Las lecciones más profundas no vinieron de hojas de cálculo ni juntas directivas. Vinieron de las personas: maestros que forman mentes jóvenes, mujeres que sostienen familias en la adversidad y jóvenes cuyo potencial solo esperaba una oportunidad.",
     "mantra": "Construir para durar y ennoblecer para triunfar",
-    "cta": "Lee su historia"
+    "cta": "Lee su historia",
+    "bookLink": "Ennobled for Success — el libro en Amazon",
+    "marquisLink": "Marquis Who's Who honra a la Dra. Kasthuri Henry"
   },
   "scholarshipCallout": {
     "kicker": "La beca Michael G. Henry Legacy Scholarship™",
@@ -169,7 +172,80 @@
     "ambassadorsTitle": "Nuestros embajadores",
     "ambassadorsBody": "El cambio comienza con quienes lideran con el ejemplo. Nuestros embajadores — jóvenes, educadores y mujeres — encarnan el espíritu de elevarse con propósito elevando a otros. Cada uno aporta una voz única, una experiencia vivida y una perspectiva cultural, modelando un liderazgo arraigado en la dignidad, la compasión y el servicio. Con sus historias y su mentoría, encienden una onda de transformación a través de los continentes.",
     "partnersTitle": "Nuestros aliados",
-    "partnersBody": "Creemos en la alianza público-privada-comunitaria. Instituciones, empresas y organizaciones comunitarias se unen a EnnobleRise para construir sistemas inclusivos fundados en la paz, la equidad y la prosperidad colectiva."
+    "partnersBody": "Creemos en la alianza público-privada-comunitaria. Estos son los aliados contemplados al inicio; los logotipos y enlaces se añaden a medida que cada alianza se formaliza.",
+    "advisoryKicker": "Guía desde todo el mundo",
+    "advisoryTitle": "Nuestro consejo asesor",
+    "advisoryBody": "Un consejo global de líderes en finanzas, educación e impacto social que ayudan a guiar la misión. Los miembros se están confirmando — perfiles, fotos y países aparecerán aquí pronto.",
+    "advisorySoon": "Por anunciar",
+    "advisoryCountry": "Nombre · País",
+    "partnersNote": "Los acuerdos de alianza se gestionan a través de nuestra plataforma de operaciones y luego se reflejan aquí con la marca y el sitio de cada aliado.",
+    "partnerGroups": [
+      {
+        "label": "Aliado tecnológico",
+        "items": [
+          {
+            "name": "TechFides",
+            "url": "https://techfides.com"
+          }
+        ]
+      },
+      {
+        "label": "Aliado de programa",
+        "items": [
+          {
+            "name": "Ciudad de Burbank, Illinois",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "label": "Aliados Legacy",
+        "items": [
+          {
+            "name": "Ennobled for Success Institute",
+            "url": ""
+          },
+          {
+            "name": "Ennobled for Success Publishing",
+            "url": ""
+          },
+          {
+            "name": "Divisiones de KasHenry LLC",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "label": "Aliado de servicio",
+        "items": [
+          {
+            "name": "Destiny Connect Foundation",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "label": "Aliados educativos",
+        "items": [
+          {
+            "name": "ASBM University, Bhubaneswar, India",
+            "url": ""
+          },
+          {
+            "name": "ICBM School of Business, Hyderabad, India",
+            "url": ""
+          },
+          {
+            "name": "Escuela aliada, Belice",
+            "url": ""
+          },
+          {
+            "name": "Biblioteca comunitaria, Haití",
+            "url": ""
+          }
+        ]
+      }
+    ]
   },
   "programs": {
     "metaTitle": "Nuestros programas | Pilares de Jóvenes, Educadores y Mujeres — EnnobleRise",

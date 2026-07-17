@@ -53,7 +53,6 @@ const orgJsonLd = {
   description:
     'EnnobleRise Global Trust is a catalyst for human-centered transformation — ennobling youth, educators, and women through emotional resilience, financial independence, and mindful leadership across 8+ countries on 5 continents.',
   email: 'Engage@EnnobleRise.Org',
-  telephone: '+1-224-536-1603',
   founder: {
     '@type': 'Person',
     name: 'Dr. Kasthuri Henry',

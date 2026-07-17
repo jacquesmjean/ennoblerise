@@ -82,11 +82,6 @@ export default function Footer({ dict, locale }: { dict: Dict; locale: Locale })
                   Engage@EnnobleRise.Org
                 </a>
               </p>
-              <p>
-                <a href="tel:+12245361603" className="hover:text-gold-bright transition-colors">
-                  +1 (224) 536-1603
-                </a>
-              </p>
             </div>
           </div>
         </div>

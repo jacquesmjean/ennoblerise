@@ -161,15 +161,62 @@ export default async function AboutPage({
         </div>
       </section>
 
+      {/* Advisory Board */}
+      <section className="grain bg-ivory py-20 md:py-24">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <Reveal className="max-w-3xl">
+            <p className="kicker text-gold">{dict.about.advisoryKicker}</p>
+            <h2 className="mt-5 font-display text-3xl font-semibold text-navy md:text-4xl">{dict.about.advisoryTitle}</h2>
+            <p className="mt-5 font-body leading-relaxed text-ink/80">{dict.about.advisoryBody}</p>
+          </Reveal>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[0, 1, 2, 3].map((i) => (
+              <Reveal key={i} delay={i * 80}>
+                <div className="border border-navy/10 bg-white p-6 text-center">
+                  <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-sand">
+                    <span className="font-display text-2xl text-navy/25">◇</span>
+                  </div>
+                  <p className="mt-4 font-display text-lg font-semibold text-navy/40">{dict.about.advisorySoon}</p>
+                  <p className="mt-1 font-body text-xs text-ink/40">{dict.about.advisoryCountry}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Partners */}
       <section className="bg-sand py-20 md:py-24">
-        <div className="mx-auto max-w-7xl px-5 text-center md:px-8">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <Reveal className="max-w-3xl">
+            <h2 className="font-display text-3xl font-semibold text-navy md:text-4xl">{dict.about.partnersTitle}</h2>
+            <p className="mt-5 font-body leading-relaxed text-ink/80">{dict.about.partnersBody}</p>
+          </Reveal>
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {dict.about.partnerGroups.map((g, i) => (
+              <Reveal key={g.label} delay={(i % 3) * 80}>
+                <div className="h-full border-t-2 border-gold bg-white p-6">
+                  <p className="kicker text-gold">{g.label}</p>
+                  <ul className="mt-3 space-y-2">
+                    {g.items.map((it) => (
+                      <li key={it.name} className="font-body text-[15px] text-navy">
+                        {it.url ? (
+                          <a href={it.url} target="_blank" rel="noopener" className="inline-flex items-center gap-1.5 border-b border-gold/50 pb-0.5 font-semibold transition-colors hover:text-gold">
+                            {it.name} <span className="text-gold">↗</span>
+                          </a>
+                        ) : (
+                          <span>{it.name}</span>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Reveal>
+            ))}
+          </div>
           <Reveal>
-            <h2 className="font-display text-3xl font-semibold text-navy">{dict.about.partnersTitle}</h2>
-            <p className="mx-auto mt-5 max-w-2xl font-body leading-relaxed text-ink/80">
-              {dict.about.partnersBody}
-            </p>
-            <Link href={`/${locale}/join`} className="btn-ghost-dark mt-8">
+            <p className="mt-8 font-body text-sm italic text-ink/55">{dict.about.partnersNote}</p>
+            <Link href={`/${locale}/join`} className="btn-ghost-dark mt-6">
               {dict.cta.partner}
             </Link>
           </Reveal>

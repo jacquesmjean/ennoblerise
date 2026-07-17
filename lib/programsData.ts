@@ -22,13 +22,19 @@ export type ProgramsContent = {
   ecosystemTitle: string;
   ecosystemLines: string[];
   ecosystemBody: string;
+  certTitle: string;
+  certBody: string;
+  certBadges: string[];
   programs: SignatureProgram[];
 };
 
 export const programsData: Record<Locale, ProgramsContent> = {
   en: {
+    certTitle: 'Certification with credibility',
+    certBody: 'All programs are delivered through the Ennobled for Success Institute under our Legacy Partnership — so certifications carry credibility through AFP, ACBSP, and licensed programs, with record-keeping for CPEs and school credits. Our Educator Leadership Certification equips teachers as recognized nation-builders.',
+    certBadges: ['Ennobled for Success Institute', 'AFP', 'ACBSP', 'CPE record-keeping', 'Educator Leadership Certification'],
     frameworkKicker: 'The EnnobleRise signature program framework',
-    frameworkTitle: 'Building emotionally resilient, financially empowered, and conscious leaders',
+    frameworkTitle: 'Building emotionally resilient, financially resilient, and conscious leaders',
     frameworkIntro:
       'True leadership extends beyond academic achievement or economic advancement. Our signature programs ennoble the whole person — equipping each participant with emotional resilience, financial intelligence, and conscious leadership so that success becomes a catalyst for uplifting others.',
     audienceLabel: 'Who it serves',
@@ -39,11 +45,11 @@ export const programsData: Record<Locale, ProgramsContent> = {
     ecosystemLines: [
       'Youth are inspired by Educators.',
       'Educators are strengthened by Women.',
-      'Women empower Families.',
+      'Women ennoble Families.',
       'Families nurture Youth.',
     ],
     ecosystemBody:
-      'Together, these interconnected programs create a self-sustaining ecosystem of emotional resilience, financial empowerment, and conscious leadership — elevating individuals, strengthening communities, and cultivating the ennobled future our world needs.',
+      'Together, these interconnected programs create a self-sustaining ecosystem of emotional resilience, financial resilience, and conscious leadership — elevating individuals, strengthening communities, and cultivating the ennobled future our world needs.',
     programs: [
       {
         key: 'youth',
@@ -66,22 +72,22 @@ export const programsData: Record<Locale, ProgramsContent> = {
         academy: 'Resilient Educator Leadership Institute',
         audience: 'Teachers, school administrators, counselors, coaches, and educational leaders',
         purpose:
-          'To strengthen the emotional well-being, leadership effectiveness, and financial resilience of educators — empowering them to cultivate thriving learning environments.',
+          'To strengthen the emotional well-being, leadership effectiveness, and financial resilience of educators — equipping them to cultivate thriving learning environments.',
         pillars: [
           { name: 'Emotional Resilience', items: ['Preventing burnout and compassion fatigue', 'Trauma-informed leadership', 'Mindfulness and emotional regulation', 'Self-care and professional sustainability'] },
           { name: 'Financial Resilience', items: ['Personal financial wellness', 'Retirement and long-term planning', 'Resource stewardship and program sustainability', 'Grant and funding awareness'] },
           { name: 'Conscious Leadership', items: ['Transformational leadership practices', 'Inclusive and compassionate classrooms', 'Mentorship and student development', 'Building belonging and psychological safety'] },
         ],
         outcomes: ['Improved educator well-being', 'Reduced burnout risk', 'Increased student engagement', 'Stronger school cultures'],
-        tagline: 'Empowering educators who shape the leaders of tomorrow.',
+        tagline: 'Ennobling educators who shape the leaders of tomorrow.',
       },
       {
         key: 'women',
         name: 'Ennobled Women™',
-        academy: 'Women Rising Leadership & Empowerment Collective',
+        academy: 'Women Rising Leadership Collective',
         audience: 'Women professionals, mothers, entrepreneurs, community leaders, and emerging changemakers',
         purpose:
-          'To empower women to strengthen their emotional resilience, financial independence, and conscious leadership capacity — becoming catalysts for thriving families, organizations, and communities.',
+          'To ennoble women to strengthen their emotional resilience, financial independence, and conscious leadership capacity — becoming catalysts for thriving families, organizations, and communities.',
         pillars: [
           { name: 'Emotional Resilience', items: ['Healing, self-awareness, and self-worth', 'Navigating life transitions', 'Boundary setting and emotional wellness', 'Building supportive networks'] },
           { name: 'Financial Resilience', items: ['Financial literacy and wealth creation', 'Entrepreneurship and business growth', 'Investing and legacy planning', 'Career advancement and economic power'] },
@@ -93,6 +99,9 @@ export const programsData: Record<Locale, ProgramsContent> = {
     ],
   },
   fr: {
+    certTitle: 'Une certification crédible',
+    certBody: "Tous les programmes sont dispensés par l'Ennobled for Success Institute dans le cadre de notre partenariat Legacy — les certifications sont ainsi crédibles via l'AFP, l'ACBSP et des programmes agréés, avec suivi des CPE et des crédits scolaires. Notre Certification de leadership enseignant reconnaît les éducateurs comme bâtisseurs de nations.",
+    certBadges: ['Ennobled for Success Institute', 'AFP', 'ACBSP', 'Suivi des CPE', 'Certification de leadership enseignant'],
     frameworkKicker: 'Le cadre des programmes signature EnnobleRise',
     frameworkTitle: 'Former des leaders émotionnellement résilients, financièrement autonomes et conscients',
     frameworkIntro:
@@ -105,7 +114,7 @@ export const programsData: Record<Locale, ProgramsContent> = {
     ecosystemLines: [
       'Les jeunes sont inspirés par les éducateurs.',
       'Les éducateurs sont renforcés par les femmes.',
-      'Les femmes élèvent les familles.',
+      'Les femmes ennoblissent les familles.',
       'Les familles nourrissent les jeunes.',
     ],
     ecosystemBody:
@@ -144,7 +153,7 @@ export const programsData: Record<Locale, ProgramsContent> = {
       {
         key: 'women',
         name: 'Ennobled Women™',
-        academy: 'Collectif Femmes en ascension — leadership et autonomisation',
+        academy: 'Collectif Femmes en ascension — leadership et ennoblissement',
         audience: 'Professionnelles, mères, entrepreneures, leaders communautaires et actrices du changement',
         purpose:
           'Permettre aux femmes de renforcer leur résilience émotionnelle, leur indépendance financière et leur capacité de leadership conscient — pour devenir des catalyseuses de familles, d’organisations et de communautés florissantes.',
@@ -159,6 +168,9 @@ export const programsData: Record<Locale, ProgramsContent> = {
     ],
   },
   es: {
+    certTitle: 'Certificación con credibilidad',
+    certBody: 'Todos los programas se imparten a través del Ennobled for Success Institute bajo nuestra Alianza Legacy — así las certificaciones tienen credibilidad mediante AFP, ACBSP y programas licenciados, con registro de CPE y créditos escolares. Nuestra Certificación de Liderazgo Docente reconoce a los maestros como constructores de naciones.',
+    certBadges: ['Ennobled for Success Institute', 'AFP', 'ACBSP', 'Registro de CPE', 'Certificación de Liderazgo Docente'],
     frameworkKicker: 'El marco de programas insignia de EnnobleRise',
     frameworkTitle: 'Formando líderes emocionalmente resilientes, financieramente empoderados y conscientes',
     frameworkIntro:
@@ -171,7 +183,7 @@ export const programsData: Record<Locale, ProgramsContent> = {
     ecosystemLines: [
       'Los jóvenes son inspirados por los educadores.',
       'Los educadores son fortalecidos por las mujeres.',
-      'Las mujeres empoderan a las familias.',
+      'Las mujeres ennoblecen a las familias.',
       'Las familias nutren a los jóvenes.',
     ],
     ecosystemBody:
@@ -210,7 +222,7 @@ export const programsData: Record<Locale, ProgramsContent> = {
       {
         key: 'women',
         name: 'Ennobled Women™',
-        academy: 'Colectivo Mujeres que Ascienden — Liderazgo y Empoderamiento',
+        academy: 'Colectivo Mujeres que Ascienden — Liderazgo y Ennoblecimiento',
         audience: 'Profesionales, madres, emprendedoras, lideresas comunitarias y agentes de cambio',
         purpose:
           'Empoderar a las mujeres para fortalecer su resiliencia emocional, independencia financiera y capacidad de liderazgo consciente — convirtiéndose en catalizadoras de familias, organizaciones y comunidades florecientes.',
