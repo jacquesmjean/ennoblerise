@@ -52,7 +52,14 @@ const orgJsonLd = {
   slogan: 'Dignity. Resilience. Global Change.',
   description:
     'EnnobleRise Global Trust is a catalyst for human-centered transformation — ennobling youth, educators, and women through emotional resilience, financial independence, and mindful leadership across 8+ countries on 5 continents.',
-  email: 'Engage@EnnobleRise.Org',
+  email: 'engage@ennoblerise.org',
+  contactPoint: [
+    { '@type': 'ContactPoint', contactType: 'general inquiries', email: 'engage@ennoblerise.org', availableLanguage: ['English', 'French', 'Spanish'] },
+    { '@type': 'ContactPoint', contactType: 'scholarships', email: 'scholarship@ennoblerise.org' },
+    { '@type': 'ContactPoint', contactType: 'donations', email: 'donate@ennoblerise.org' },
+    { '@type': 'ContactPoint', contactType: 'media relations', email: 'social@ennoblerise.org' },
+    { '@type': 'ContactPoint', contactType: 'administration', email: 'admin@ennoblerise.org' },
+  ],
   founder: {
     '@type': 'Person',
     name: 'Dr. Kasthuri Henry',

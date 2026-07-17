@@ -73,7 +73,7 @@ With gratitude and purpose,
 
 **Dr. Kasthuri Henry**
 Founder & Executive Director, EnnobleRise Global Trust™
-Engage@EnnobleRise.Org · +1 (224) 536-1603`;
+Engage@EnnobleRise.Org`;
     return { title, content };
   }
 
@@ -114,6 +114,6 @@ Our theory of change is inherently sustainable: ennobled leaders ennoble others.
 ## 7. Conclusion
 When the human spirit is ennobled, transformation does not stop with one individual — it ripples across families, communities, and generations. We invite ${input.funder} to help set that ripple in motion.
 
-**Contact:** Dr. Kasthuri Henry, Founder & Executive Director · Engage@EnnobleRise.Org · +1 (224) 536-1603`;
+**Contact:** Dr. Kasthuri Henry, Founder & Executive Director · Engage@EnnobleRise.Org`;
   return { title, content };
 }

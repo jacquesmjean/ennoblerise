@@ -27,7 +27,7 @@ export const privacyData: Record<Locale, LegalDoc> = {
       { h: 'Children and young people', body: 'Our programs serve youth, and we take their protection seriously. Our website is not directed at children under 13, and we do not knowingly collect personal information from them online. Scholarship applicants under the age of majority should apply with the involvement of a parent or guardian.' },
       { h: 'Your rights', body: 'You may request a copy of the personal information we hold about you, ask us to correct it, or ask us to delete it — at any time, in any of our languages. You can unsubscribe from the newsletter with one message.' },
       { h: 'Retention', body: 'We keep information only as long as needed for the purpose you gave it — for example, scholarship applications through the selection cycle and any award period, and donation records as required for nonprofit accounting.' },
-      { h: 'Changes and contact', body: 'If this policy changes, we will post the new version here with a new date. Questions or requests: Engage@EnnobleRise.Org or +1 (224) 536-1603.' },
+      { h: 'Changes and contact', body: 'If this policy changes, we will post the new version here with a new date. Questions or requests: Engage@EnnobleRise.Org.' },
     ],
   },
   fr: {
@@ -45,7 +45,7 @@ export const privacyData: Record<Locale, LegalDoc> = {
       { h: 'Enfants et jeunes', body: "Nos programmes servent la jeunesse et nous prenons sa protection au sérieux. Le site ne s'adresse pas aux enfants de moins de 13 ans et nous ne collectons pas sciemment leurs données. Les candidats mineurs à la bourse doivent postuler avec un parent ou tuteur." },
       { h: 'Vos droits', body: "Vous pouvez à tout moment demander une copie de vos informations, leur correction ou leur suppression — dans chacune de nos langues. Un simple message suffit pour vous désabonner de la lettre." },
       { h: 'Conservation', body: "Nous conservons les informations uniquement le temps nécessaire à leur finalité — les candidatures pendant le cycle de sélection, les dons selon les exigences comptables des organisations à but non lucratif." },
-      { h: 'Modifications et contact', body: "Toute modification sera publiée ici avec une nouvelle date. Questions ou demandes : Engage@EnnobleRise.Org ou +1 (224) 536-1603." },
+      { h: 'Modifications et contact', body: "Toute modification sera publiée ici avec une nouvelle date. Questions ou demandes : Engage@EnnobleRise.Org." },
     ],
   },
   es: {
@@ -63,7 +63,7 @@ export const privacyData: Record<Locale, LegalDoc> = {
       { h: 'Niños y jóvenes', body: 'Nuestros programas sirven a la juventud y tomamos su protección en serio. El sitio no está dirigido a menores de 13 años y no recopilamos a sabiendas su información. Los solicitantes de beca menores de edad deben postular con un padre o tutor.' },
       { h: 'Tus derechos', body: 'Puedes pedir en cualquier momento una copia de tu información, su corrección o su eliminación — en cualquiera de nuestros idiomas. Un solo mensaje basta para darte de baja del boletín.' },
       { h: 'Retención', body: 'Conservamos la información solo el tiempo necesario para su propósito — las solicitudes durante el ciclo de selección, los donativos según los requisitos contables de las organizaciones sin fines de lucro.' },
-      { h: 'Cambios y contacto', body: 'Cualquier cambio se publicará aquí con nueva fecha. Preguntas o solicitudes: Engage@EnnobleRise.Org o +1 (224) 536-1603.' },
+      { h: 'Cambios y contacto', body: 'Cualquier cambio se publicará aquí con nueva fecha. Preguntas o solicitudes: Engage@EnnobleRise.Org.' },
     ],
   },
 };

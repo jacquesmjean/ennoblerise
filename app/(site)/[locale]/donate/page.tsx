@@ -45,6 +45,16 @@ export default async function DonatePage({
           >
             {dict.donate.lead}
           </p>
+          <p className="mt-6 animate-rise font-body text-sm text-ivory/70" style={{ animationDelay: '380ms' }}>
+            {locale === 'fr'
+              ? 'Questions sur les dons, reçus fiscaux ou parrainages ? '
+              : locale === 'es'
+                ? '¿Preguntas sobre donativos, recibos o patrocinios? '
+                : 'Questions about giving, tax receipts, or sponsorships? '}
+            <a href="mailto:donate@ennoblerise.org" className="border-b border-gold/50 pb-0.5 font-semibold text-gold-bright transition-colors hover:text-ivory">
+              Donate@EnnobleRise.Org
+            </a>
+          </p>
           <div className="mt-10 hidden space-y-5 md:block">
             {dict.impact.stats.slice(0, 3).map((s, i) => (
               <Reveal key={s.label} delay={i * 100}>

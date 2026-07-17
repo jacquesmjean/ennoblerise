@@ -42,6 +42,12 @@ export default function Footer({ dict, locale }: { dict: Dict; locale: Locale })
               {dict.footer.blurb}
             </p>
             <SocialIcons className="mt-6" />
+            <p className="mt-4 font-body text-xs text-ivory/55">
+              {locale === 'fr' ? 'Médias et réseaux : ' : locale === 'es' ? 'Medios y redes: ' : 'Media & social: '}
+              <a href="mailto:social@ennoblerise.org" className="text-ivory/75 transition-colors hover:text-gold-bright">
+                Social@EnnobleRise.Org
+              </a>
+            </p>
           </div>
 
           <div className="md:col-span-2">
@@ -76,10 +82,21 @@ export default function Footer({ dict, locale }: { dict: Dict; locale: Locale })
             <div className="mt-4">
               <NewsletterForm dict={dict} locale={locale} />
             </div>
-            <div className="mt-6 space-y-1 font-body text-sm text-ivory/70">
+            <div className="mt-6 space-y-2.5 font-body text-sm text-ivory/70">
               <p>
-                <a href="mailto:Engage@EnnobleRise.Org" className="hover:text-gold-bright transition-colors">
+                <span className="block text-[10px] uppercase tracking-wider2 text-gold-bright/70">
+                  {locale === 'fr' ? 'Général' : locale === 'es' ? 'General' : 'General'}
+                </span>
+                <a href="mailto:engage@ennoblerise.org" className="hover:text-gold-bright transition-colors">
                   Engage@EnnobleRise.Org
+                </a>
+              </p>
+              <p>
+                <span className="block text-[10px] uppercase tracking-wider2 text-gold-bright/70">
+                  {locale === 'fr' ? 'Administration' : locale === 'es' ? 'Administración' : 'Administration'}
+                </span>
+                <a href="mailto:admin@ennoblerise.org" className="hover:text-gold-bright transition-colors">
+                  Admin@EnnobleRise.Org
                 </a>
               </p>
             </div>

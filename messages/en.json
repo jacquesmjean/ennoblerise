@@ -405,7 +405,29 @@
     "submit": "Send message",
     "receivedTitle": "Thank you. Your message has reached us.",
     "receivedBody": "We respond personally, usually within two business days.",
-    "reachTitle": "Reach us directly"
+    "reachTitle": "Reach us directly",
+    "directory": [
+      {
+        "label": "General & Partnerships",
+        "email": "Engage@EnnobleRise.Org"
+      },
+      {
+        "label": "Scholarships",
+        "email": "Scholarship@EnnobleRise.Org"
+      },
+      {
+        "label": "Donations & Giving",
+        "email": "Donate@EnnobleRise.Org"
+      },
+      {
+        "label": "Media & Social",
+        "email": "Social@EnnobleRise.Org"
+      },
+      {
+        "label": "Administration",
+        "email": "Admin@EnnobleRise.Org"
+      }
+    ]
   },
   "concierge": {
     "open": "Concierge",

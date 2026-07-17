@@ -184,6 +184,16 @@ export default async function ScholarshipPage({
               <p className="mt-5 font-body leading-[1.8] text-ink/80">{c.promiseBody}</p>
               <p className="mt-8 font-display text-xl italic text-navy">{c.promiseClose1}</p>
               <p className="font-display text-xl italic text-gold">{c.promiseClose2}</p>
+              <p className="mt-8 font-body text-sm text-ink/65">
+                {locale === 'fr'
+                  ? 'Questions sur la bourse ? '
+                  : locale === 'es'
+                    ? '¿Preguntas sobre la beca? '
+                    : 'Questions about the scholarship? '}
+                <a href="mailto:scholarship@ennoblerise.org" className="border-b border-gold/60 pb-0.5 font-semibold text-navy transition-colors hover:text-gold">
+                  Scholarship@EnnobleRise.Org
+                </a>
+              </p>
               <div className="mt-10 hidden md:block">
                 <Link href="#apply" className="btn-ghost-dark">
                   {c.form.submit} ↓
