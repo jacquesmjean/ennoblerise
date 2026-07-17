@@ -20,8 +20,27 @@ const legacyRedirects: Record<string, string> = {
   '/contact-us': '/contact',
 };
 
+// Brand-protection domains that must always resolve to the canonical host.
+const PRIMARY_HOST = 'ennoblerise.org';
+const REDIRECT_HOSTS = new Set([
+  'www.ennoblerise.org',
+  'ennobleriseglobal.org',
+  'www.ennobleriseglobal.org',
+  'ennobleriseglobaltrust.org',
+  'www.ennobleriseglobaltrust.org',
+]);
+
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+
+  // Canonical host: send www + secondary brand domains to ennoblerise.org (301)
+  const host = (request.headers.get('host') ?? '').toLowerCase().split(':')[0];
+  if (REDIRECT_HOSTS.has(host)) {
+    return NextResponse.redirect(
+      `https://${PRIMARY_HOST}${request.nextUrl.pathname}${request.nextUrl.search}`,
+      301,
+    );
+  }
 
   // Legacy GoHighLevel URLs → new structure (301)
   if (legacyRedirects[pathname]) {
