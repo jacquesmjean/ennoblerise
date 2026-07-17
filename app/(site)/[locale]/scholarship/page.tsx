@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { getDict, type Locale } from '@/lib/i18n';
 import { scholarshipData } from '@/lib/scholarshipData';
@@ -72,13 +73,24 @@ export default async function ScholarshipPage({
             <p className="kicker text-gold">{c.legacyKicker}</p>
             <h2 className="mt-5 font-display text-3xl font-semibold text-navy md:text-4xl">{c.legacyTitle}</h2>
             <SunriseArc className="mt-8 h-12 w-40" />
-            <div className="mt-10 border-l-2 border-gold pl-6">
-              <p className="font-body text-sm font-semibold uppercase tracking-widest text-navy/60">
-                Michael G. Henry
-              </p>
-              <p className="mt-1 font-body text-sm italic text-ink/60">
-                Educator · Minister · Broadcaster · Mentor · Humanitarian
-              </p>
+            <div className="mt-10 flex items-center gap-5">
+              <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-full shadow-lg ring-2 ring-gold ring-offset-4 ring-offset-ivory">
+                <Image
+                  src="/images/mike-henry.jpg"
+                  alt="Michael G. Henry"
+                  fill
+                  className="object-cover"
+                  sizes="96px"
+                />
+              </div>
+              <div className="border-l-2 border-gold pl-5">
+                <p className="font-body text-sm font-semibold uppercase tracking-widest text-navy/60">
+                  Michael G. Henry
+                </p>
+                <p className="mt-1 font-body text-sm italic text-ink/60">
+                  Educator · Minister · Broadcaster · Mentor · Humanitarian
+                </p>
+              </div>
             </div>
           </Reveal>
           <div className="space-y-6 md:col-span-6 md:col-start-7">
@@ -90,6 +102,24 @@ export default async function ScholarshipPage({
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Official banner showcase */}
+      <section className="bg-sand pb-20 pt-4 md:pb-24">
+        <div className="mx-auto max-w-6xl px-5 md:px-8">
+          <Reveal>
+            <div className="overflow-hidden rounded-2xl shadow-2xl ring-1 ring-navy/10">
+              <Image
+                src="/images/scholarship-banner.jpg"
+                alt="Michael G. Henry Legacy Scholarship — Invest in Potential. Inspire the Future. Educating Minds. Ennobling Hearts. Elevating Humanity."
+                width={1516}
+                height={1010}
+                className="h-auto w-full"
+                sizes="(max-width: 768px) 100vw, 72rem"
+              />
+            </div>
+          </Reveal>
         </div>
       </section>
 
