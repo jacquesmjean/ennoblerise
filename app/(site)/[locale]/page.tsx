@@ -56,11 +56,11 @@ export default async function HomePage({
       {/* ——— HERO ——— */}
       <section className="horizon-strong aurora relative flex min-h-[100svh] items-center overflow-hidden text-ivory">
         <Image
-          src="/images/hero.jpg"
-          alt="A joyful, diverse global community standing together in bright daylight"
+          src="/images/hero-community.jpg"
+          alt="A radiant, diverse global family gathered together around a golden Earth"
           fill
           priority
-          className="object-cover opacity-90"
+          className="object-cover object-center opacity-95"
           sizes="100vw"
         />
         {/* Left scrim for text legibility — keeps the right side bright and vibrant */}

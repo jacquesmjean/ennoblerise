@@ -103,8 +103,8 @@ export default async function AboutPage({
               </h2>
               <div className="relative mt-10 aspect-[16/11] overflow-hidden">
                 <Image
-                  src="/images/founder-journey.jpg"
-                  alt="A journey from adversity toward golden light"
+                  src="/images/kas-portrait.jpg"
+                  alt="Dr. Kasthuri Henry, Founder & Executive Director of EnnobleRise Global Trust"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 40vw"
