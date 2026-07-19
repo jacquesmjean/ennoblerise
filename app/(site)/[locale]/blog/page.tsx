@@ -35,6 +35,7 @@ export default async function BlogPage({
   const nowIdx = currentThemeIndex(new Date());
   const [featured, ...rest] = posts;
   const featuredFull = featured ? getPost(featured.slug) : null;
+  const restFull = rest.map((p) => ({ ...p, heroImage: getPost(p.slug)?.heroImage }));
 
   const fmt = (date: string) =>
     new Date(date).toLocaleDateString(locale === 'en' ? 'en-US' : locale, {
@@ -95,10 +96,22 @@ export default async function BlogPage({
             </Reveal>
           )}
 
-          <div className="mt-16 grid gap-x-10 gap-y-14 md:grid-cols-2">
-            {rest.map((post, i) => (
+          <div className="mt-16 grid gap-x-10 gap-y-16 md:grid-cols-2">
+            {restFull.map((post, i) => (
               <Reveal key={post.slug} delay={i * 80}>
-                <Link href={`/${locale}/blog/${post.slug}`} className="group block border-t border-navy/10 pt-6">
+                <Link href={`/${locale}/blog/${post.slug}`} className="group block">
+                  {post.heroImage && (
+                    <div className="relative mb-5 aspect-[16/10] overflow-hidden">
+                      <Image
+                        src={post.heroImage}
+                        alt={post.title}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                        sizes="(max-width: 768px) 100vw, 45vw"
+                      />
+                      <div className="absolute inset-0 ring-1 ring-inset ring-navy/10" />
+                    </div>
+                  )}
                   <p className="font-body text-xs uppercase tracking-wider2 text-gold">
                     {fmt(post.date)} · {post.readMinutes} {dict.blog.minRead}
                   </p>
@@ -106,6 +119,9 @@ export default async function BlogPage({
                     {post.title}
                   </h3>
                   <p className="mt-3 font-body text-[15px] leading-relaxed text-ink/70">{post.excerpt}</p>
+                  <span className="mt-4 inline-block border-b border-gold pb-0.5 font-body text-sm font-semibold text-navy">
+                    {dict.blog.readMore} →
+                  </span>
                 </Link>
               </Reveal>
             ))}

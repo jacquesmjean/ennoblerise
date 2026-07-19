@@ -8,43 +8,43 @@
     "readMinutes": 6
   },
   {
-    "slug": "redefined-power",
-    "title": "Love, Leadership & Legacy: What Executives Can Learn From a Marriage That Redefined Power",
-    "excerpt": "How one extraordinary marriage offers a transformative blueprint for the future of human-centered leadership. It challenges traditional assumptions about power, masculinity, femininity, caregiving, and executive success.",
-    "category": "Capitalism Reimagined",
-    "date": "2026-05-15",
+    "slug": "the-wealth-of-human-relationships",
+    "title": "The Wealth of Human Relationships™",
+    "excerpt": "The richest lives are measured not by what we own, but by who walks beside us. Chapter Four of the Foundational Wealth™ series on the power of connection.",
+    "category": "Foundational Wealth",
+    "date": "2026-06-01",
     "readMinutes": 6
   },
   {
-    "slug": "business-as-a-policy-architect",
-    "title": "Business as a Policy Architect: How Companies Can Shape Systems That Work for All",
-    "excerpt": "Reimagining capitalism through ethical leadership, governance, and shared prosperity. Forward-thinking businesses can become co-architects of policies that enable human flourishing, economic resilience, and societal trust.",
-    "category": "Capitalism Reimagined",
-    "date": "2026-04-27",
+    "slug": "the-wealth-of-compassion",
+    "title": "The Wealth of Compassion™",
+    "excerpt": "Kindness is love made visible, enriching both the giver and the receiver. Chapter Three of the Foundational Wealth™ series on creating an Ennobled Life™.",
+    "category": "Foundational Wealth",
+    "date": "2026-05-01",
+    "readMinutes": 6
+  },
+  {
+    "slug": "the-wealth-of-presence",
+    "title": "The Wealth of Presence™",
+    "excerpt": "Mindfulness is the courage to fully inhabit this moment — where wisdom grows and peace begins. Chapter Two of the Foundational Wealth™ series.",
+    "category": "Foundational Wealth",
+    "date": "2026-04-01",
+    "readMinutes": 6
+  },
+  {
+    "slug": "the-wealth-of-courage",
+    "title": "The Wealth of Courage™",
+    "excerpt": "Courage is the first wealth we cultivate — the inner strength that turns fear into possibility and purpose into action. Chapter One of the Foundational Wealth™ series.",
+    "category": "Foundational Wealth",
+    "date": "2026-03-01",
+    "readMinutes": 6
+  },
+  {
+    "slug": "foundational-wealth-inner-riches",
+    "title": "Foundational Wealth™: Building the Inner Riches That Create Lasting Prosperity",
+    "excerpt": "The richest lives are built from the inside out. An introduction to the Foundational Wealth™ series — the enduring inner riches that no downturn can take away.",
+    "category": "Foundational Wealth",
+    "date": "2026-02-15",
     "readMinutes": 5
-  },
-  {
-    "slug": "ethical-leadership-as-a-growth-accelerator",
-    "title": "Ethical Leadership as a Growth Accelerator: Why Integrity Outperforms in Volatile Markets",
-    "excerpt": "Ethical leadership fuels trust, innovation, and resilient valuation. Integrity-driven leaders outperform in volatility by strengthening culture, governance, and long-term strategic advantage.",
-    "category": "Capitalism Reimagined",
-    "date": "2026-03-20",
-    "readMinutes": 4
-  },
-  {
-    "slug": "from-extractive-to-regenerative",
-    "title": "From Extractive to Regenerative: The New Business Strategy for Sustainable Growth",
-    "excerpt": "A powerful call for business transformation: why extractive models are collapsing and how regenerative strategy builds resilient systems, circular value, and sustainable prosperity for the new emergent economy.",
-    "category": "Capitalism Reimagined",
-    "date": "2026-02-23",
-    "readMinutes": 4
-  },
-  {
-    "slug": "case-for-capitalism-reimagined",
-    "title": "The Case for Capitalism Reimagined: Beyond Profit, Toward Shared Prosperity",
-    "excerpt": "The first blog of the series sets the philosophical and economic foundation for why capitalism must evolve now, inviting business leaders, policymakers, and members of society to be the change with intentionality.",
-    "category": "Capitalism Reimagined",
-    "date": "2026-01-26",
-    "readMinutes": 4
   }
 ]
