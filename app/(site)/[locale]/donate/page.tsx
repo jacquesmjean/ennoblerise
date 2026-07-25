@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { getDict, type Locale } from '@/lib/i18n';
-import DonateFlow from '@/components/forms/DonateFlow';
 import Reveal from '@/components/Reveal';
 
 export async function generateMetadata({
@@ -66,8 +65,23 @@ export default async function DonatePage({
             ))}
           </div>
         </div>
-        <div className="md:col-span-6 md:col-start-7">
-          <DonateFlow dict={dict} locale={locale} />
+        <div className="md:col-span-7 md:col-start-6">
+          <div className="overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-white/10">
+            <iframe
+              title="EnnobleRise Global Trust — secure donation form"
+              src="https://www.zeffy.com/embed/donation-form/donate-to-change-lives-18523"
+              className="h-[1180px] w-full md:h-[1120px]"
+              style={{ border: 0 }}
+              allow="payment"
+            />
+          </div>
+          <p className="mt-4 text-center font-body text-xs text-ivory/55">
+            {locale === 'fr'
+              ? 'Paiement sécurisé par Zeffy — 100 % de votre don nous parvient.'
+              : locale === 'es'
+                ? 'Pago seguro con Zeffy: el 100 % de tu donativo llega a nuestra misión.'
+                : 'Secure payment via Zeffy — 100% of your gift reaches our mission.'}
+          </p>
         </div>
       </div>
     </section>

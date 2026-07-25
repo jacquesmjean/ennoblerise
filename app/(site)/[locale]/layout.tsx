@@ -36,7 +36,7 @@ export async function generateMetadata({
       siteName: dict.meta.siteName,
       type: 'website',
       locale,
-      images: ['/images/og.jpg'],
+      images: ['/images/og-hero.jpg'],
     },
     twitter: { card: 'summary_large_image' },
   };
