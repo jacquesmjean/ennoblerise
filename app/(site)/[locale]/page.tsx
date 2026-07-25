@@ -258,8 +258,8 @@ export default async function HomePage({
           <Reveal className="relative md:col-span-6">
             <div className="relative aspect-[16/10] overflow-hidden">
               <Image
-                src="/images/founder-journey.jpg"
-                alt="A figure walking toward golden light over a mountain ridge at dawn"
+                src="/images/kas-portrait.jpg"
+                alt="Dr. Kasthuri Henry, Founder & Executive Director of EnnobleRise Global Trust"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -284,11 +284,11 @@ export default async function HomePage({
                 {dict.founder.cta}
               </Link>
               <div className="mt-6 flex flex-col gap-2">
-                <a href="https://www.amazon.com/Ennobled-Success-Civil-War-CFO-ebook/dp/B0DNP1S7GJ" target="_blank" rel="noopener" className="group inline-flex items-center gap-2 font-body text-sm text-navy transition-colors hover:text-gold">
+                <a href="https://www.amazon.com/Ennobled-Success-Civil-War-CFO-ebook/dp/B08LCN258T" target="_blank" rel="noopener" className="group inline-flex items-center gap-2 font-body text-sm text-navy transition-colors hover:text-gold">
                   <span className="text-gold">↗</span>
                   <span className="border-b border-gold/50 pb-0.5 group-hover:border-gold">{dict.founder.bookLink}</span>
                 </a>
-                <a href="https://blog.marquiswhoswho.com/kasthuri-henry-phd-ctp" target="_blank" rel="noopener" className="group inline-flex items-center gap-2 font-body text-sm text-navy transition-colors hover:text-gold">
+                <a href="https://www.24-7pressrelease.com/press-release-service/521162" target="_blank" rel="noopener" className="group inline-flex items-center gap-2 font-body text-sm text-navy transition-colors hover:text-gold">
                   <span className="text-gold">↗</span>
                   <span className="border-b border-gold/50 pb-0.5 group-hover:border-gold">{dict.founder.marquisLink}</span>
                 </a>
