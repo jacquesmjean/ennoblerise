@@ -31,8 +31,8 @@ export type ProgramsContent = {
 export const programsData: Record<Locale, ProgramsContent> = {
   en: {
     certTitle: 'Certification with credibility',
-    certBody: 'All programs are delivered through the Ennobled for Success Institute under our Legacy Partnership — so certifications carry credibility through AFP, ACBSP, and licensed programs, with record-keeping for CPEs and school credits. Our Educator Leadership Certification equips teachers as recognized nation-builders.',
-    certBadges: ['Ennobled for Success Institute', 'AFP', 'ACBSP', 'CPE record-keeping', 'Educator Leadership Certification'],
+    certBody: 'All programs are delivered through the Ennobled for Success Institute under our Legacy Partnership — so certifications carry credibility through AFP and licensed programs, with record-keeping for CPEs and school credits.',
+    certBadges: ['Ennobled for Success Institute', 'AFP', 'CPE record-keeping'],
     frameworkKicker: 'The EnnobleRise signature program framework',
     frameworkTitle: 'Building emotionally resilient, financially resilient, and conscious leaders',
     frameworkIntro:
@@ -78,7 +78,7 @@ export const programsData: Record<Locale, ProgramsContent> = {
           { name: 'Financial Resilience', items: ['Personal financial wellness', 'Retirement and long-term planning', 'Resource stewardship and program sustainability', 'Grant and funding awareness'] },
           { name: 'Conscious Leadership', items: ['Transformational leadership practices', 'Inclusive and compassionate classrooms', 'Mentorship and student development', 'Building belonging and psychological safety'] },
         ],
-        outcomes: ['Improved educator well-being', 'Reduced burnout risk', 'Increased student engagement', 'Stronger school cultures'],
+        outcomes: ['Improved educator well-being', 'Reduced burnout risk', 'Increased student engagement', 'Stronger school cultures', 'Educator Leadership Certification'],
         tagline: 'Ennobling educators who shape the leaders of tomorrow.',
       },
       {
@@ -100,8 +100,8 @@ export const programsData: Record<Locale, ProgramsContent> = {
   },
   fr: {
     certTitle: 'Une certification crédible',
-    certBody: "Tous les programmes sont dispensés par l'Ennobled for Success Institute dans le cadre de notre partenariat Legacy — les certifications sont ainsi crédibles via l'AFP, l'ACBSP et des programmes agréés, avec suivi des CPE et des crédits scolaires. Notre Certification de leadership enseignant reconnaît les éducateurs comme bâtisseurs de nations.",
-    certBadges: ['Ennobled for Success Institute', 'AFP', 'ACBSP', 'Suivi des CPE', 'Certification de leadership enseignant'],
+    certBody: "Tous les programmes sont dispensés par l'Ennobled for Success Institute dans le cadre de notre partenariat Legacy — les certifications sont ainsi crédibles via l'AFP et des programmes agréés, avec suivi des CPE et des crédits scolaires.",
+    certBadges: ['Ennobled for Success Institute', 'AFP', 'Suivi des CPE'],
     frameworkKicker: 'Le cadre des programmes signature EnnobleRise',
     frameworkTitle: 'Former des leaders émotionnellement résilients, financièrement autonomes et conscients',
     frameworkIntro:
@@ -147,7 +147,7 @@ export const programsData: Record<Locale, ProgramsContent> = {
           { name: 'Résilience financière', items: ['Bien-être financier personnel', 'Retraite et planification à long terme', 'Intendance des ressources et durabilité des programmes', 'Connaissance des subventions et financements'] },
           { name: 'Leadership conscient', items: ['Pratiques de leadership transformationnel', 'Classes inclusives et compatissantes', "Mentorat et développement de l'élève", "Appartenance et sécurité psychologique"] },
         ],
-        outcomes: ['Bien-être accru des éducateurs', "Risque d'épuisement réduit", 'Engagement accru des élèves', "Cultures scolaires renforcées"],
+        outcomes: ['Bien-être accru des éducateurs', "Risque d'épuisement réduit", 'Engagement accru des élèves', "Cultures scolaires renforcées", 'Certification de leadership enseignant'],
         tagline: 'Élever les éducateurs qui façonnent les leaders de demain.',
       },
       {
@@ -169,8 +169,8 @@ export const programsData: Record<Locale, ProgramsContent> = {
   },
   es: {
     certTitle: 'Certificación con credibilidad',
-    certBody: 'Todos los programas se imparten a través del Ennobled for Success Institute bajo nuestra Alianza Legacy — así las certificaciones tienen credibilidad mediante AFP, ACBSP y programas licenciados, con registro de CPE y créditos escolares. Nuestra Certificación de Liderazgo Docente reconoce a los maestros como constructores de naciones.',
-    certBadges: ['Ennobled for Success Institute', 'AFP', 'ACBSP', 'Registro de CPE', 'Certificación de Liderazgo Docente'],
+    certBody: 'Todos los programas se imparten a través del Ennobled for Success Institute bajo nuestra Alianza Legacy — así las certificaciones tienen credibilidad mediante AFP y programas licenciados, con registro de CPE y créditos escolares.',
+    certBadges: ['Ennobled for Success Institute', 'AFP', 'Registro de CPE'],
     frameworkKicker: 'El marco de programas insignia de EnnobleRise',
     frameworkTitle: 'Formando líderes emocionalmente resilientes, financieramente empoderados y conscientes',
     frameworkIntro:
@@ -216,7 +216,7 @@ export const programsData: Record<Locale, ProgramsContent> = {
           { name: 'Resiliencia financiera', items: ['Bienestar financiero personal', 'Retiro y planificación a largo plazo', 'Administración de recursos y sostenibilidad de programas', 'Conocimiento de subvenciones y financiamiento'] },
           { name: 'Liderazgo consciente', items: ['Prácticas de liderazgo transformacional', 'Aulas inclusivas y compasivas', 'Mentoría y desarrollo estudiantil', 'Pertenencia y seguridad psicológica'] },
         ],
-        outcomes: ['Mayor bienestar docente', 'Menor riesgo de agotamiento', 'Mayor compromiso estudiantil', 'Culturas escolares más fuertes'],
+        outcomes: ['Mayor bienestar docente', 'Menor riesgo de agotamiento', 'Mayor compromiso estudiantil', 'Culturas escolares más fuertes', 'Certificación de Liderazgo Docente'],
         tagline: 'Empoderando a los educadores que forman a los líderes del mañana.',
       },
       {
