@@ -26,6 +26,7 @@ export const advisoryBoard: Person[] = [
     country: 'Sri Lanka',
     img: '/images/people/ruchira-palliyaguruge.jpg',
     bio: 'An internationally respected cricket leader, former first-class cricketer, and ICC International Panel umpire, Ruchira has officiated more than 100 One Day Internationals, Test matches, and ICC World Cup competitions. He holds a Master of Science in Performance Enhancement in Sports Officiating from Edinburgh Napier University. He champions sport as a platform for developing character, resilience, and ethical leadership in young people worldwide.',
+    linkedin: 'https://www.linkedin.com/in/ruchira-palliyaguruge-b7881b147/',
   },
   {
     name: 'James J. Ojo',
@@ -59,6 +60,14 @@ export const advisoryBoard: Person[] = [
     bio: 'A three-time Top 100 Thought Leader (Thinkers360), Neeraja moved from a 25-year career in IT to become a champion of leadership development and gender advocacy. She transforms mindsets through mentoring, coaching, and workshops — helping women move beyond impostor syndrome, perfectionism, and self-doubt to lead with confidence.',
     linkedin: 'https://www.linkedin.com/in/neeraja-ganesh/',
   },
+  {
+    name: 'Ngeijung Prisca Kuwong',
+    role: 'Finance Professional & Community Development Advocate',
+    country: 'Cameroon',
+    img: '/images/people/ngeijung-kuwong.jpg',
+    bio: 'A finance professional, entrepreneur, and trainer from Cameroon, Prisca equips women and young people with practical financial, entrepreneurial, and digital skills that create sustainable livelihoods. Founder of several impact-driven initiatives, she champions financial literacy, STEM, and women’s empowerment — building partnerships that expand access to education and leadership across Africa.',
+    linkedin: 'https://www.linkedin.com/in/ngeijung-prisca/',
+  },
 ];
 
 /** EnnobleRise Global Trust™ Ambassadors — Youth · Educators · Women */
@@ -69,8 +78,35 @@ export const ambassadors: Ambassador[] = [
     role: 'Youth Ennoblement Lead',
     country: 'Belize',
     img: '/images/people/rhojani-manzanero.jpg',
-    bio: 'A Marketing and Media Communication student at Sacred Heart College and an aspiring entrepreneur building an AI-powered media startup, Rhojani serves as Youth Ennoblement Lead for Belize. She champions youth leadership, personal growth, and community engagement — representing a new generation of purpose-driven innovators who believe technology, creativity, and human values build stronger communities.',
+    bio: 'A high-school graduate pursuing a Marketing and Media Communication degree in Belize, Rhojani is an aspiring entrepreneur building an AI-powered media marketing startup. As Youth Ennoblement Lead for Belize, she champions youth leadership, personal growth, and community engagement — a new generation of innovators who believe technology, creativity, and human values build stronger communities.',
     linkedin: 'https://www.linkedin.com/in/rhojani-manzanero-88461740a/',
+  },
+  {
+    category: 'Youth',
+    name: 'Stuti Sahoo',
+    role: 'Law Student · Gender Equality Advocate',
+    country: 'India',
+    img: '/images/people/stuti-sahoo.jpg',
+    bio: 'A B.A. LL.B. student at ASBM School of Law, Stuti is committed to law, justice, and social impact — advocating for gender equality and the empowerment of women. Guided by integrity, empathy, and excellence, she aspires to a legal career that upholds justice and creates a lasting, positive impact on individuals and communities.',
+    linkedin: 'https://www.linkedin.com/in/stuti-sahoo-b4a069284/',
+  },
+  {
+    category: 'Youth',
+    name: 'Sanskarsri SS Mishra',
+    role: 'Youth Leadership · Climate Action',
+    country: 'India',
+    img: '/images/people/sanskar-mishra.jpg',
+    bio: 'A law student at ASBM University, Bhubaneswar, Sanskar serves as Impact Officer for the Global Shapers Bhubaneswar Hub and volunteers with the Bakul Foundation and UNICEF Odisha’s Youth4Water Plus. He champions climate action, inclusive leadership, and youth-led governance to build a more sustainable and equitable future.',
+    linkedin: 'https://www.linkedin.com/in/sanskarsri-ss-mishra-b58057316/',
+  },
+  {
+    category: 'Youth',
+    name: 'Fabrice Tyler Dolcé',
+    role: 'Youth Leadership · Financial Empowerment',
+    country: 'Haiti',
+    img: '/images/people/fabrice-dolce.jpg',
+    bio: 'Student Ambassador for Haiti and a university student fluent in French, Creole, Spanish, and English, Fabrice champions youth leadership, entrepreneurship, and financial empowerment. He works to build a generation of confident, financially resilient young leaders who create opportunities, uplift others, and lead with integrity.',
+    linkedin: 'https://www.linkedin.com/in/fabrice-tyler-dolc%C3%A9-a138aa2ba/',
   },
   {
     category: 'Educator',
