@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getDict, type Locale } from '@/lib/i18n';
 import { aboutStory } from '@/lib/aboutStory';
+import { advisoryBoard, ambassadors } from '@/lib/people';
 import Reveal from '@/components/Reveal';
 import ArcDivider from '@/components/ArcDivider';
 import SunriseArc from '@/components/SunriseArc';
@@ -42,11 +43,12 @@ export default async function AboutPage({
   const dict = getDict(locale);
   const story = aboutStory[locale];
 
-  const ambassadors = [
-    { name: dict.pillars.youth.name, img: '/images/pillar-youth.jpg' },
-    { name: dict.pillars.educators.name, img: '/images/pillar-educators.jpg' },
-    { name: dict.pillars.women.name, img: '/images/pillar-women.jpg' },
-  ];
+  const categoryLabel: Record<string, string> = {
+    Youth: locale === 'fr' ? 'Jeunesse' : locale === 'es' ? 'Juventud' : 'Youth',
+    Educator: locale === 'fr' ? 'Éducateurs' : locale === 'es' ? 'Educadores' : 'Educators',
+    Women: locale === 'fr' ? 'Femmes' : locale === 'es' ? 'Mujeres' : 'Women',
+  };
+  const connectLabel = locale === 'fr' ? 'Se connecter' : locale === 'es' ? 'Conectar' : 'Connect';
 
   return (
     <>
@@ -139,24 +141,44 @@ export default async function AboutPage({
             <p className="mt-6 font-body leading-[1.8] text-ink/85">{dict.about.ambassadorsBody}</p>
           </Reveal>
           <div className="mt-14 grid gap-8 md:grid-cols-3">
-            {ambassadors.map((a, i) => (
-              <Reveal key={a.name} delay={i * 120}>
-                <div className="group relative aspect-[4/5] overflow-hidden">
-                  <Image
-                    src={a.img}
-                    alt={a.name}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/20 to-transparent" />
-                  <div className="absolute bottom-0 left-0 p-6">
-                    <h3 className="font-display text-2xl font-semibold text-ivory">{a.name}</h3>
-                    <div className="mt-2 h-px w-10 bg-gold" />
+            {ambassadors.map((a, i) => {
+              const link = a.linkedin ?? a.website;
+              return (
+                <Reveal key={a.name} delay={i * 120}>
+                  <div className="group flex h-full flex-col overflow-hidden border border-navy/10 bg-white shadow-sm transition-shadow hover:shadow-lg">
+                    <div className="relative aspect-[4/5] overflow-hidden">
+                      <Image
+                        src={a.img}
+                        alt={a.name}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent" />
+                      <span className="absolute left-4 top-4 rounded-full bg-gold px-3 py-1 font-body text-xs font-semibold uppercase tracking-wide text-navy">
+                        {categoryLabel[a.category]}
+                      </span>
+                    </div>
+                    <div className="flex flex-1 flex-col p-6">
+                      <h3 className="font-display text-xl font-semibold text-navy">{a.name}</h3>
+                      <p className="mt-1 font-body text-sm font-semibold text-gold">{a.role}</p>
+                      <p className="mt-0.5 font-body text-xs uppercase tracking-wide text-ink/50">{a.country}</p>
+                      <p className="mt-4 font-body text-[15px] leading-relaxed text-ink/80">{a.bio}</p>
+                      {link && (
+                        <a
+                          href={link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-5 inline-flex items-center gap-1.5 border-b border-gold/50 pb-0.5 font-body text-sm font-semibold text-navy transition-colors hover:text-gold"
+                        >
+                          {a.linkedin ? 'LinkedIn' : connectLabel} <span className="text-gold">↗</span>
+                        </a>
+                      )}
+                    </div>
                   </div>
-                </div>
-              </Reveal>
-            ))}
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -169,15 +191,35 @@ export default async function AboutPage({
             <h2 className="mt-5 font-display text-3xl font-semibold text-navy md:text-4xl">{dict.about.advisoryTitle}</h2>
             <p className="mt-5 font-body leading-relaxed text-ink/80">{dict.about.advisoryBody}</p>
           </Reveal>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {[0, 1, 2, 3].map((i) => (
-              <Reveal key={i} delay={i * 80}>
-                <div className="border border-navy/10 bg-white p-6 text-center">
-                  <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-sand">
-                    <span className="font-display text-2xl text-navy/25">◇</span>
+          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {advisoryBoard.map((m, i) => (
+              <Reveal key={m.name} delay={(i % 3) * 80}>
+                <div className="group flex h-full flex-col overflow-hidden border border-navy/10 bg-white shadow-sm transition-shadow hover:shadow-lg">
+                  <div className="relative aspect-[4/5] overflow-hidden">
+                    <Image
+                      src={m.img}
+                      alt={m.name}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
                   </div>
-                  <p className="mt-4 font-display text-lg font-semibold text-navy/40">{dict.about.advisorySoon}</p>
-                  <p className="mt-1 font-body text-xs text-ink/40">{dict.about.advisoryCountry}</p>
+                  <div className="flex flex-1 flex-col p-6">
+                    <h3 className="font-display text-xl font-semibold text-navy">{m.name}</h3>
+                    <p className="mt-1 font-body text-sm font-semibold text-gold">{m.role}</p>
+                    <p className="mt-0.5 font-body text-xs uppercase tracking-wide text-ink/50">{m.country}</p>
+                    <p className="mt-4 font-body text-[15px] leading-relaxed text-ink/80">{m.bio}</p>
+                    {m.linkedin && (
+                      <a
+                        href={m.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-5 inline-flex items-center gap-1.5 border-b border-gold/50 pb-0.5 font-body text-sm font-semibold text-navy transition-colors hover:text-gold"
+                      >
+                        LinkedIn <span className="text-gold">↗</span>
+                      </a>
+                    )}
+                  </div>
                 </div>
               </Reveal>
             ))}
