@@ -102,7 +102,7 @@ export const ambassadors: Ambassador[] = [
   {
     category: 'Youth',
     name: 'Fabrice Tyler Dolcé',
-    role: 'Youth Leadership · Financial Empowerment',
+    role: 'Youth Leadership · Financial Resilience',
     country: 'Haiti',
     img: '/images/people/fabrice-dolce.jpg',
     bio: 'Student Ambassador for Haiti and a university student fluent in French, Creole, Spanish, and English, Fabrice champions youth leadership, entrepreneurship, and financial empowerment. He works to build a generation of confident, financially resilient young leaders who create opportunities, uplift others, and lead with integrity.',
