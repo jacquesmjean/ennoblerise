@@ -140,42 +140,46 @@ export default async function AboutPage({
             </h2>
             <p className="mt-6 font-body leading-[1.8] text-ink/85">{dict.about.ambassadorsBody}</p>
           </Reveal>
-          <div className="mt-14 grid gap-8 md:grid-cols-3">
+          <div className="mt-16 grid gap-9 md:grid-cols-3">
             {ambassadors.map((a, i) => {
               const link = a.linkedin ?? a.website;
               return (
                 <Reveal key={a.name} delay={i * 120}>
-                  <div className="group flex h-full flex-col overflow-hidden border border-navy/10 bg-white shadow-sm transition-shadow hover:shadow-lg">
+                  <article className="group relative flex h-full flex-col border-t-2 border-gold bg-white shadow-[0_2px_30px_-12px_rgba(15,23,42,0.18)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_24px_60px_-24px_rgba(15,23,42,0.35)]">
                     <div className="relative aspect-[4/5] overflow-hidden">
                       <Image
                         src={a.img}
                         alt={a.name}
                         fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                        className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.05]"
                         sizes="(max-width: 768px) 100vw, 33vw"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent" />
-                      <span className="absolute left-4 top-4 rounded-full bg-gold px-3 py-1 font-body text-xs font-semibold uppercase tracking-wide text-navy">
+                      <div className="absolute inset-0 bg-gradient-to-t from-navy/75 via-navy/5 to-transparent" />
+                      <span className="absolute left-5 top-5 border border-gold/70 bg-navy/40 px-3 py-1 font-body text-[11px] font-semibold uppercase tracking-[0.18em] text-gold-bright backdrop-blur-sm">
                         {categoryLabel[a.category]}
                       </span>
                     </div>
-                    <div className="flex flex-1 flex-col p-6">
-                      <h3 className="font-display text-xl font-semibold text-navy">{a.name}</h3>
-                      <p className="mt-1 font-body text-sm font-semibold text-gold">{a.role}</p>
-                      <p className="mt-0.5 font-body text-xs uppercase tracking-wide text-ink/50">{a.country}</p>
-                      <p className="mt-4 font-body text-[15px] leading-relaxed text-ink/80">{a.bio}</p>
+                    <div className="flex flex-1 flex-col px-7 pb-8 pt-7">
+                      <h3 className="font-display text-2xl font-semibold text-navy">{a.name}</h3>
+                      <p className="mt-2 font-body text-[13px] font-semibold uppercase tracking-[0.12em] text-gold">{a.role}</p>
+                      <div className="mt-3 flex items-center gap-2.5">
+                        <span className="h-px w-6 bg-gold/60" />
+                        <span className="font-body text-xs uppercase tracking-[0.16em] text-ink/50">{a.country}</span>
+                      </div>
+                      <p className="mt-5 font-body text-[15px] leading-[1.75] text-ink/80">{a.bio}</p>
                       {link && (
                         <a
                           href={link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="mt-5 inline-flex items-center gap-1.5 border-b border-gold/50 pb-0.5 font-body text-sm font-semibold text-navy transition-colors hover:text-gold"
+                          className="mt-auto pt-6 inline-flex items-center gap-1.5 font-body text-sm font-semibold text-navy transition-colors hover:text-gold"
                         >
-                          {a.linkedin ? 'LinkedIn' : connectLabel} <span className="text-gold">↗</span>
+                          <span className="border-b border-gold/50 pb-0.5">{a.linkedin ? 'View LinkedIn' : connectLabel}</span>
+                          <span className="text-gold transition-transform group-hover:translate-x-0.5">↗</span>
                         </a>
                       )}
                     </div>
-                  </div>
+                  </article>
                 </Reveal>
               );
             })}
@@ -184,43 +188,50 @@ export default async function AboutPage({
       </section>
 
       {/* Advisory Board */}
-      <section className="grain bg-ivory py-20 md:py-24">
+      <section className="horizon-strong relative py-24 text-ivory md:py-32">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal className="max-w-3xl">
-            <p className="kicker text-gold">{dict.about.advisoryKicker}</p>
-            <h2 className="mt-5 font-display text-3xl font-semibold text-navy md:text-4xl">{dict.about.advisoryTitle}</h2>
-            <p className="mt-5 font-body leading-relaxed text-ink/80">{dict.about.advisoryBody}</p>
+            <p className="kicker text-gold-bright">{dict.about.advisoryKicker}</p>
+            <h2 className="mt-5 font-display text-3xl font-semibold md:text-4xl">{dict.about.advisoryTitle}</h2>
+            <div className="mt-6 h-px w-24 bg-gold/60" />
+            <p className="mt-6 font-body text-lg leading-[1.8] text-ivory/80">{dict.about.advisoryBody}</p>
           </Reveal>
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-16 grid gap-9 sm:grid-cols-2 lg:grid-cols-3">
             {advisoryBoard.map((m, i) => (
               <Reveal key={m.name} delay={(i % 3) * 80}>
-                <div className="group flex h-full flex-col overflow-hidden border border-navy/10 bg-white shadow-sm transition-shadow hover:shadow-lg">
+                <article className="group flex h-full flex-col border border-white/10 bg-white/[0.04] shadow-[0_2px_40px_-16px_rgba(0,0,0,0.6)] backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-gold/40 hover:bg-white/[0.07]">
                   <div className="relative aspect-[4/5] overflow-hidden">
                     <Image
                       src={m.img}
                       alt={m.name}
                       fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                      className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.05]"
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent" />
+                    <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent opacity-70" />
                   </div>
-                  <div className="flex flex-1 flex-col p-6">
-                    <h3 className="font-display text-xl font-semibold text-navy">{m.name}</h3>
-                    <p className="mt-1 font-body text-sm font-semibold text-gold">{m.role}</p>
-                    <p className="mt-0.5 font-body text-xs uppercase tracking-wide text-ink/50">{m.country}</p>
-                    <p className="mt-4 font-body text-[15px] leading-relaxed text-ink/80">{m.bio}</p>
+                  <div className="flex flex-1 flex-col px-7 pb-8 pt-7">
+                    <h3 className="font-display text-2xl font-semibold text-ivory">{m.name}</h3>
+                    <p className="mt-2 font-body text-[13px] font-semibold uppercase tracking-[0.12em] text-gold-bright">{m.role}</p>
+                    <div className="mt-3 flex items-center gap-2.5">
+                      <span className="h-px w-6 bg-gold/50" />
+                      <span className="font-body text-xs uppercase tracking-[0.16em] text-ivory/55">{m.country}</span>
+                    </div>
+                    <p className="mt-5 font-body text-[15px] leading-[1.75] text-ivory/80">{m.bio}</p>
                     {m.linkedin && (
                       <a
                         href={m.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-5 inline-flex items-center gap-1.5 border-b border-gold/50 pb-0.5 font-body text-sm font-semibold text-navy transition-colors hover:text-gold"
+                        className="mt-auto pt-6 inline-flex items-center gap-1.5 font-body text-sm font-semibold text-ivory transition-colors hover:text-gold-bright"
                       >
-                        LinkedIn <span className="text-gold">↗</span>
+                        <span className="border-b border-gold/50 pb-0.5">View LinkedIn</span>
+                        <span className="text-gold-bright transition-transform group-hover:translate-x-0.5">↗</span>
                       </a>
                     )}
                   </div>
-                </div>
+                </article>
               </Reveal>
             ))}
           </div>
