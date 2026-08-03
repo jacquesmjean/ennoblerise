@@ -127,4 +127,13 @@ export const ambassadors: Ambassador[] = [
     linkedin: 'https://www.linkedin.com/in/coachkarengray/',
     website: 'https://www.coachkarengray.com/',
   },
+  {
+    category: 'Women',
+    name: 'Bria Cross',
+    role: 'Strategic Marketing Leader & Storyteller',
+    country: 'United States',
+    img: '/images/people/bria-cross.jpg',
+    bio: 'A strategic marketing leader and storyteller with a Master of Science in Marketing from Florida International University, Bria has led brand initiatives and community-centered campaigns for Nike, REI, adidas, Reebok, and Lids. She champions the growth and leadership of women — believing growth itself is a form of Foundational Wealth™, cultivated through continuous learning, courage, and self-discovery.',
+    linkedin: 'https://www.linkedin.com/in/bria-c-9859a129/',
+  },
 ];
