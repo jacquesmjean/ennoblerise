@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow: /applications/
+
+Sitemap: https://ennoblerise.org/sitemap.xml
