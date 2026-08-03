@@ -105,7 +105,7 @@ export const ambassadors: Ambassador[] = [
     role: 'Youth Leadership · Financial Resilience',
     country: 'Haiti',
     img: '/images/people/fabrice-dolce.jpg',
-    bio: 'Student Ambassador for Haiti and a university student fluent in French, Creole, Spanish, and English, Fabrice champions youth leadership, entrepreneurship, and financial empowerment. He works to build a generation of confident, financially resilient young leaders who create opportunities, uplift others, and lead with integrity.',
+    bio: 'Student Ambassador for Haiti and a university student fluent in French, Creole, Spanish, and English, Fabrice champions youth leadership, entrepreneurship, and financial resilience. He works to build a generation of confident, financially resilient young leaders who create opportunities, uplift others, and lead with integrity.',
     linkedin: 'https://www.linkedin.com/in/fabrice-tyler-dolc%C3%A9-a138aa2ba/',
   },
   {
