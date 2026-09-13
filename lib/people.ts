@@ -118,6 +118,16 @@ export const ambassadors: Ambassador[] = [
     website: 'https://thebrainstages.com',
   },
   {
+    category: 'Educator',
+    name: 'Marcus Blackwell, Jr.',
+    role: 'CEO & Founder, Make Music Count',
+    country: 'United States',
+    img: '/images/people/marcus-blackwell.jpg',
+    bio: 'Marcus has played piano since he was five and was playing professionally for churches by fourteen. Math intimidated him at school until he realized he was already using it every time he played. That confidence carried him to a B.S. in Mathematics from Morehouse College. He founded Make Music Count to teach math through songs on the piano, the solution he wished he had growing up. He believes creative methods, reaching students early, send more of them toward STEM.',
+    linkedin: 'https://www.linkedin.com/in/marcus-blackwell-72972245/',
+    website: 'https://makemusiccount.com',
+  },
+  {
     category: 'Women',
     name: 'Karen Gray',
     role: 'ICF-Certified Executive Coach (PCC) & Identity Architect',
