@@ -195,6 +195,7 @@ export default async function AboutPage({
             <h2 className="mt-5 font-display text-3xl font-semibold md:text-4xl">{dict.about.advisoryTitle}</h2>
             <div className="mt-6 h-px w-24 bg-gold/60" />
             <p className="mt-6 font-body text-lg leading-[1.8] text-ivory/80">{dict.about.advisoryBody}</p>
+            <p className="mt-5 font-body text-[15px] leading-[1.7] text-gold-pale">{dict.about.advisoryChair}</p>
           </Reveal>
           <div className="mt-16 grid gap-9 sm:grid-cols-2 lg:grid-cols-3">
             {advisoryBoard.map((m, i) => (
