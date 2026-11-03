@@ -7,8 +7,12 @@ import { getDict, locales, type Locale } from '@/lib/i18n';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://ennoblerise.org';
 
-export function generateStaticParams() {
-  const posts = getAllPosts();
+// Posts come from Mission Control. Known slugs are prebuilt; new ones render on first request.
+export const revalidate = 300;
+export const dynamicParams = true;
+
+export async function generateStaticParams() {
+  const posts = await getAllPosts();
   return locales.flatMap((locale) => posts.map((p) => ({ locale, slug: p.slug })));
 }
 
@@ -18,7 +22,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
-  const post = getPost(slug);
+  const post = await getPost(slug);
   if (!post) return {};
   return {
     title: { absolute: `${post.title} | EnnobleRise Global Trust` },
@@ -43,7 +47,7 @@ export default async function BlogPostPage({
   const { locale: l, slug } = await params;
   const locale = l as Locale;
   const dict = getDict(locale);
-  const post = getPost(slug);
+  const post = await getPost(slug);
   if (!post) notFound();
 
   const html = markdownToHtml(post.body);

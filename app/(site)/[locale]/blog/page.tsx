@@ -7,6 +7,9 @@ import { themesData, currentThemeIndex } from '@/lib/themesData';
 import Reveal from '@/components/Reveal';
 import ArcDivider from '@/components/ArcDivider';
 
+// Posts come from Mission Control; refresh the page every five minutes.
+export const revalidate = 300;
+
 
 export async function generateMetadata({
   params,
@@ -30,12 +33,12 @@ export default async function BlogPage({
   const { locale: l } = await params;
   const locale = l as Locale;
   const dict = getDict(locale);
-  const posts = getAllPosts();
+  const posts = await getAllPosts();
   const themes = themesData[locale] ?? themesData.en;
   const nowIdx = currentThemeIndex(new Date());
   const [featured, ...rest] = posts;
-  const featuredFull = featured ? getPost(featured.slug) : null;
-  const restFull = rest.map((p) => ({ ...p, heroImage: getPost(p.slug)?.heroImage }));
+  const featuredFull = featured ? await getPost(featured.slug) : null;
+  const restFull = await Promise.all(rest.map(async (p) => ({ ...p, heroImage: (await getPost(p.slug))?.heroImage })));
 
   const fmt = (date: string) =>
     new Date(date).toLocaleDateString(locale === 'en' ? 'en-US' : locale, {

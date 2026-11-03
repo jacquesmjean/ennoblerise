@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { createClient } from '@supabase/supabase-js';
 
 export type BlogPostMeta = {
   slug: string;
@@ -16,19 +17,108 @@ export type BlogPost = BlogPostMeta & {
   body: string;
 };
 
+/**
+ * Posts live in Mission Control. A post published there appears here within
+ * the revalidation window, with no deploy. The JSON files under content/blog
+ * remain as the fallback and the seed, so the site still renders if the
+ * database is unreachable at build time.
+ */
 const blogDir = path.join(process.cwd(), 'content', 'blog');
 
-export function getAllPosts(): BlogPostMeta[] {
-  const index = JSON.parse(
-    fs.readFileSync(path.join(blogDir, 'index.json'), 'utf-8')
-  ) as BlogPostMeta[];
-  return index;
+function readIndexFile(): BlogPostMeta[] {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(blogDir, 'index.json'), 'utf-8')) as BlogPostMeta[];
+  } catch {
+    return [];
+  }
 }
 
-export function getPost(slug: string): BlogPost | null {
+function readPostFile(slug: string): BlogPost | null {
   const file = path.join(blogDir, `${slug}.json`);
-  if (!fs.existsSync(file)) return null;
-  return JSON.parse(fs.readFileSync(file, 'utf-8')) as BlogPost;
+  if (!/^[a-z0-9-]+$/.test(slug) || !fs.existsSync(file)) return null;
+  try {
+    return JSON.parse(fs.readFileSync(file, 'utf-8')) as BlogPost;
+  } catch {
+    return null;
+  }
+}
+
+type PublicRow = {
+  slug: string;
+  title: string;
+  excerpt: string | null;
+  category: string | null;
+  author: string | null;
+  hero_image: string | null;
+  body: string | null;
+  date: string;
+  read_minutes: number | null;
+  language: string | null;
+};
+
+function db() {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  if (!url || !key) return null;
+  return createClient(url, key, { auth: { persistSession: false } });
+}
+
+function fromRow(r: PublicRow): BlogPost {
+  return {
+    slug: r.slug,
+    title: r.title,
+    excerpt: r.excerpt ?? '',
+    category: r.category ?? 'Insights',
+    date: r.date,
+    readMinutes: r.read_minutes ?? 5,
+    author: r.author ?? '',
+    heroImage: r.hero_image ?? undefined,
+    body: r.body ?? '',
+  };
+}
+
+async function fetchPublished(language = 'en'): Promise<BlogPost[]> {
+  const client = db();
+  if (!client) return [];
+  try {
+    const { data, error } = await client
+      .from('blog_posts_public')
+      .select('slug,title,excerpt,category,author,hero_image,body,date,read_minutes,language')
+      .eq('language', language)
+      .order('date', { ascending: false })
+      .limit(200);
+    if (error || !data) return [];
+    return (data as PublicRow[]).map(fromRow);
+  } catch {
+    return [];
+  }
+}
+
+/** Newest first. Database wins over the file with the same slug. */
+export async function getAllPosts(language = 'en'): Promise<BlogPostMeta[]> {
+  const live = await fetchPublished(language);
+  const seen = new Set(live.map((p) => p.slug));
+  const files = readIndexFile().filter((p) => !seen.has(p.slug));
+  const all = [...live.map(({ slug, title, excerpt, category, date, readMinutes }) => ({ slug, title, excerpt, category, date, readMinutes })), ...files];
+  return all.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
+}
+
+export async function getPost(slug: string, language = 'en'): Promise<BlogPost | null> {
+  const client = db();
+  if (client && /^[a-z0-9-]+$/.test(slug)) {
+    try {
+      const { data } = await client
+        .from('blog_posts_public')
+        .select('slug,title,excerpt,category,author,hero_image,body,date,read_minutes,language')
+        .eq('slug', slug)
+        .eq('language', language)
+        .maybeSingle();
+      if (data) return fromRow(data as PublicRow);
+    } catch {
+      /* fall through to the file */
+    }
+  }
+  return readPostFile(slug);
 }
 
 /** Minimal, dependency-free markdown → HTML for our trusted, self-authored content. */
