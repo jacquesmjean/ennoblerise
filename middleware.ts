@@ -42,6 +42,11 @@ export function middleware(request: NextRequest) {
     );
   }
 
+  // The old /applications portal is retired. Staff work in Mission Control.
+  if (pathname === '/applications' || pathname.startsWith('/applications/')) {
+    return NextResponse.redirect('https://servicedesk.ennoblerise.org/', 301);
+  }
+
   // Legacy GoHighLevel URLs → new structure (301)
   if (legacyRedirects[pathname]) {
     const url = request.nextUrl.clone();

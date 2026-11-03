@@ -4,6 +4,7 @@ import { useState, useTransition } from 'react';
 import { submitPledge } from '@/lib/submit';
 import type { Dict, Locale } from '@/lib/i18n';
 
+import Honeypot from '@/components/forms/Honeypot';
 const AMOUNTS = [25, 50, 100, 250, 500, 1000];
 
 export default function DonateFlow({ dict, locale }: { dict: Dict; locale: Locale }) {
@@ -43,6 +44,7 @@ export default function DonateFlow({ dict, locale }: { dict: Dict; locale: Local
         });
       }}
     >
+      <Honeypot />
       {/* Frequency */}
       <div className="grid grid-cols-2 gap-2">
         {(['once', 'monthly'] as const).map((f) => (

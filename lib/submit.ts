@@ -1,7 +1,9 @@
 'use client';
 
-// Client-side form submissions — write directly to Supabase under RLS
-// (anon role may INSERT only; nothing is readable without staff auth).
+// Client-side form submissions — write directly to the EnnobleRise Mission
+// Control database under RLS. The anon role may INSERT only; nothing is
+// readable without staff auth. Each table's trigger opens a Service Desk
+// ticket and files bot traffic as spam (see the `website` honeypot).
 import { createClient } from '@/lib/supabase/client';
 
 type ActionResult = { ok: boolean; error?: string };
@@ -13,6 +15,7 @@ function clean(value: FormDataEntryValue | null, max = 2000): string {
 export async function submitInquiry(formData: FormData): Promise<ActionResult> {
   const supabase = createClient();
   const { error } = await supabase.from('inquiries').insert({
+    website: clean(formData.get('website'), 200),
     name: clean(formData.get('name'), 160),
     email: clean(formData.get('email'), 200),
     topic: clean(formData.get('topic'), 60) || 'other',
@@ -25,7 +28,8 @@ export async function submitInquiry(formData: FormData): Promise<ActionResult> {
 
 export async function submitJoinApplication(formData: FormData): Promise<ActionResult> {
   const supabase = createClient();
-  const { error } = await supabase.from('applications').insert({
+  const { error } = await supabase.from('join_applications').insert({
+    website: clean(formData.get('website'), 200),
     role: clean(formData.get('role'), 40) || 'volunteer',
     name: clean(formData.get('name'), 160),
     email: clean(formData.get('email'), 200),
@@ -43,7 +47,8 @@ export async function submitPledge(formData: FormData): Promise<ActionResult> {
   if (!Number.isFinite(amount) || amount <= 0 || amount > 1000000) {
     return { ok: false, error: 'Invalid amount' };
   }
-  const { error } = await supabase.from('donations').insert({
+  const { error } = await supabase.from('pledges').insert({
+    website: clean(formData.get('website'), 200),
     donor_name: clean(formData.get('name'), 160),
     donor_email: clean(formData.get('email'), 200),
     amount,
@@ -73,6 +78,7 @@ export async function subscribeNewsletter(formData: FormData): Promise<ActionRes
 export async function submitConciergeMessage(formData: FormData): Promise<ActionResult> {
   const supabase = createClient();
   const { error } = await supabase.from('inquiries').insert({
+    website: clean(formData.get('website'), 200),
     name: clean(formData.get('name'), 160),
     email: clean(formData.get('email'), 200),
     topic: clean(formData.get('topic'), 60) || 'concierge',
@@ -86,6 +92,7 @@ export async function submitConciergeMessage(formData: FormData): Promise<Action
 export async function submitScholarshipApplication(formData: FormData): Promise<ActionResult> {
   const supabase = createClient();
   const { error } = await supabase.from('scholarship_applications').insert({
+    website: clean(formData.get('website'), 200),
     name: clean(formData.get('name'), 160),
     email: clean(formData.get('email'), 200),
     phone: clean(formData.get('phone'), 40),

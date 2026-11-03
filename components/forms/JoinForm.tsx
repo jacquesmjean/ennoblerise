@@ -4,6 +4,7 @@ import { useState, useTransition } from 'react';
 import { submitJoinApplication } from '@/lib/submit';
 import type { Dict, Locale } from '@/lib/i18n';
 
+import Honeypot from '@/components/forms/Honeypot';
 export default function JoinForm({
   dict,
   locale,
@@ -40,6 +41,7 @@ export default function JoinForm({
         });
       }}
     >
+      <Honeypot />
       <h2 className="font-display text-2xl font-semibold text-navy">{j.formTitle}</h2>
 
       <p className="label mt-7 text-navy/70">{j.roleLabel}</p>

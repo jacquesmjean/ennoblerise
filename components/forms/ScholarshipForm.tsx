@@ -5,6 +5,7 @@ import { submitScholarshipApplication } from '@/lib/submit';
 import type { Locale } from '@/lib/i18n';
 import type { ScholarshipContent } from '@/lib/scholarshipData';
 
+import Honeypot from '@/components/forms/Honeypot';
 export default function ScholarshipForm({
   content,
   locale,
@@ -39,6 +40,7 @@ export default function ScholarshipForm({
         });
       }}
     >
+      <Honeypot />
       <h2 className="font-display text-2xl font-semibold text-navy md:text-3xl">{content.applyTitle}</h2>
       <p className="mt-3 font-body text-[15px] leading-relaxed text-ink/70">{content.applyIntro}</p>
 

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { submitConciergeMessage } from '@/lib/submit';
 import type { Dict, Locale } from '@/lib/i18n';
 
+import Honeypot from '@/components/forms/Honeypot';
 type Turn = { from: 'concierge' | 'visitor'; text: string };
 type OptionId = 'programs' | 'donate' | 'join' | 'partner' | 'founder' | 'human';
 
@@ -142,6 +143,7 @@ export default function Concierge({ dict, locale }: { dict: Dict; locale: Locale
                 });
               }}
             >
+              <Honeypot />
               <input name="name" required placeholder={c.namePlaceholder} className="field-dark !py-2.5 text-sm" />
               <input name="email" type="email" required placeholder={c.emailPlaceholder} className="field-dark !py-2.5 text-sm" />
               <textarea name="message" required rows={3} placeholder={c.messagePlaceholder} className="field-dark resize-none text-sm" />

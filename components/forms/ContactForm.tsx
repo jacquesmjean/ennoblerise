@@ -4,6 +4,7 @@ import { useState, useTransition } from 'react';
 import { submitInquiry } from '@/lib/submit';
 import type { Dict, Locale } from '@/lib/i18n';
 
+import Honeypot from '@/components/forms/Honeypot';
 export default function ContactForm({ dict, locale }: { dict: Dict; locale: Locale }) {
   const c = dict.contact;
   const [topic, setTopic] = useState('programs');
@@ -32,6 +33,7 @@ export default function ContactForm({ dict, locale }: { dict: Dict; locale: Loca
         });
       }}
     >
+      <Honeypot />
       <div className="grid gap-4 md:grid-cols-2">
         <div>
           <label className="label text-navy/70" htmlFor="ct-name">{c.nameLabel}</label>
