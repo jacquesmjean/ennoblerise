@@ -90,5 +90,6 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!_next|api|applications|.*\\..*).*)'],
+  // /applications is matched on purpose: the middleware redirects it to Mission Control.
+  matcher: ['/((?!_next|api|.*\\..*).*)'],
 };
