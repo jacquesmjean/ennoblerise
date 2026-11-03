@@ -3,7 +3,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getDict, type Locale } from '@/lib/i18n';
 import { aboutStory } from '@/lib/aboutStory';
-import { advisoryBoard, ambassadors } from '@/lib/people';
+import { getAdvisoryBoard, getAmbassadors } from '@/lib/people';
+
+// Board and ambassadors come from Mission Control; refresh every five minutes.
+export const revalidate = 300;
 import Reveal from '@/components/Reveal';
 import ArcDivider from '@/components/ArcDivider';
 import SunriseArc from '@/components/SunriseArc';
@@ -38,6 +41,7 @@ export default async function AboutPage({
 }: {
   params: Promise<{ locale: string }>;
 }) {
+  const [advisoryBoard, ambassadors] = await Promise.all([getAdvisoryBoard(), getAmbassadors()]);
   const { locale: l } = await params;
   const locale = l as Locale;
   const dict = getDict(locale);

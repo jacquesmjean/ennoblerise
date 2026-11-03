@@ -10,6 +10,48 @@ export type Person = {
 
 export type Ambassador = Person & { category: 'Youth' | 'Educator' | 'Women' };
 
+/**
+ * Board and ambassadors are managed in Mission Control. The arrays below are
+ * the fallback and the seed; when the database answers, it wins.
+ */
+import { createClient } from '@supabase/supabase-js';
+
+type PublicPerson = {
+  id: string; name: string; role: string | null; country: string | null; pillar: string | null;
+  img: string | null; bio: string | null; linkedin: string | null; website: string | null;
+  public_role: 'board' | 'ambassador'; sort: number;
+};
+
+async function fetchPublicPeople(role: 'board' | 'ambassador'): Promise<PublicPerson[]> {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL, key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  if (!url || !key) return [];
+  try {
+    const sb = createClient(url, key, { auth: { persistSession: false } });
+    const { data, error } = await sb.from('people_public').select('*').eq('public_role', role).order('sort').order('name');
+    if (error || !data) return [];
+    return data as PublicPerson[];
+  } catch {
+    return [];
+  }
+}
+
+const PILLAR_TO_CATEGORY: Record<string, Ambassador['category']> = { youth: 'Youth', educators: 'Educator', women: 'Women' };
+
+// Images on the site are served from /images/...; the database stores absolute URLs.
+const localImg = (img: string | null) => (img ? img.replace(/^https?:\/\/(www\.)?ennoblerise\.org/, '') : '');
+
+export async function getAdvisoryBoard(): Promise<Person[]> {
+  const rows = await fetchPublicPeople('board');
+  if (!rows.length) return advisoryBoard;
+  return rows.map((r) => ({ name: r.name, role: r.role ?? '', country: r.country ?? '', img: localImg(r.img), bio: r.bio ?? '', linkedin: r.linkedin ?? undefined, website: r.website ?? undefined }));
+}
+
+export async function getAmbassadors(): Promise<Ambassador[]> {
+  const rows = await fetchPublicPeople('ambassador');
+  if (!rows.length) return ambassadors;
+  return rows.map((r) => ({ category: PILLAR_TO_CATEGORY[r.pillar ?? 'youth'] ?? 'Youth', name: r.name, role: r.role ?? '', country: r.country ?? '', img: localImg(r.img), bio: r.bio ?? '', linkedin: r.linkedin ?? undefined, website: r.website ?? undefined }));
+}
+
 /** EnnobleRise Global Trust™ Advisory Board */
 export const advisoryBoard: Person[] = [
   {

@@ -10,6 +10,9 @@ const nextConfig = {
       { protocol: 'https', hostname: 'assets.cdn.filesafe.space' },
       { protocol: 'https', hostname: 'storage.googleapis.com' },
       { protocol: 'https', hostname: 'stcdn.leadconnectorhq.com' },
+      // Photos managed in Mission Control may live on the site itself or in its storage bucket.
+      { protocol: 'https', hostname: 'ennoblerise.org' },
+      { protocol: 'https', hostname: 'knsuzpcaatwfevulphhw.supabase.co' },
     ],
   },
 };
