@@ -19,10 +19,10 @@ import { createClient } from '@supabase/supabase-js';
 type PublicPerson = {
   id: string; name: string; role: string | null; country: string | null; pillar: string | null;
   img: string | null; bio: string | null; linkedin: string | null; website: string | null;
-  public_role: 'board' | 'ambassador'; sort: number;
+  public_role: 'board' | 'ambassador' | 'team'; sort: number;
 };
 
-async function fetchPublicPeople(role: 'board' | 'ambassador'): Promise<PublicPerson[]> {
+async function fetchPublicPeople(role: 'board' | 'ambassador' | 'team'): Promise<PublicPerson[]> {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL, key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
   if (!url || !key) return [];
   try {
@@ -44,6 +44,13 @@ export async function getAdvisoryBoard(): Promise<Person[]> {
   const rows = await fetchPublicPeople('board');
   if (!rows.length) return advisoryBoard;
   return rows.map((r) => ({ name: r.name, role: r.role ?? '', country: r.country ?? '', img: localImg(r.img), bio: r.bio ?? '', linkedin: r.linkedin ?? undefined, website: r.website ?? undefined }));
+}
+
+export type TeamMember = Person & { scope: string };
+
+export async function getTeam(): Promise<TeamMember[]> {
+  const rows = await fetchPublicPeople('team');
+  return rows.map((r) => ({ scope: r.pillar ?? 'all', name: r.name, role: r.role ?? '', country: r.country ?? '', img: localImg(r.img), bio: r.bio ?? '', linkedin: r.linkedin ?? undefined, website: r.website ?? undefined }));
 }
 
 export async function getAmbassadors(): Promise<Ambassador[]> {

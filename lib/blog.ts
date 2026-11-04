@@ -98,7 +98,8 @@ async function fetchPublished(language = 'en'): Promise<BlogPost[]> {
 export async function getAllPosts(language = 'en'): Promise<BlogPostMeta[]> {
   const live = await fetchPublished(language);
   const seen = new Set(live.map((p) => p.slug));
-  const files = readIndexFile().filter((p) => !seen.has(p.slug));
+  const today = new Date().toISOString().slice(0, 10);
+  const files = readIndexFile().filter((p) => !seen.has(p.slug) && p.date <= today);
   const all = [...live.map(({ slug, title, excerpt, category, date, readMinutes }) => ({ slug, title, excerpt, category, date, readMinutes })), ...files];
   return all.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
 }

@@ -246,7 +246,10 @@
           }
         ]
       }
-    ]
+    ],
+    "teamKicker": "Les personnes derrière le travail",
+    "teamTitle": "Notre équipe",
+    "teamBody": "Le personnel et les bénévoles qui font vivre EnnobleRise au quotidien : recherche et évaluation, subventions, communication et programmes. Ils transforment la mission en preuves, en récits et en résultats dans chaque pilier et chaque pays."
   },
   "programs": {
     "metaTitle": "Nos programmes | Piliers Jeunesse, Éducateurs et Femmes — EnnobleRise",

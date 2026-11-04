@@ -1,5 +1,37 @@
 [
   {
+    "slug": "hope-the-promise-of-renewal",
+    "title": "Hope: The Promise of Renewal, The Power of Togetherness",
+    "excerpt": "As the year closes we stand between reflection and possibility. On renewal, unity and purpose, and the hope that lets us begin again, together.",
+    "category": "Foundational Wealth",
+    "date": "2026-12-01",
+    "readMinutes": 6
+  },
+  {
+    "slug": "gratitude-the-art-of-appreciating-what-matters",
+    "title": "Gratitude: The Art of Appreciating What Matters",
+    "excerpt": "Gratitude invites us to pause and recognize the people who carry our journey, in families, classrooms and workplaces. How appreciation becomes shared prosperity.",
+    "category": "Foundational Wealth",
+    "date": "2026-11-01",
+    "readMinutes": 6
+  },
+  {
+    "slug": "compassion-the-courage-to-care",
+    "title": "Compassion: The Courage to Care, The Wisdom to Listen",
+    "excerpt": "One human need never changes: to be seen, heard, understood and valued. On emotional intelligence, listening, and compassion as a leadership strength.",
+    "category": "Foundational Wealth",
+    "date": "2026-10-01",
+    "readMinutes": 5
+  },
+  {
+    "slug": "responsibility-the-wealth-of-making-a-difference",
+    "title": "Responsibility: The Wealth of Making a Difference",
+    "excerpt": "Accountability is how we honor our word, leadership is how we honor people, and service is how we strengthen our world. A reflection on the influence each of us has been given.",
+    "category": "Foundational Wealth",
+    "date": "2026-09-01",
+    "readMinutes": 8
+  },
+  {
     "slug": "growth-the-inner-wealth",
     "title": "Growth: The Inner Wealth That Creates Lasting Success",
     "excerpt": "Growth is the one form of wealth that cannot be inherited, purchased, or transferred. A reflection on the inner asset that appreciates for a lifetime and compounds across generations.",

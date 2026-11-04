@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getDict, type Locale } from '@/lib/i18n';
 import { aboutStory } from '@/lib/aboutStory';
-import { getAdvisoryBoard, getAmbassadors } from '@/lib/people';
+import { getAdvisoryBoard, getAmbassadors, getTeam } from '@/lib/people';
 
 // Board and ambassadors come from Mission Control; refresh every five minutes.
 export const revalidate = 300;
@@ -41,7 +41,7 @@ export default async function AboutPage({
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  const [advisoryBoard, ambassadors] = await Promise.all([getAdvisoryBoard(), getAmbassadors()]);
+  const [advisoryBoard, ambassadors, team] = await Promise.all([getAdvisoryBoard(), getAmbassadors(), getTeam()]);
   const { locale: l } = await params;
   const locale = l as Locale;
   const dict = getDict(locale);
@@ -53,6 +53,7 @@ export default async function AboutPage({
     Women: locale === 'fr' ? 'Femmes' : locale === 'es' ? 'Mujeres' : 'Women',
   };
   const connectLabel = locale === 'fr' ? 'Se connecter' : locale === 'es' ? 'Conectar' : 'Connect';
+  const scopeAll = locale === 'fr' ? 'Jeunes · Éducateurs · Femmes' : locale === 'es' ? 'Jóvenes · Educadores · Mujeres' : 'Youth · Educators · Women';
 
   return (
     <>
@@ -190,6 +191,53 @@ export default async function AboutPage({
           </div>
         </div>
       </section>
+
+      {/* Team */}
+      {team.length > 0 && (
+        <section className="bg-sand py-24 md:py-32">
+          <div className="mx-auto max-w-7xl px-5 md:px-8">
+            <Reveal className="max-w-3xl">
+              <p className="kicker text-gold">{dict.about.teamKicker}</p>
+              <h2 className="mt-5 font-display text-3xl font-semibold text-navy md:text-4xl">{dict.about.teamTitle}</h2>
+              <p className="mt-6 font-body leading-[1.8] text-ink/85">{dict.about.teamBody}</p>
+            </Reveal>
+            <div className="mt-16 grid gap-9 md:grid-cols-3">
+              {team.map((m, i) => {
+                const link = m.linkedin ?? m.website;
+                const scopeKey: Record<string, string> = { youth: 'Youth', educators: 'Educator', women: 'Women' };
+                const scope = m.scope === 'all' ? scopeAll : (categoryLabel[scopeKey[m.scope] ?? ''] ?? m.scope);
+                return (
+                  <Reveal key={m.name} delay={i * 120}>
+                    <article className="group relative flex h-full flex-col border-t-2 border-gold bg-white shadow-[0_2px_30px_-12px_rgba(15,23,42,0.18)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_24px_60px_-24px_rgba(15,23,42,0.35)]">
+                      {m.img && (
+                        <div className="relative aspect-[4/5] overflow-hidden">
+                          <Image src={m.img} alt={m.name} fill className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.05]" sizes="(max-width: 768px) 100vw, 33vw" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-navy/75 via-navy/5 to-transparent" />
+                        </div>
+                      )}
+                      <div className="flex flex-1 flex-col px-7 pb-8 pt-7">
+                        <h3 className="font-display text-2xl font-semibold text-navy">{m.name}</h3>
+                        <p className="mt-2 font-body text-[13px] font-semibold uppercase tracking-[0.12em] text-gold">{m.role}</p>
+                        <div className="mt-3 flex items-center gap-2.5">
+                          <span className="h-px w-6 bg-gold/60" />
+                          <span className="font-body text-xs uppercase tracking-[0.16em] text-ink/50">{scope}</span>
+                        </div>
+                        <p className="mt-5 font-body text-[15px] leading-[1.75] text-ink/80">{m.bio}</p>
+                        {link && (
+                          <a href={link} target="_blank" rel="noopener noreferrer" className="mt-auto pt-6 inline-flex items-center gap-1.5 font-body text-sm font-semibold text-navy transition-colors hover:text-gold">
+                            <span className="border-b border-gold/50 pb-0.5">{m.linkedin ? 'View LinkedIn' : connectLabel}</span>
+                            <span className="text-gold transition-transform group-hover:translate-x-0.5">↗</span>
+                          </a>
+                        )}
+                      </div>
+                    </article>
+                  </Reveal>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Advisory Board */}
       <section className="horizon-strong relative py-24 text-ivory md:py-32">

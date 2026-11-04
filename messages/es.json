@@ -246,7 +246,10 @@
           }
         ]
       }
-    ]
+    ],
+    "teamKicker": "Las personas detrás del trabajo",
+    "teamTitle": "Nuestro equipo",
+    "teamBody": "El personal y los voluntarios que hacen funcionar EnnobleRise cada día: investigación y evaluación, subvenciones, comunicación y programas. Convierten la misión en evidencia, historias y resultados en cada pilar y cada país."
   },
   "programs": {
     "metaTitle": "Nuestros programas | Pilares de Jóvenes, Educadores y Mujeres — EnnobleRise",
