@@ -119,7 +119,10 @@ export async function getPost(slug: string, language = 'en'): Promise<BlogPost |
       /* fall through to the file */
     }
   }
-  return readPostFile(slug);
+  const file = readPostFile(slug);
+  // A file post scheduled for a future date stays unpublished until its day, like the database copy.
+  if (file && file.date > new Date().toISOString().slice(0, 10)) return null;
+  return file;
 }
 
 /** Minimal, dependency-free markdown → HTML for our trusted, self-authored content. */
